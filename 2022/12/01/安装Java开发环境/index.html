@@ -26,20 +26,17 @@
 <meta property="og:site_name" content="Kevin&#39;s Space">
 <meta property="og:description" content="卸载JDK一般情况 删除java的安装目录 删除java_HOME 删除path下关于java的目录 检查是否卸载完成。java -version  非常规情况在电脑上安装JDK失败，再次安装时会提醒“已经在安装，请关闭原来的安装进程”这时的解决办法如下：  在电脑上，进入命令行，输入“regedit”,1、按Windows图标键+R。 输入regedit，然后回车，打开注册表编辑器。 找到HKE">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://example.com/.com//%E5%AE%89%E8%A3%85Java%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/JAVAHOMEPIC-1669881985524-5.jpg">
-<meta property="og:image" content="http://example.com/.com//AVAHOMEPIC.jpg">
-<meta property="og:image" content="http://example.com/.com//12/01/%E5%AE%89%E8%A3%85Java%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/JAVAHOMEPIC.jpg">
-<meta property="og:image" content="http://example.com/.com//%E5%AE%89%E8%A3%85Java%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/JAVAHOMEPIC-1669882473931-8.jpg">
-<meta property="og:image" content="http://example.com/.com//12/01/%E5%AE%89%E8%A3%85Java%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/JAVAHOMEPIC.jpg">
+<meta property="og:image" content="http://example.com/images/%E5%AE%89%E8%A3%85Java%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/JAVAHOMEPIC.jpg">
+<meta property="og:image" content="http://example.com/images/%E5%AE%89%E8%A3%85Java%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/pathvariables.jpg">
 <meta property="article:published_time" content="2022-11-30T17:08:32.000Z">
-<meta property="article:modified_time" content="2022-12-01T10:04:06.229Z">
+<meta property="article:modified_time" content="2022-12-01T11:52:11.619Z">
 <meta property="article:author" content="Kevin Y">
 <meta property="article:tag" content="environment variables">
 <meta property="article:tag" content="Java">
 <meta property="article:tag" content="install">
 <meta property="article:tag" content="uninstall">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/.com//%E5%AE%89%E8%A3%85Java%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/JAVAHOMEPIC-1669881985524-5.jpg">
+<meta name="twitter:image" content="http://example.com/images/%E5%AE%89%E8%A3%85Java%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/JAVAHOMEPIC.jpg">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <link rel="icon" href="/assets/favicon.ico">
@@ -348,7 +345,7 @@
                 
                 
                     <div class="post-intro-read">
-                        <span>Word count: <span class="post-count word-count">227</span>Reading time: <span class="post-count reading-time">1 min</span></span>
+                        <span>Word count: <span class="post-count word-count">236</span>Reading time: <span class="post-count reading-time">1 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
@@ -520,16 +517,10 @@
 <h2 id="安装JDK"><a href="#安装JDK" class="headerlink" title="安装JDK"></a>安装JDK</h2><ol>
 <li>路径全英文和数字。</li>
 <li>路径简介好记，<strong>路径需要记住</strong>。</li>
-<li>配置环境变量。</li>
+<li>配置环境变量JAVA_HOME。<img src="/images/%E5%AE%89%E8%A3%85Java%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/JAVAHOMEPIC.jpg"></li>
+<li>配置path变量，添加jdk和jre的bin。<img src="/images/%E5%AE%89%E8%A3%85Java%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/pathvariables.jpg"></li>
+<li>测试JDK是否安装成功，<code>java -version</code>。</li>
 </ol>
-<p>![(D:\myBlogky\source_posts\安装Java开发环境\JAVAHOMEPIC.jpg)</p>
-<p><img src="/.com//%E5%AE%89%E8%A3%85Java%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/JAVAHOMEPIC-1669881985524-5.jpg" alt="JAVAHOMEPIC"></p>
-<p><img src="/.com//AVAHOMEPIC.jpg"></p>
-<img src="/.com//12/01/%E5%AE%89%E8%A3%85Java%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/JAVAHOMEPIC.jpg" class title="This is an example image">
-
-<p><img src="/.com//%E5%AE%89%E8%A3%85Java%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/JAVAHOMEPIC-1669882473931-8.jpg" alt="JAVAHOMEPIC"></p>
-<p>123123</p>
-<p><img src="/.com//12/01/%E5%AE%89%E8%A3%85Java%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/JAVAHOMEPIC.jpg" alt="好的好的"></p>
 
     </article>
     <!-- license -->
@@ -537,11 +528,6 @@
     <!-- paginator -->
     <ul class="post-paginator">
         <li class="next">
-            
-                <div class="nextSlogan">Next Post</div>
-                <a href="/2022/12/01/test123/" title="test123">
-                    <div class="nextTitle">test123</div>
-                </a>
             
         </li>
         <li class="previous">
@@ -709,18 +695,7 @@
         
         
         
-        
-        
-        
-        
-        
     
-        
-        
-        
-        
-        
-        
         
         
         
@@ -737,7 +712,7 @@
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 5
+        Total : 4
         </div>
         <!-- search  -->
         
@@ -751,12 +726,6 @@
             <div class="archive-year"> 2022 </div>
             <ul class="year-list">
             
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">12/01</span>
-            <a class="archive-post-title" href="/2022/12/01/test123/">test123</a>
-        </li>
-    
         
         <li class="archive-post-item">
             <span class="archive-post-date">12/01</span>
