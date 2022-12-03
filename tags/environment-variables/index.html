@@ -433,24 +433,17 @@
                 <span class="abstract-title-text">安装Java开发环境</span>
             </a>
             <div class="abstract-content">
-                卸载JDK一般情况
-删除java的安装目录
-删除java_HOME
-删除path下关于java的目录
-检查是否卸载完成。java -version
+                什么是JDKJDK包含：JRE，以及JRE包含的JVM。
+JDK(Java Development Kit) 是整个JAVA的核心，包括了Java运行环境（Java Runtime Envirnment），一堆Java工具（javac&#x2F;java&#x2F;jdb等）和Java基础的类库（即Java API 包括rt.jar）。JDK是java开发工具包，基本上每个学java的人都会先在机器 上装一个JDK。在目录下面有 六个文件夹、一个src类库源码压缩包、和其他几个声明文件。其中，真正在运行java时起作用的 是以下四个文件夹：
 
-非常规情况在电脑上安装JDK失败，再次安装时会提醒“已经在安装，请关闭原来的安装进程”这时的解决办法如下：
-
-在电脑上，进入命令行，输入“regedit”,1、按Windows图标键+R。
-输入regedit，然后回车，打开注册表编辑器。
-找到HKEY_LOCAL_MACHINE\SOFTWARE\JavaSoft\Java Development Kit就是JDK的注册表项找到注册表，将注册表上的的java文件夹删除，就好。
-通过控制面板...
+bin：最主要的是编译器javac；
+inc...
             </div>
             <!-- read more -->
             
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2022/12/01">
+                <div class="abstract-date" title="Last updated: 2022/12/03">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/12/01</span>
                 </div>
                 <!-- tags -->
@@ -462,9 +455,11 @@
     
         <a class="post-tag" href="javascript:void(0);" data-tags="Java">Java</a>
     
-        <a class="post-tag" href="javascript:void(0);" data-tags="install">install</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags="jdk">jdk</a>
     
-        <a class="post-tag" href="javascript:void(0);" data-tags="uninstall">uninstall</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags="jre">jre</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="jvm">jvm</a>
     
 </div>
 
@@ -737,14 +732,19 @@ win键+R 输入cmd打开控制台（推荐使用）
                 Java
             </span>
         
-            <span class="sidebar-tag-name" data-tags="install">
+            <span class="sidebar-tag-name" data-tags="jdk">
                 <span class="iconfont-archer">&#xe606;</span>
-                install
+                jdk
             </span>
         
-            <span class="sidebar-tag-name" data-tags="uninstall">
+            <span class="sidebar-tag-name" data-tags="jre">
                 <span class="iconfont-archer">&#xe606;</span>
-                uninstall
+                jre
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="jvm">
+                <span class="iconfont-archer">&#xe606;</span>
+                jvm
             </span>
         
     </div>
