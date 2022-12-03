@@ -19,18 +19,18 @@
         <meta name="keywords" content="hexo,hexo-theme,hexo-blog">
     
     <meta name="description" content="">
-    <meta name="description" content="什么是JDKJDK包含：JRE，以及JRE包含的JVM。 JDK(Java Development Kit) 是整个JAVA的核心，包括了Java运行环境（Java Runtime Envirnment），一堆Java工具（javac&#x2F;java&#x2F;jdb等）和Java基础的类库（即Java API 包括rt.jar）。JDK是java开发工具包，基本上每个学java的人都会先在机">
+    <meta name="description" content="什么是JDKJDK（Java Development Kit，  java开发工具包），是整个JAVA的核心，包括了Java运行环境（Java Runtime Envirnment），一堆Java工具（javac&#x2F;java&#x2F;jdb等）和java基础的类库（即Java API 包括rt.jar）和JVM交互的头文件（include）。也就是Java SE开发工具包，也就是说JDK">
 <meta property="og:type" content="article">
 <meta property="og:title" content="安装Java开发环境">
 <meta property="og:url" content="http://example.com/2022/12/01/%E5%AE%89%E8%A3%85Java%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/index.html">
 <meta property="og:site_name" content="Kevin&#39;s Space">
-<meta property="og:description" content="什么是JDKJDK包含：JRE，以及JRE包含的JVM。 JDK(Java Development Kit) 是整个JAVA的核心，包括了Java运行环境（Java Runtime Envirnment），一堆Java工具（javac&#x2F;java&#x2F;jdb等）和Java基础的类库（即Java API 包括rt.jar）。JDK是java开发工具包，基本上每个学java的人都会先在机">
+<meta property="og:description" content="什么是JDKJDK（Java Development Kit，  java开发工具包），是整个JAVA的核心，包括了Java运行环境（Java Runtime Envirnment），一堆Java工具（javac&#x2F;java&#x2F;jdb等）和java基础的类库（即Java API 包括rt.jar）和JVM交互的头文件（include）。也就是Java SE开发工具包，也就是说JDK">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://example.com/images/%E5%AE%89%E8%A3%85Java%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/jdkjrejvm.jpg">
 <meta property="og:image" content="http://example.com/images/%E5%AE%89%E8%A3%85Java%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/JAVAHOMEPIC.jpg">
 <meta property="og:image" content="http://example.com/images/%E5%AE%89%E8%A3%85Java%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/pathvariables.jpg">
 <meta property="article:published_time" content="2022-11-30T17:08:32.000Z">
-<meta property="article:modified_time" content="2022-12-03T15:22:53.539Z">
+<meta property="article:modified_time" content="2022-12-03T16:11:59.644Z">
 <meta property="article:author" content="Kevin Y">
 <meta property="article:tag" content="environment variables">
 <meta property="article:tag" content="Java">
@@ -349,7 +349,7 @@
                 
                 
                     <div class="post-intro-read">
-                        <span>Word count: <span class="post-count word-count">981</span>Reading time: <span class="post-count reading-time">3 min</span></span>
+                        <span>Word count: <span class="post-count word-count">1.1k</span>Reading time: <span class="post-count reading-time">4 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
@@ -505,8 +505,8 @@
             <div class="container container-unloaded">
                 <main class="main post-page">
     <article class="article-entry">
-        <h2 id="什么是JDK"><a href="#什么是JDK" class="headerlink" title="什么是JDK"></a>什么是JDK</h2><p>JDK包含：JRE，以及JRE包含的JVM。</p>
-<p>JDK(Java Development Kit) 是整个JAVA的核心，包括了Java运行环境（Java Runtime Envirnment），一堆Java工具（javac&#x2F;java&#x2F;jdb等）和Java基础的类库（即Java API 包括rt.jar）。<br>JDK是java开发工具包，基本上每个学java的人都会先在机器 上装一个JDK。在目录下面有 六个文件夹、一个src类库源码压缩包、和其他几个声明文件。其中，真正在运行java时起作用的 是以下四个文件夹：</p>
+        <h2 id="什么是JDK"><a href="#什么是JDK" class="headerlink" title="什么是JDK"></a>什么是JDK</h2><p>JDK（Java Development Kit，  java开发工具包），是整个JAVA的核心，包括了Java运行环境（Java Runtime Envirnment），一堆Java工具（javac&#x2F;java&#x2F;jdb等）和java基础的类库（即Java API 包括rt.jar）和JVM交互的头文件（include）。也就是Java SE开发工具包，也就是说JDK是给开发人员准备的，而JRE这是给使用Java软件的用户准备的，当然，开发人员也可以使用JRE来测试程序。</p>
+<p>基本上每个学java的人都会先在机器上装一个JDK。在目录下面有六个文件夹、一个src类库源码压缩包、和其他几个声明文件。其中，真正在运行java时起作用的是以下四个文件夹：</p>
 <ul>
 <li>bin：最主要的是编译器javac；</li>
 <li>include：java和jvm交互用的头文件；</li>
@@ -515,9 +515,10 @@
 </ul>
 <h2 id="什么是JRE"><a href="#什么是JRE" class="headerlink" title="什么是JRE"></a>什么是JRE</h2><p>JRE包含JVM。</p>
 <p>JRE（Java Runtime Environment，Java运行环境），包含JVM标准实现及Java核心类库。JRE是Java运行环境，并不是一个开发环境，所以没有包含任何开发工具（如编译器和调试器）。</p>
-<p>光有JVM还不能成class的 执行，因为在解释class的时候JVM需要调用解释所需要的类库lib。 （jre里有运行.class的java.exe）。这些类库lib和JVM一起构成了JRE</p>
+<p>光有JVM还不能成class的执行，因为在解释class的时候JVM需要调用解释所需要的类库lib（jre里有运行.class的java.exe）。这些类库lib和JVM一起构成了JRE。</p>
 <p>编写的Java程序也必须要JRE才能运行。</p>
-<h2 id="什么是JVM"><a href="#什么是JVM" class="headerlink" title="什么是JVM"></a>什么是JVM</h2><p>JVM（Java Virtual Machine），即java虚拟机。 java运行时的环境，JVM是一种用于计算设备的规范，它是一个虚构出来的计算机，是通过在实际的计算机上仿真模拟各种计算机功能来实现的。针对java用户，也就是拥有可运行的.class文件包（jar或者war）的用户。里面主要包含了jvm和java运行时基本类库（rt.jar）。rt.jar可以简单粗暴地理解为：它就是java源码编译成的jar包。Java虚拟机在执行字节码时，把字节码解释成具体平台上的机器指令执行。这就是Java的能够<u>一次编译，到处运行</u>的原因。<br><img src="/images/%E5%AE%89%E8%A3%85Java%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/jdkjrejvm.jpg"></p>
+<h2 id="什么是JVM"><a href="#什么是JVM" class="headerlink" title="什么是JVM"></a>什么是JVM</h2><p>JVM（Java Virtual Machine，java虚拟机）， java运行时的环境，JVM是一种用于计算设备的规范，它是一个虚构出来的计算机，是通过在实际的计算机上仿真模拟各种计算机功能来实现的。针对java用户，也就是拥有可运行的.class文件包（jar或者war）的用户。里面主要包含了jvm和java运行时基本类库（rt.jar）。rt.jar可以简单粗暴地理解为：它就是java源码编译成的jar包。Java虚拟机在执行字节码时，把字节码解释成具体平台上的机器指令执行。</p>
+<p>JVM主要的功能就是解释和执行字节码（.class文件）。JVM就是Java程序真正运行的地方，也是Java能够<u>一处编译到处运行</u>的核心，不同的操作系统由不同的JVM进行交互。JVM在运行时，会调用JRE下lib中的Java基础类库来解释.class文件，然后在跟操作系统进行交互，从而屏蔽了操作系统的底层，让Java变成只需要面向JVM即可。<br><img src="/images/%E5%AE%89%E8%A3%85Java%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/jdkjrejvm.jpg"></p>
 <h2 id="JDK、JRE、JVM的关系"><a href="#JDK、JRE、JVM的关系" class="headerlink" title="JDK、JRE、JVM的关系"></a>JDK、JRE、JVM的关系</h2><ul>
 <li><p>利用JDK（调用java API）开发了属于我们自己的JAVA程序后，通过JDK中的编译程序（javac）将我们的文本java文件编译成JAVA字节码，在JRE上运行这些JAVA字节码，JVM解析这些字节码，映射到CPU指令集或OS的系统调用。</p>
 </li>
