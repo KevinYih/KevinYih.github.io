@@ -27,7 +27,7 @@
 <meta property="og:description" content="基本数据类型（primitive type）123456789101112131415161718192021222324&#x2F;&#x2F;整型byte num1 &#x3D; 10;   &#x2F;&#x2F;1个字节，范围-128~127short num2 &#x3D; 20;  &#x2F;&#x2F;2个字节int num3 &#x3D; 30;  &#x2F;&#x2F;4个字节；int 的范围大概在 -21亿~21亿，                 &#x2F;&#x2F;二进制的表示，在数字前加0b">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-12-05T16:14:35.000Z">
-<meta property="article:modified_time" content="2022-12-08T03:27:26.562Z">
+<meta property="article:modified_time" content="2022-12-08T18:31:20.494Z">
 <meta property="article:author" content="Kevin Y">
 <meta property="article:tag" content="Java">
 <meta name="twitter:card" content="summary">
@@ -333,7 +333,7 @@
                 
                 
                     <div class="post-intro-read">
-                        <span>Word count: <span class="post-count word-count">394</span>Reading time: <span class="post-count reading-time">1 min</span></span>
+                        <span>Word count: <span class="post-count word-count">613</span>Reading time: <span class="post-count reading-time">2 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
@@ -508,6 +508,25 @@
 <li><p>字符：指计算机中使用的数字、字母、字和符号。</p>
 </li>
 </ul>
+<h2 id="数据类型转换"><a href="#数据类型转换" class="headerlink" title="数据类型转换"></a>数据类型转换</h2><ol>
+<li><p>不能对布尔值进行转换；</p>
+</li>
+<li><p>不能把对象类型转换为不相干的类型；</p>
+</li>
+<li><p>高容量转换为低容量，必须强制转换，<code>(type)variable</code>；反之，不用强制。</p>
+<p><code>低容量  ------------------------------------&gt;高容量</code></p>
+<p><code>byte, short, char -&gt; int -&gt; long -&gt; float -&gt; double</code></p>
+</li>
+<li><p>高容量转换为低容量，注意内存可能溢出。</p>
+</li>
+<li><p>操作、计算比较大的数注意可能溢出，要在计算前解决精度和数据类型的问题。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="variable">money</span> <span class="operator">=</span> <span class="number">1000_000_000</span>;</span><br><span class="line"><span class="type">int</span> <span class="variable">years</span> <span class="operator">=</span> <span class="number">20</span>;</span><br><span class="line"><span class="type">long</span> <span class="variable">total1</span> <span class="operator">=</span> money*years;   </span><br><span class="line"><span class="comment">//运算式仍然按照int进行运算，最后只是将错误的运算结果进行了一次强制转换。</span></span><br><span class="line"><span class="type">long</span> <span class="variable">total2</span> <span class="operator">=</span> money*((<span class="type">long</span>)years);    </span><br><span class="line"><span class="comment">//只用把运算中的一个数转换，整个运算式就按转换后的进行计算了。</span></span><br></pre></td></tr></table></figure>
+
+
+</li>
+<li><p>数字可以加下划线分隔，例如1亿可写为：<code>100_000_000</code> 或者<code>10000_0000</code>。</p>
+</li>
+</ol>
 <h2 id="引用数据类型（reference-type）"><a href="#引用数据类型（reference-type）" class="headerlink" title="引用数据类型（reference type）"></a>引用数据类型（reference type）</h2><p>类、接口、数组</p>
 
     </article>
@@ -649,7 +668,7 @@
                 <div class="toc-catalog">
                     <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
                 </div>
-                <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%EF%BC%88primitive-type%EF%BC%89"><span class="toc-number">1.</span> <span class="toc-text">基本数据类型（primitive type）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%95%E7%94%A8%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%EF%BC%88reference-type%EF%BC%89"><span class="toc-number">2.</span> <span class="toc-text">引用数据类型（reference type）</span></a></li></ol>
+                <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%EF%BC%88primitive-type%EF%BC%89"><span class="toc-number">1.</span> <span class="toc-text">基本数据类型（primitive type）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2"><span class="toc-number">2.</span> <span class="toc-text">数据类型转换</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%95%E7%94%A8%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%EF%BC%88reference-type%EF%BC%89"><span class="toc-number">3.</span> <span class="toc-text">引用数据类型（reference type）</span></a></li></ol>
             </div>
         
         <!-- sidebar -->
