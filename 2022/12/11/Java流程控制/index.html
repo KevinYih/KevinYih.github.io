@@ -19,18 +19,29 @@
         <meta name="keywords" content="hexo,hexo-theme,hexo-blog">
     
     <meta name="description" content="">
-    <meta property="og:type" content="website">
-<meta property="og:title" content="Kevin&#39;s Space">
-<meta property="og:url" content="http://example.com/tags/project/index.html">
+    <meta name="description" content="Scanner对象通过java.util.Scanner类获取用户的输入，实现程序和人的交互。  调用java公用类。放在package申明之后。 1import java.util.scanner  创建一个s (scanner)，用于接收键盘数据。 1Scanner s &#x3D; new Scanner(System.in);  在读取前，一般需使用 hasNext() 与 hasNextLine(">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java流程控制">
+<meta property="og:url" content="http://example.com/2022/12/11/Java%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/index.html">
 <meta property="og:site_name" content="Kevin&#39;s Space">
+<meta property="og:description" content="Scanner对象通过java.util.Scanner类获取用户的输入，实现程序和人的交互。  调用java公用类。放在package申明之后。 1import java.util.scanner  创建一个s (scanner)，用于接收键盘数据。 1Scanner s &#x3D; new Scanner(System.in);  在读取前，一般需使用 hasNext() 与 hasNextLine(">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-12-11T03:58:46.000Z">
+<meta property="article:modified_time" content="2022-12-11T17:10:30.246Z">
 <meta property="article:author" content="Kevin Y">
+<meta property="article:tag" content="Java">
+<meta property="article:tag" content="scanner">
+<meta property="article:tag" content="sequential structure">
+<meta property="article:tag" content="selective structure">
+<meta property="article:tag" content="cycle structure">
+<meta property="article:tag" content="break">
+<meta property="article:tag" content="continue">
 <meta name="twitter:card" content="summary">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <link rel="icon" href="/assets/favicon.ico">
     
-    <title>Kevin&#39;s Studio</title>
+    <title>Java流程控制 · Kevin&#39;s Studio</title>
     <!-- /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
 /* This file is meant as a standalone workflow for
 - testing support for link[rel=preload]
@@ -217,6 +228,8 @@
         }
     </script>
     
+        <body class="post-body">
+    
         <!-- header -->
         <header class="header header-mobile">
     <!-- top read progress line -->
@@ -246,6 +259,17 @@
     </div>
     <!-- toggle banner for post layout -->
     
+        
+            <div class="banner">
+        
+            <div class="blog-title header-element">
+                <a href="/">Kevin&#39;s Studio.</a>
+            </div>
+            <div class="post-title header-element">
+                <a href="#" class="post-name">Java流程控制</a>
+            </div>
+        </div>
+    
 </header>
 
         <!-- fixed footer -->
@@ -272,24 +296,86 @@
 
 
 
+    height:50vh;
+
 ">
     
     <!-- 主页  -->
+    
+        
+    <!-- 404页  -->
             
     <div class="site-intro-placeholder"></div>
-    <div class="site-intro-img" style="background-image: url(/)"></div>
+    <div class="site-intro-img" style="background-image: url(/intro/post-bg.jpg)"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
+            
+                Java流程控制
+            <!-- 404 -->
             
         </h1>
         <!-- 副标题 -->
         <p class="intro-subtitle">
             <!-- 主页副标题  -->
             
+                
+            <!-- 404 -->
+            
         </p>
         <!-- 文章页 meta -->
+        
+            <div class="post-intros">
+                <!-- 文章页标签  -->
+                
+                    <div class= post-intro-tags >
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Java">Java</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="scanner">scanner</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="sequential structure">sequential structure</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="selective structure">selective structure</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="cycle structure">cycle structure</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="break">break</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="continue">continue</a>
+    
+</div>
+
+                
+                
+                    <div class="post-intro-read">
+                        <span>Word count: <span class="post-count word-count">303</span>Reading time: <span class="post-count reading-time">1 min</span></span>
+                    </div>
+                
+                <div class="post-intro-meta">
+                    <!-- 撰写日期 -->
+                    <span class="iconfont-archer post-intro-calander">&#xe676;</span>
+                    <span class="post-intro-time">2022/12/11</span>
+                    <!-- busuanzi -->
+                    
+                    <!-- 文章分享 -->
+                    <span class="share-wrapper">
+                        <span class="iconfont-archer share-icon">&#xe71d;</span>
+                        <span class="share-text">Share</span>
+                        <ul class="share-list">
+                            <li class="iconfont-archer share-qr" data-type="qr">&#xe75b;
+                                <div class="share-qrcode"></div>
+                            </li>
+                            <li class="iconfont-archer" data-type="weibo">&#xe619;</li>
+                            <li class="iconfont-archer" data-type="qzone">&#xe62e;</li>
+                            <li class="iconfont-archer" data-type="twitter">&#xe634;</li>
+                            <li class="iconfont-archer" data-type="facebook">&#xe67a;</li>
+                        </ul>
+                    </span>
+                </div>
+            </div>
         
     </div>
 </div>
@@ -419,61 +505,89 @@
 
             <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
             <div class="container container-unloaded">
-                <main class="main index-page">
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/2022/12/05/IDEA%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/">
-                
-                <span class="abstract-title-text">IDEA使用指南</span>
-            </a>
-            <div class="abstract-content">
-                结构分类
-project（项目、工程）
-module（模块）
-package（包）
-class（类）
+                <main class="main post-page">
+    <article class="article-entry">
+        <h2 id="Scanner对象"><a href="#Scanner对象" class="headerlink" title="Scanner对象"></a>Scanner对象</h2><p>通过java.util.Scanner类获取用户的输入，实现程序和人的交互。</p>
+<ul>
+<li><p>调用java公用类。放在package申明之后。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.scanner</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>创建一个s (<em>scanner</em>)，用于接收键盘数据。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">Scanner</span> <span class="variable">s</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Scanner</span>(System.in);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在读取前，一般需使用 <code>hasNext()</code> 与 <code>hasNextLine()</code> <strong>方法</strong>判断是否还有输入的内容。</p>
+<ul>
+<li><p>hasNext() </p>
+<ul>
+<li>一定要读取到有效字符后才可以结束输入。</li>
+<li>对输入有效字符之前遇到的空格，<code>hasNext()</code>方法会自动将其去掉。</li>
+<li>只有输入有效字符后才将其后面输入的<strong>space bar</strong>作为分隔符或者结束符。</li>
+<li><u>不能得到带有空白格的字符串</u>。</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(s.hasNext())&#123;</span><br><span class="line">    <span class="comment">//判断是否还有输入的内容</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>hasNextLine() </p>
+<ul>
+<li>以<strong>Enter</strong>为结束符。返回回车前所有的输入。</li>
+<li>可以获得空白格的字符串。</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(s.hasNextLine())&#123;</span><br><span class="line">    <span class="comment">//判断是否还有输入的内容</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>通过Scanner<strong>类</strong>的 <code>next()</code> 与 <code>nextLine()</code> <strong>方法</strong>获取输入的字符串。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//用next()方法获取输入。</span></span><br><span class="line"><span class="type">String</span> <span class="variable">str</span> <span class="operator">=</span> s.next();</span><br><span class="line"><span class="comment">//用nextLine()方法获取输入。</span></span><br><span class="line"><span class="type">String</span> <span class="variable">str</span> <span class="operator">=</span> s.nextLine();</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>用完后，就关掉<code>scanner</code>。I&#x2F;O流不关闭，会一直占用资源，用完就须关掉。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scanner.close();</span><br></pre></td></tr></table></figure></li>
+</ul>
 
-结构介绍在 IntelliJ IDEA 中Project是最顶级的结构单元，然后就是Module，再下面就是package。
-project（项目、工程）淘宝、京东、某程序员网站都属于一个个项目，IDEA中就是一个个的Project。
-module（模块）在一个项目中，可以存放多个模块，不同的模块可以存放项目中不同的业务功能代码。
-一个Project可以有多个Module。目前，主流的大型项目结构基本都是多Module的结构，这类项目一般是按功能划分的，比如：user-core-mod...
-            </div>
-            <!-- read more -->
+    </article>
+    <!-- license -->
+    
+    <!-- paginator -->
+    <ul class="post-paginator">
+        <li class="next">
             
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2022/12/11">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/12/05</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
+        </li>
+        <li class="previous">
+            
+                <div class="prevSlogan">Previous Post</div>
+                <a href="/2022/12/10/%E8%BF%90%E7%AE%97%E7%AC%A6/" title="运算符">
+                    <div class="prevTitle">运算符</div>
+                </a>
+            
+        </li>
+    </ul>
+    <!-- comment -->
     
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="IDEA">IDEA</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="project">project</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="module">module</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="package">package</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="class">class</a>
-    
-</div>
+        <div class="post-comment">
+            <!-- 来必力 City 版安装代码 -->
 
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
+
+            
+
+            
+
+            
+
+            <!-- utteranc评论 -->
+
+
+            <!-- partial('_partial/comment/changyan') -->
+            <!--PC版-->
+
+
+            
+            
+
+            
+
+        </div>
     
-    <!-- paginator  -->
+    <!-- timeliness note -->
+    <!-- idea from: https://hexo.fluid-dev.com/posts/hexo-injector/#%E6%96%87%E7%AB%A0%E6%97%B6%E6%95%88%E6%80%A7%E6%8F%90%E7%A4%BA -->
+    
+    <!-- Mathjax -->
     
 </main>
 
@@ -551,6 +665,23 @@ module（模块）在一个项目中，可以存放多个模块，不同的模�
 
         </div>
         <!-- toc -->
+        
+            <div class="toc-wrapper toc-wrapper-loding" style=
+
+
+
+
+
+
+
+    top:50vh;
+
+>
+                <div class="toc-catalog">
+                    <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
+                </div>
+                <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Scanner%E5%AF%B9%E8%B1%A1"><span class="toc-number">1.</span> <span class="toc-text">Scanner对象</span></a></li></ol>
+            </div>
         
         <!-- sidebar -->
         <div class="sidebar sidebar-hide">
@@ -935,6 +1066,8 @@ module（模块）在一个项目中，可以存放多个模块，不同的模�
         <!-- CNZZ -->
         
         <!-- async load share.js -->
+        
+            <script src="/scripts/share.js?v=20211217" async></script>
         
         <!-- mermaid -->
         

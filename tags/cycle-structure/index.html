@@ -21,7 +21,7 @@
     <meta name="description" content="">
     <meta property="og:type" content="website">
 <meta property="og:title" content="Kevin&#39;s Space">
-<meta property="og:url" content="http://example.com/tags/project/index.html">
+<meta property="og:url" content="http://example.com/tags/cycle-structure/index.html">
 <meta property="og:site_name" content="Kevin&#39;s Space">
 <meta property="og:locale" content="en_US">
 <meta property="article:author" content="Kevin Y">
@@ -428,43 +428,52 @@
             
         
         <article class="index-post">
-            <a class="abstract-title" href="/2022/12/05/IDEA%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/">
+            <a class="abstract-title" href="/2022/12/11/Java%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/">
                 
-                <span class="abstract-title-text">IDEA使用指南</span>
+                <span class="abstract-title-text">Java流程控制</span>
             </a>
             <div class="abstract-content">
-                结构分类
-project（项目、工程）
-module（模块）
-package（包）
-class（类）
+                Scanner对象通过java.util.Scanner类获取用户的输入，实现程序和人的交互。
 
-结构介绍在 IntelliJ IDEA 中Project是最顶级的结构单元，然后就是Module，再下面就是package。
-project（项目、工程）淘宝、京东、某程序员网站都属于一个个项目，IDEA中就是一个个的Project。
-module（模块）在一个项目中，可以存放多个模块，不同的模块可以存放项目中不同的业务功能代码。
-一个Project可以有多个Module。目前，主流的大型项目结构基本都是多Module的结构，这类项目一般是按功能划分的，比如：user-core-mod...
+调用java公用类。放在package申明之后。
+1import java.util.scanner
+
+创建一个s (scanner)，用于接收键盘数据。
+1Scanner s = new Scanner(System.in);
+
+在读取前，一般需使用 hasNext() 与 hasNextLine() 方法判断是否还有输入的内容。
+
+hasNext() 
+
+一定要读取到有效字符后才可以结束输入。
+对输入有效字符之前遇到的空格，hasNext()方法会自动将其去掉。
+只有输入有效字符后才将其...
             </div>
             <!-- read more -->
             
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2022/12/11">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/12/05</span>
+                <div class="abstract-date" title="Last updated: 2022/12/12">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/12/11</span>
                 </div>
                 <!-- tags -->
                 
                     <div class= abstract-tags >
     
     
-        <a class="post-tag" href="javascript:void(0);" data-tags="IDEA">IDEA</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags="Java">Java</a>
     
-        <a class="post-tag" href="javascript:void(0);" data-tags="project">project</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags="scanner">scanner</a>
     
-        <a class="post-tag" href="javascript:void(0);" data-tags="module">module</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags="sequential structure">sequential structure</a>
     
-        <a class="post-tag" href="javascript:void(0);" data-tags="package">package</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags="selective structure">selective structure</a>
     
-        <a class="post-tag" href="javascript:void(0);" data-tags="class">class</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags="cycle structure">cycle structure</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="break">break</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="continue">continue</a>
     
 </div>
 
