@@ -19,15 +19,15 @@
         <meta name="keywords" content="hexo,hexo-theme,hexo-blog">
     
     <meta name="description" content="">
-    <meta name="description" content="基本运算符 算术运算符：+，-，*，&#x2F;，%，++，--  b &#x3D; ++a，b &#x3D; --a ：先a自增减1，再把a增减后的值赋给b；  b &#x3D; a++，b &#x3D; a-- ：先把a的原值赋给b，再a自增减1；  不能写成：a &#x3D; a++或者 a &#x3D; ++a；可直接写为a++或者++a；  String类型右侧的 + 就是字符串连接符，并将右侧所有 + 两侧的变量进行String连接。 1234int a">
+    <meta name="description" content="基本运算符 算术运算符：+，-，*，&#x2F;，%，++，--  b &#x3D; ++a，b &#x3D; --a ：先a自增减1，再把a增减后的值赋给b；  b &#x3D; a++，b &#x3D; a-- ：先把a的原值赋给b，再a自增减1；  不能写成：a &#x3D; a++或者 a &#x3D; ++a，应直接写为a++或者++a；  String类型右侧的 + 就是字符串连接符，并将右侧所有 + 两侧的变量进行String连接。 1234int a">
 <meta property="og:type" content="article">
 <meta property="og:title" content="运算符">
 <meta property="og:url" content="http://example.com/2022/12/10/%E8%BF%90%E7%AE%97%E7%AC%A6/index.html">
 <meta property="og:site_name" content="Kevin&#39;s Space">
-<meta property="og:description" content="基本运算符 算术运算符：+，-，*，&#x2F;，%，++，--  b &#x3D; ++a，b &#x3D; --a ：先a自增减1，再把a增减后的值赋给b；  b &#x3D; a++，b &#x3D; a-- ：先把a的原值赋给b，再a自增减1；  不能写成：a &#x3D; a++或者 a &#x3D; ++a；可直接写为a++或者++a；  String类型右侧的 + 就是字符串连接符，并将右侧所有 + 两侧的变量进行String连接。 1234int a">
+<meta property="og:description" content="基本运算符 算术运算符：+，-，*，&#x2F;，%，++，--  b &#x3D; ++a，b &#x3D; --a ：先a自增减1，再把a增减后的值赋给b；  b &#x3D; a++，b &#x3D; a-- ：先把a的原值赋给b，再a自增减1；  不能写成：a &#x3D; a++或者 a &#x3D; ++a，应直接写为a++或者++a；  String类型右侧的 + 就是字符串连接符，并将右侧所有 + 两侧的变量进行String连接。 1234int a">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-12-09T17:21:06.000Z">
-<meta property="article:modified_time" content="2022-12-23T04:20:26.534Z">
+<meta property="article:modified_time" content="2022-12-23T13:15:42.474Z">
 <meta property="article:author" content="Kevin Y">
 <meta property="article:tag" content="Java">
 <meta property="article:tag" content="operator">
@@ -499,7 +499,7 @@
 </li>
 <li><p><code>b = a++</code>，<code>b = a--</code> ：先把a的原值赋给b，再a自增减1；</p>
 </li>
-<li><p>不能写成：<code>a = a++</code>或者<code> a = ++a</code>；可直接写为<code>a++</code>或者<code>++a</code>；</p>
+<li><p>不能写成：<code>a = a++</code>或者<code> a = ++a</code>，应直接写为<code>a++</code>或者<code>++a</code>；</p>
 </li>
 <li><p>String类型<strong>右侧</strong>的 <code>+</code> 就是字符串连接符，并将<strong>右侧</strong>所有 <code>+</code> 两侧的变量进行String连接。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="variable">a</span> <span class="operator">=</span> <span class="number">10</span>;</span><br><span class="line"><span class="type">int</span> <span class="variable">b</span> <span class="operator">=</span> <span class="number">20</span>;</span><br><span class="line">System.out.println(a + b + <span class="string">&quot;&quot;</span> + a + a * b + b); </span><br><span class="line"><span class="comment">//将String右边的a，a*b和b转换为String类型，并输出：301020020</span></span><br></pre></td></tr></table></figure>
@@ -788,12 +788,6 @@
         
         
         
-        
-        
-        
-        
-        
-        
     
     
     
@@ -955,36 +949,6 @@
                 Java
             </span>
         
-            <span class="sidebar-tag-name" data-tags="variable">
-                <span class="iconfont-archer">&#xe606;</span>
-                variable
-            </span>
-        
-            <span class="sidebar-tag-name" data-tags="constant">
-                <span class="iconfont-archer">&#xe606;</span>
-                constant
-            </span>
-        
-            <span class="sidebar-tag-name" data-tags="jdk">
-                <span class="iconfont-archer">&#xe606;</span>
-                jdk
-            </span>
-        
-            <span class="sidebar-tag-name" data-tags="jre">
-                <span class="iconfont-archer">&#xe606;</span>
-                jre
-            </span>
-        
-            <span class="sidebar-tag-name" data-tags="jvm">
-                <span class="iconfont-archer">&#xe606;</span>
-                jvm
-            </span>
-        
-            <span class="sidebar-tag-name" data-tags="operator">
-                <span class="iconfont-archer">&#xe606;</span>
-                operator
-            </span>
-        
             <span class="sidebar-tag-name" data-tags="scanner">
                 <span class="iconfont-archer">&#xe606;</span>
                 scanner
@@ -1013,6 +977,36 @@
             <span class="sidebar-tag-name" data-tags="continue">
                 <span class="iconfont-archer">&#xe606;</span>
                 continue
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="variable">
+                <span class="iconfont-archer">&#xe606;</span>
+                variable
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="constant">
+                <span class="iconfont-archer">&#xe606;</span>
+                constant
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="jdk">
+                <span class="iconfont-archer">&#xe606;</span>
+                jdk
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="jre">
+                <span class="iconfont-archer">&#xe606;</span>
+                jre
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="jvm">
+                <span class="iconfont-archer">&#xe606;</span>
+                jvm
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="operator">
+                <span class="iconfont-archer">&#xe606;</span>
+                operator
             </span>
         
     </div>
