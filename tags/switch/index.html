@@ -21,7 +21,7 @@
     <meta name="description" content="">
     <meta property="og:type" content="website">
 <meta property="og:title" content="Kevin&#39;s Space">
-<meta property="og:url" content="http://example.com/tags/constant/index.html">
+<meta property="og:url" content="http://example.com/tags/switch/index.html">
 <meta property="og:site_name" content="Kevin&#39;s Space">
 <meta property="og:locale" content="en_US">
 <meta property="article:author" content="Kevin Y">
@@ -428,32 +428,33 @@
             
         
         <article class="index-post">
-            <a class="abstract-title" href="/2022/12/09/%E5%8F%98%E9%87%8F%E3%80%81%E5%B8%B8%E9%87%8F%E5%92%8C%E4%BD%9C%E7%94%A8%E5%9F%9F/">
+            <a class="abstract-title" href="/2022/12/11/Java%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/">
                 
-                <span class="abstract-title-text">变量、常量和作用域</span>
+                <span class="abstract-title-text">Java流程控制</span>
             </a>
             <div class="abstract-content">
-                1. 变量1.1. 变量命名规则
-所有变量、方法、类名，见名知义；
+                1. Scanner对象通过java.util.Scanner类获取用户的输入，实现程序和人的交互。
 
-类成员变量，局部变量，首字母小写和驼峰原则（首字母外单词首字母均大写）；
-例如：monthSalaryBonus；
+调用java公用类。放在package申明之后。
+1import java.util.scanner
 
-方法，首字母小写和驼峰原则。runDance()，putInFridge()，main()；
+创建一个s (scanner)，用于接收键盘数据。
+1Scanner s = new Scanner(System.in);
 
-常量，全部大写，单词间加_；例如：MONTH_SALARY；
+在读取前，一般需使用 hasNext() 与 hasNextLine() 方法判断是否还有非空字符的输入。
 
-类，首字母大写和驼峰原则；例如：GoodMen，BadMen；
+hasNext() 
 
-
-1.2. 类变量，实例变量和局部变量，以及作用域1234567891011121314151617181920212223242526public class Demo08 &#...
+一定要读取到有效字符后才可以结束输入。
+对输入有效字符之前遇到的空格，hasNext()方法会自动将其去掉。
+只有输入有效字...
             </div>
             <!-- read more -->
             
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2022/12/24">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/12/09</span>
+                <div class="abstract-date" title="Last updated: 2022/12/26">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/12/11</span>
                 </div>
                 <!-- tags -->
                 
@@ -462,9 +463,19 @@
     
         <a class="post-tag" href="javascript:void(0);" data-tags="Java">Java</a>
     
-        <a class="post-tag" href="javascript:void(0);" data-tags="variable">variable</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags="scanner">scanner</a>
     
-        <a class="post-tag" href="javascript:void(0);" data-tags="constant">constant</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags="sequential structure">sequential structure</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="selective structure">selective structure</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="cycle structure">cycle structure</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="break">break</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="continue">continue</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="switch">switch</a>
     
 </div>
 
