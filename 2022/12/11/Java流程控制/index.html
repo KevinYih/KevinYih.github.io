@@ -27,7 +27,7 @@
 <meta property="og:description" content="1. Scanner对象通过java.util.Scanner类获取用户的输入，实现程序和人的交互。  调用java公用类。放在package申明之后。 1import java.util.scanner  创建一个s (scanner)，用于接收键盘数据。 1Scanner s &#x3D; new Scanner(System.in);  在读取前，一般需使用 hasNext() 与 hasNextLi">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-12-11T03:58:46.000Z">
-<meta property="article:modified_time" content="2022-12-25T18:02:18.331Z">
+<meta property="article:modified_time" content="2022-12-26T14:31:21.336Z">
 <meta property="article:author" content="Kevin Y">
 <meta property="article:tag" content="Java">
 <meta property="article:tag" content="scanner">
@@ -354,7 +354,7 @@
                 
                 
                     <div class="post-intro-read">
-                        <span>Word count: <span class="post-count word-count">715</span>Reading time: <span class="post-count reading-time">2 min</span></span>
+                        <span>Word count: <span class="post-count word-count">949</span>Reading time: <span class="post-count reading-time">3 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
@@ -563,6 +563,26 @@
 <li><strong>case穿透</strong>：不写<code>break</code>，会执行符合的某case后面所有语句。</li>
 </ul>
 <h2 id="5-IDEA反编译"><a href="#5-IDEA反编译" class="headerlink" title="5. IDEA反编译"></a>5. IDEA反编译</h2><p>将out文件夹下的<code>.class</code>文件，拷贝到<code>.java</code>文件夹下。</p>
+<h2 id="6-循环结构"><a href="#6-循环结构" class="headerlink" title="6. 循环结构"></a>6. 循环结构</h2><h3 id="6-1-while-循环"><a href="#6-1-while-循环" class="headerlink" title="6.1. while 循环"></a>6.1. <code>while</code> 循环</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span>(布尔表达式)&#123;</span><br><span class="line">    <span class="comment">//循环内容</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>要首先满足条件（先判断），才能进入循环。</li>
+<li>循环布尔表达式一直为<code>true</code>会造成死循环，会影响程序性能或卡死崩溃，我们需要一个让表达式失效的方式来结束循环。</li>
+</ul>
+<h3 id="6-2-do-while-循环"><a href="#6-2-do-while-循环" class="headerlink" title="6.2. do...while 循环"></a>6.2. <code>do...while</code> 循环</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">do</span>&#123;</span><br><span class="line">    <span class="comment">//循环内容</span></span><br><span class="line">&#125;<span class="keyword">while</span>(布尔表达式)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>先循环，再判断条件。即使不满足条件，也会循环一次。</li>
+</ul>
+<h3 id="6-3-for-循环"><a href="#6-3-for-循环" class="headerlink" title="6.3. for 循环"></a>6.3. <code>for</code> 循环</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(初始化; 布尔表达式; 迭代)&#123;    </span><br><span class="line">    <span class="comment">//循环内容</span></span><br><span class="line">    <span class="comment">//循环一次之后，才会进行迭代。    </span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>初始化，布尔表达式，迭代，三个部分都可省略。</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(;;)&#123;</span><br><span class="line">    <span class="comment">//循环内容</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="7-continue-amp-break"><a href="#7-continue-amp-break" class="headerlink" title="7. continue &amp; break"></a>7. continue &amp; break</h2><h3 id="7-1-continue"><a href="#7-1-continue" class="headerlink" title="7.1. continue"></a>7.1. continue</h3><p>终止某次循环，不再执行本次剩余的循环语句，开始下次循环。</p>
+<h3 id="7-2-Break"><a href="#7-2-Break" class="headerlink" title="7.2. Break"></a>7.2. Break</h3><p>强制退出整个循环。不再执行循环。</p>
 
     </article>
     <!-- license -->
@@ -703,7 +723,7 @@
                 <div class="toc-catalog">
                     <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
                 </div>
-                <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-Scanner%E5%AF%B9%E8%B1%A1"><span class="toc-text">1. Scanner对象</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E9%A1%BA%E5%BA%8F%E7%BB%93%E6%9E%84"><span class="toc-text">2. 顺序结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E9%80%89%E6%8B%A9%E7%BB%93%E6%9E%84"><span class="toc-text">3. 选择结构</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-if%E5%8D%95%E9%80%89%E7%BB%93%E6%9E%84"><span class="toc-text">3.1. if单选结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-if%E5%8F%8C%E9%80%89%E7%BB%93%E6%9E%84"><span class="toc-text">3.2. if双选结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-if%E5%A4%9A%E9%80%89%E7%BB%93%E6%9E%84"><span class="toc-text">3.3. if多选结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-4-%E5%B5%8C%E5%A5%97if%E7%BB%93%E6%9E%84"><span class="toc-text">3.4. 嵌套if结构</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-switch%E9%80%89%E6%8B%A9%E7%BB%93%E6%9E%84"><span class="toc-text">4. switch选择结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-IDEA%E5%8F%8D%E7%BC%96%E8%AF%91"><span class="toc-text">5. IDEA反编译</span></a></li></ol>
+                <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-Scanner%E5%AF%B9%E8%B1%A1"><span class="toc-text">1. Scanner对象</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E9%A1%BA%E5%BA%8F%E7%BB%93%E6%9E%84"><span class="toc-text">2. 顺序结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E9%80%89%E6%8B%A9%E7%BB%93%E6%9E%84"><span class="toc-text">3. 选择结构</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-if%E5%8D%95%E9%80%89%E7%BB%93%E6%9E%84"><span class="toc-text">3.1. if单选结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-if%E5%8F%8C%E9%80%89%E7%BB%93%E6%9E%84"><span class="toc-text">3.2. if双选结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-if%E5%A4%9A%E9%80%89%E7%BB%93%E6%9E%84"><span class="toc-text">3.3. if多选结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-4-%E5%B5%8C%E5%A5%97if%E7%BB%93%E6%9E%84"><span class="toc-text">3.4. 嵌套if结构</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-switch%E9%80%89%E6%8B%A9%E7%BB%93%E6%9E%84"><span class="toc-text">4. switch选择结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-IDEA%E5%8F%8D%E7%BC%96%E8%AF%91"><span class="toc-text">5. IDEA反编译</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-%E5%BE%AA%E7%8E%AF%E7%BB%93%E6%9E%84"><span class="toc-text">6. 循环结构</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#6-1-while-%E5%BE%AA%E7%8E%AF"><span class="toc-text">6.1. while 循环</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-2-do-while-%E5%BE%AA%E7%8E%AF"><span class="toc-text">6.2. do...while 循环</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-3-for-%E5%BE%AA%E7%8E%AF"><span class="toc-text">6.3. for 循环</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-continue-amp-break"><span class="toc-text">7. continue &amp; break</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#7-1-continue"><span class="toc-text">7.1. continue</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-2-Break"><span class="toc-text">7.2. Break</span></a></li></ol></li></ol>
             </div>
         
         <!-- sidebar -->
