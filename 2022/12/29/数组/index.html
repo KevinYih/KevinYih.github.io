@@ -19,18 +19,24 @@
         <meta name="keywords" content="hexo,hexo-theme,hexo-blog">
     
     <meta name="description" content="">
-    <meta property="og:type" content="website">
-<meta property="og:title" content="Kevin&#39;s Space">
-<meta property="og:url" content="http://example.com/tags/jre/index.html">
+    <meta name="description" content="1. 数组的含义数组：相同类型的数据的有序集合。 数组元素：数组中的每个数据。 1.1. 数组的声明和创建12345678&#x2F;&#x2F;首选方式dataType[] arrayRefVar &#x3D; new dataType[arraySize];  &#x2F;&#x2F;次选方式，不推荐。属于C和C++习惯写法。dataType arrayRefVar[] &#x3D; new dataType[arraySize];  int[] nu">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数组">
+<meta property="og:url" content="http://example.com/2022/12/29/%E6%95%B0%E7%BB%84/index.html">
 <meta property="og:site_name" content="Kevin&#39;s Space">
+<meta property="og:description" content="1. 数组的含义数组：相同类型的数据的有序集合。 数组元素：数组中的每个数据。 1.1. 数组的声明和创建12345678&#x2F;&#x2F;首选方式dataType[] arrayRefVar &#x3D; new dataType[arraySize];  &#x2F;&#x2F;次选方式，不推荐。属于C和C++习惯写法。dataType arrayRefVar[] &#x3D; new dataType[arraySize];  int[] nu">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-12-29T14:40:33.000Z">
+<meta property="article:modified_time" content="2022-12-29T17:25:08.636Z">
 <meta property="article:author" content="Kevin Y">
+<meta property="article:tag" content="Java">
+<meta property="article:tag" content="array">
 <meta name="twitter:card" content="summary">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <link rel="icon" href="/assets/favicon.ico">
     
-    <title>Kevin&#39;s Studio</title>
+    <title>数组 · Kevin&#39;s Studio</title>
     <!-- /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
 /* This file is meant as a standalone workflow for
 - testing support for link[rel=preload]
@@ -217,6 +223,8 @@
         }
     </script>
     
+        <body class="post-body">
+    
         <!-- header -->
         <header class="header header-mobile">
     <!-- top read progress line -->
@@ -246,6 +254,17 @@
     </div>
     <!-- toggle banner for post layout -->
     
+        
+            <div class="banner">
+        
+            <div class="blog-title header-element">
+                <a href="/">Kevin&#39;s Studio.</a>
+            </div>
+            <div class="post-title header-element">
+                <a href="#" class="post-name">数组</a>
+            </div>
+        </div>
+    
 </header>
 
         <!-- fixed footer -->
@@ -272,24 +291,76 @@
 
 
 
+    height:50vh;
+
 ">
     
     <!-- 主页  -->
+    
+        
+    <!-- 404页  -->
             
     <div class="site-intro-placeholder"></div>
-    <div class="site-intro-img" style="background-image: url(/)"></div>
+    <div class="site-intro-img" style="background-image: url(/intro/post-bg.jpg)"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
+            
+                数组
+            <!-- 404 -->
             
         </h1>
         <!-- 副标题 -->
         <p class="intro-subtitle">
             <!-- 主页副标题  -->
             
+                
+            <!-- 404 -->
+            
         </p>
         <!-- 文章页 meta -->
+        
+            <div class="post-intros">
+                <!-- 文章页标签  -->
+                
+                    <div class= post-intro-tags >
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Java">Java</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="array">array</a>
+    
+</div>
+
+                
+                
+                    <div class="post-intro-read">
+                        <span>Word count: <span class="post-count word-count">237</span>Reading time: <span class="post-count reading-time">1 min</span></span>
+                    </div>
+                
+                <div class="post-intro-meta">
+                    <!-- 撰写日期 -->
+                    <span class="iconfont-archer post-intro-calander">&#xe676;</span>
+                    <span class="post-intro-time">2022/12/29</span>
+                    <!-- busuanzi -->
+                    
+                    <!-- 文章分享 -->
+                    <span class="share-wrapper">
+                        <span class="iconfont-archer share-icon">&#xe71d;</span>
+                        <span class="share-text">Share</span>
+                        <ul class="share-list">
+                            <li class="iconfont-archer share-qr" data-type="qr">&#xe75b;
+                                <div class="share-qrcode"></div>
+                            </li>
+                            <li class="iconfont-archer" data-type="weibo">&#xe619;</li>
+                            <li class="iconfont-archer" data-type="qzone">&#xe62e;</li>
+                            <li class="iconfont-archer" data-type="twitter">&#xe634;</li>
+                            <li class="iconfont-archer" data-type="facebook">&#xe67a;</li>
+                        </ul>
+                    </span>
+                </div>
+            </div>
         
     </div>
 </div>
@@ -419,53 +490,69 @@
 
             <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
             <div class="container container-unloaded">
-                <main class="main index-page">
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/2022/12/01/%E5%AE%89%E8%A3%85Java%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/">
-                
-                <span class="abstract-title-text">安装Java开发环境</span>
-            </a>
-            <div class="abstract-content">
-                1. 什么是JDKJDK（Java Development Kit，  java开发工具包），是整个JAVA的核心，包括了Java运行环境（Java Runtime Envirnment），一堆Java工具（javac&#x2F;java&#x2F;jdb等）和java基础的类库（即Java API 包括rt.jar）和JVM交互的头文件（include）。也就是Java SE开发工具包，也就是说JDK是给开发人员准备的，而JRE这是给使用Java软件的用户准备的，当然，开发人员也可以使用JRE来测试程序。
-基本上每个学java的人都会先在机器上装一个JDK。在目录下面有六个文件夹、一个...
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2022/12/26">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/12/01</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="environment variables">environment variables</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Java">Java</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="jdk">jdk</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="jre">jre</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="jvm">jvm</a>
-    
-</div>
+                <main class="main post-page">
+    <article class="article-entry">
+        <h2 id="1-数组的含义"><a href="#1-数组的含义" class="headerlink" title="1. 数组的含义"></a>1. 数组的含义</h2><p>数组：<u>相同类型</u>的数据的有序集合。</p>
+<p>数组元素：数组中的每个数据。</p>
+<h3 id="1-1-数组的声明和创建"><a href="#1-1-数组的声明和创建" class="headerlink" title="1.1. 数组的声明和创建"></a>1.1. 数组的声明和创建</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//首选方式</span></span><br><span class="line">dataType[] arrayRefVar = <span class="keyword">new</span> <span class="title class_">dataType</span>[arraySize];  </span><br><span class="line"><span class="comment">//次选方式，不推荐。属于C和C++习惯写法。</span></span><br><span class="line">dataType arrayRefVar[] = <span class="keyword">new</span> <span class="title class_">dataType</span>[arraySize];  </span><br><span class="line"></span><br><span class="line"><span class="type">int</span>[] numbers = <span class="keyword">new</span> <span class="title class_">int</span>[<span class="number">9</span>]; <span class="comment">//存放了9个int类型元素的数组。</span></span><br><span class="line"><span class="comment">//int[] numbers            声明数组</span></span><br><span class="line"><span class="comment">//numbers = new int[9]     开辟内存空间，创建数组</span></span><br></pre></td></tr></table></figure>
 
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
+<p>Java的方法是语句的集合，它们在一起执行一个功能。</p>
+<ul>
+<li>方法是解决一类问题的步骤的有序组合。</li>
+<li>方法包含于类和对象中。</li>
+<li>方法在程序中被创建，在其他地方被引用。</li>
+</ul>
+<h3 id="1-2-数组元素的访问"><a href="#1-2-数组元素的访问" class="headerlink" title="1.2. 数组元素的访问"></a>1.2. 数组元素的访问</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">arrayRefVar[<span class="number">0</span>] = <span class="number">2</span>;  <span class="comment">//第1个元素，数组是从0开始索引。</span></span><br><span class="line">arrayRefVar[<span class="number">1</span>] = <span class="number">5</span>;  <span class="comment">//第2个元素，数组是从0开始索引。</span></span><br><span class="line">                     <span class="comment">//若未赋值，则为该类型的默认值。</span></span><br></pre></td></tr></table></figure>
+
+<p>数组的长度：<code>arrayRefVar.length</code>。</p>
+
+    </article>
+    <!-- license -->
     
-    <!-- paginator  -->
+    <!-- paginator -->
+    <ul class="post-paginator">
+        <li class="next">
+            
+        </li>
+        <li class="previous">
+            
+                <div class="prevSlogan">Previous Post</div>
+                <a href="/2022/12/26/%E6%96%B9%E6%B3%95/" title="方法">
+                    <div class="prevTitle">方法</div>
+                </a>
+            
+        </li>
+    </ul>
+    <!-- comment -->
+    
+        <div class="post-comment">
+            <!-- 来必力 City 版安装代码 -->
+
+
+            
+
+            
+
+            
+
+            <!-- utteranc评论 -->
+
+
+            <!-- partial('_partial/comment/changyan') -->
+            <!--PC版-->
+
+
+            
+            
+
+            
+
+        </div>
+    
+    <!-- timeliness note -->
+    <!-- idea from: https://hexo.fluid-dev.com/posts/hexo-injector/#%E6%96%87%E7%AB%A0%E6%97%B6%E6%95%88%E6%80%A7%E6%8F%90%E7%A4%BA -->
+    
+    <!-- Mathjax -->
     
 </main>
 
@@ -543,6 +630,23 @@
 
         </div>
         <!-- toc -->
+        
+            <div class="toc-wrapper toc-wrapper-loding" style=
+
+
+
+
+
+
+
+    top:50vh;
+
+>
+                <div class="toc-catalog">
+                    <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
+                </div>
+                <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E6%95%B0%E7%BB%84%E7%9A%84%E5%90%AB%E4%B9%89"><span class="toc-text">1. 数组的含义</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-%E6%95%B0%E7%BB%84%E7%9A%84%E5%A3%B0%E6%98%8E%E5%92%8C%E5%88%9B%E5%BB%BA"><span class="toc-text">1.1. 数组的声明和创建</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-%E6%95%B0%E7%BB%84%E5%85%83%E7%B4%A0%E7%9A%84%E8%AE%BF%E9%97%AE"><span class="toc-text">1.2. 数组元素的访问</span></a></li></ol></li></ol>
+            </div>
         
         <!-- sidebar -->
         <div class="sidebar sidebar-hide">
@@ -969,6 +1073,8 @@
         <!-- CNZZ -->
         
         <!-- async load share.js -->
+        
+            <script src="/scripts/share.js?v=20211217" async></script>
         
         <!-- mermaid -->
         
