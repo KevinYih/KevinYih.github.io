@@ -21,7 +21,7 @@
     <meta name="description" content="">
     <meta property="og:type" content="website">
 <meta property="og:title" content="Kevin&#39;s Space">
-<meta property="og:url" content="http://example.com/tags/java/index.html">
+<meta property="og:url" content="http://example.com/tags/Java/index.html">
 <meta property="og:site_name" content="Kevin&#39;s Space">
 <meta property="og:locale" content="en_US">
 <meta property="article:author" content="Kevin Y">
@@ -428,44 +428,287 @@
             
         
         <article class="index-post">
-            <a class="abstract-title" href="/2022/12/04/HelloWorld/">
+            <a class="abstract-title" href="/2022/12/26/%E6%96%B9%E6%B3%95/">
                 
-                <span class="abstract-title-text">HelloWorld!</span>
+                <span class="abstract-title-text">方法</span>
             </a>
             <div class="abstract-content">
-                1. 新建Java程序全流程
-新建一个存放代码的文件夹
+                1. 方法的含义方法 &#x3D; 功能 &#x3D; 函数 &#x3D; funtion
+1.1. Java的方法Java的方法是语句的集合，它们在一起执行一个功能。
 
-新建一个java文件
+方法是解决一类问题的步骤的有序组合。
+方法包含于类和对象中。
+方法在程序中被创建，在其他地方被引用。
 
-文件扩展名改为.java
-然后可用notepad++打开进行编写
+1.2. 方法设计的原则方法的本意是功能块，为实现某个功能的语句的集合。
+
+方法的原子性：一个方法只完成一个功能,这样有利于我们后期的扩展。
+
+方法的命名原则：首字母小写 + 驼峰规则。
+
+main方法尽可能简洁，干净。把公共模块都提取到main方法外面，通过方法调用的方式来实现功能。
 
 
-编写代码
-12345public class Hello&#123;	public static void main(String[] args)&#123;		System.out.print(&quot;hello, world!&quot;);			&#125;	&#125;
-
-编译javac Hello.java，生成class文件。
-
-
-
-class文件打破了C或者C++等语言所遵循的传统，使用这些传统语言写的程序通常首先被编译...
+1.3. 方法的定义Jav...
             </div>
             <!-- read more -->
             
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2022/12/26">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/12/04</span>
+                <div class="abstract-date" title="Last updated: 2022/12/29">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/12/26</span>
                 </div>
                 <!-- tags -->
                 
                     <div class= abstract-tags >
     
     
-        <a class="post-tag" href="javascript:void(0);" data-tags="Notepad++">Notepad++</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags="Java">Java</a>
     
-        <a class="post-tag" href="javascript:void(0);" data-tags="java">java</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags="variable">variable</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="constant">constant</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
+            <a class="abstract-title" href="/2022/12/11/Java%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/">
+                
+                <span class="abstract-title-text">Java流程控制</span>
+            </a>
+            <div class="abstract-content">
+                1. Scanner对象通过java.util.Scanner类获取用户的输入，实现程序和人的交互。
+
+调用java公用类。放在package申明之后。
+1import java.util.scanner
+
+创建一个s (scanner)，用于接收键盘数据。
+1Scanner s = new Scanner(System.in);
+
+在读取前，一般需使用 hasNext() 与 hasNextLine() 方法判断是否还有非空字符的输入。
+
+hasNext() 
+
+一定要读取到有效字符后才可以结束输入。
+对输入有效字符之前遇到的空格，hasNext()方法会自动将其去掉。
+只有输入有效字...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2022/12/29">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/12/11</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Java">Java</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="scanner">scanner</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="sequential structure">sequential structure</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="selective structure">selective structure</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="cycle structure">cycle structure</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="break">break</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="continue">continue</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="switch">switch</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
+            <a class="abstract-title" href="/2022/12/10/%E8%BF%90%E7%AE%97%E7%AC%A6/">
+                
+                <span class="abstract-title-text">运算符</span>
+            </a>
+            <div class="abstract-content">
+                1. 基本运算符
+算术运算符：+，-，*，/，%，++，--
+
+b = ++a，b = --a ：先a自增减1，再把a增减后的值赋给b；
+
+b = a++，b = a-- ：先把a的原值赋给b，再a自增减1；
+
+不能写成：a = a++或者 a = ++a，应直接写为a++或者++a；
+
+String类型右侧的 + 就是字符串连接符，并将右侧所有 + 两侧的变量进行String连接。
+1234int a = 10;int b = 20;System.out.println(a + b + &quot;&quot; + a + a * b + b); //将String右边的a，a*b和b...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2022/12/29">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/12/10</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Java">Java</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="operator">operator</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
+            <a class="abstract-title" href="/2022/12/09/%E5%8F%98%E9%87%8F%E3%80%81%E5%B8%B8%E9%87%8F%E5%92%8C%E4%BD%9C%E7%94%A8%E5%9F%9F/">
+                
+                <span class="abstract-title-text">变量、常量和作用域</span>
+            </a>
+            <div class="abstract-content">
+                1. 变量1.1. 变量命名规则
+所有变量、方法、类名，见名知义；
+
+类成员变量，局部变量，首字母小写和驼峰原则（首字母外单词首字母均大写）；
+例如：monthSalaryBonus；
+
+方法，首字母小写和驼峰原则。runDance()，putInFridge()，main()；
+
+常量，全部大写，单词间加_；例如：MONTH_SALARY；
+
+类，首字母大写和驼峰原则；例如：GoodMen，BadMen；
+
+
+1.2. 类变量，实例变量和局部变量，以及作用域1234567891011121314151617181920212223242526public class Demo08 &#...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2022/12/26">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/12/09</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Java">Java</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="variable">variable</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="constant">constant</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
+            <a class="abstract-title" href="/2022/12/06/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">
+                
+                <span class="abstract-title-text">数据类型</span>
+            </a>
+            <div class="abstract-content">
+                1. 基本数据类型（primitive type）123456789101112131415161718192021222324//整型byte num1 = 10;   //1个字节，范围-128~127short num2 = 20;  //2个字节int num3 = 30;  //4个字节；int 的范围大概在 -21亿~21亿，                 //二进制的表示，在数字前加0b；                //八进制的表示，在数字前加0；                //十六进制的表示，在数字前0x；long num4 = 40L;  //8个字节；用lo...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2022/12/24">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/12/06</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Java">Java</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
+            <a class="abstract-title" href="/2022/12/01/%E5%AE%89%E8%A3%85Java%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/">
+                
+                <span class="abstract-title-text">安装Java开发环境</span>
+            </a>
+            <div class="abstract-content">
+                1. 什么是JDKJDK（Java Development Kit，  java开发工具包），是整个JAVA的核心，包括了Java运行环境（Java Runtime Envirnment），一堆Java工具（javac&#x2F;java&#x2F;jdb等）和java基础的类库（即Java API 包括rt.jar）和JVM交互的头文件（include）。也就是Java SE开发工具包，也就是说JDK是给开发人员准备的，而JRE这是给使用Java软件的用户准备的，当然，开发人员也可以使用JRE来测试程序。
+基本上每个学java的人都会先在机器上装一个JDK。在目录下面有六个文件夹、一个...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2022/12/26">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/12/01</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="environment variables">environment variables</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Java">Java</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="jdk">jdk</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="jre">jre</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="jvm">jvm</a>
     
 </div>
 
@@ -685,284 +928,6 @@ class文件打破了C或者C++等语言所遵循的传统，使用这些传统�
     </div>
     
     <div class="post-archive">
-    
-        
-            
-            
-            <div class="archive-year"> 2022 </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">12/26</span>
-            <a class="archive-post-title" href="/2022/12/26/%E6%96%B9%E6%B3%95/">方法</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">12/11</span>
-            <a class="archive-post-title" href="/2022/12/11/Java%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/">Java流程控制</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">12/10</span>
-            <a class="archive-post-title" href="/2022/12/10/%E8%BF%90%E7%AE%97%E7%AC%A6/">运算符</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">12/09</span>
-            <a class="archive-post-title" href="/2022/12/09/%E5%8F%98%E9%87%8F%E3%80%81%E5%B8%B8%E9%87%8F%E5%92%8C%E4%BD%9C%E7%94%A8%E5%9F%9F/">变量、常量和作用域</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">12/06</span>
-            <a class="archive-post-title" href="/2022/12/06/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">数据类型</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">12/05</span>
-            <a class="archive-post-title" href="/2022/12/05/IDEA%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/">IDEA使用指南</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">12/04</span>
-            <a class="archive-post-title" href="/2022/12/04/HelloWorld/">HelloWorld!</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">12/01</span>
-            <a class="archive-post-title" href="/2022/12/01/%E5%AE%89%E8%A3%85Java%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/">安装Java开发环境</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/30</span>
-            <a class="archive-post-title" href="/2022/11/30/Dos%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C/">DOS常用操作</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/30</span>
-            <a class="archive-post-title" href="/2022/11/30/Blog/">Blog</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/29</span>
-            <a class="archive-post-title" href="/2022/11/29/hello-world/">Hello World</a>
-        </li>
-    
-    </div>
-</div>
-
-        <div class="sidebar-panel-tags">
-    <div class="sidebar-tags-name">
-        
-            <span class="sidebar-tag-name" data-tags="Blog">
-                <span class="iconfont-archer">&#xe606;</span>
-                Blog
-            </span>
-        
-            <span class="sidebar-tag-name" data-tags="Hexo">
-                <span class="iconfont-archer">&#xe606;</span>
-                Hexo
-            </span>
-        
-            <span class="sidebar-tag-name" data-tags="Github">
-                <span class="iconfont-archer">&#xe606;</span>
-                Github
-            </span>
-        
-            <span class="sidebar-tag-name" data-tags="Git">
-                <span class="iconfont-archer">&#xe606;</span>
-                Git
-            </span>
-        
-            <span class="sidebar-tag-name" data-tags="Notepad++">
-                <span class="iconfont-archer">&#xe606;</span>
-                Notepad++
-            </span>
-        
-            <span class="sidebar-tag-name" data-tags="DOS">
-                <span class="iconfont-archer">&#xe606;</span>
-                DOS
-            </span>
-        
-            <span class="sidebar-tag-name" data-tags="CMD">
-                <span class="iconfont-archer">&#xe606;</span>
-                CMD
-            </span>
-        
-            <span class="sidebar-tag-name" data-tags="environment variables">
-                <span class="iconfont-archer">&#xe606;</span>
-                environment variables
-            </span>
-        
-            <span class="sidebar-tag-name" data-tags="java">
-                <span class="iconfont-archer">&#xe606;</span>
-                java
-            </span>
-        
-            <span class="sidebar-tag-name" data-tags="Java">
-                <span class="iconfont-archer">&#xe606;</span>
-                Java
-            </span>
-        
-            <span class="sidebar-tag-name" data-tags="scanner">
-                <span class="iconfont-archer">&#xe606;</span>
-                scanner
-            </span>
-        
-            <span class="sidebar-tag-name" data-tags="sequential structure">
-                <span class="iconfont-archer">&#xe606;</span>
-                sequential structure
-            </span>
-        
-            <span class="sidebar-tag-name" data-tags="selective structure">
-                <span class="iconfont-archer">&#xe606;</span>
-                selective structure
-            </span>
-        
-            <span class="sidebar-tag-name" data-tags="cycle structure">
-                <span class="iconfont-archer">&#xe606;</span>
-                cycle structure
-            </span>
-        
-            <span class="sidebar-tag-name" data-tags="break">
-                <span class="iconfont-archer">&#xe606;</span>
-                break
-            </span>
-        
-            <span class="sidebar-tag-name" data-tags="continue">
-                <span class="iconfont-archer">&#xe606;</span>
-                continue
-            </span>
-        
-            <span class="sidebar-tag-name" data-tags="IDEA">
-                <span class="iconfont-archer">&#xe606;</span>
-                IDEA
-            </span>
-        
-            <span class="sidebar-tag-name" data-tags="project">
-                <span class="iconfont-archer">&#xe606;</span>
-                project
-            </span>
-        
-            <span class="sidebar-tag-name" data-tags="module">
-                <span class="iconfont-archer">&#xe606;</span>
-                module
-            </span>
-        
-            <span class="sidebar-tag-name" data-tags="package">
-                <span class="iconfont-archer">&#xe606;</span>
-                package
-            </span>
-        
-            <span class="sidebar-tag-name" data-tags="class">
-                <span class="iconfont-archer">&#xe606;</span>
-                class
-            </span>
-        
-            <span class="sidebar-tag-name" data-tags="variable">
-                <span class="iconfont-archer">&#xe606;</span>
-                variable
-            </span>
-        
-            <span class="sidebar-tag-name" data-tags="constant">
-                <span class="iconfont-archer">&#xe606;</span>
-                constant
-            </span>
-        
-            <span class="sidebar-tag-name" data-tags="jdk">
-                <span class="iconfont-archer">&#xe606;</span>
-                jdk
-            </span>
-        
-            <span class="sidebar-tag-name" data-tags="jre">
-                <span class="iconfont-archer">&#xe606;</span>
-                jre
-            </span>
-        
-            <span class="sidebar-tag-name" data-tags="jvm">
-                <span class="iconfont-archer">&#xe606;</span>
-                jvm
-            </span>
-        
-            <span class="sidebar-tag-name" data-tags="operator">
-                <span class="iconfont-archer">&#xe606;</span>
-                operator
-            </span>
-        
-            <span class="sidebar-tag-name" data-tags="switch">
-                <span class="iconfont-archer">&#xe606;</span>
-                switch
-            </span>
-        
-    </div>
-    <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>
-    <div class="tag-load-fail" style="display: none; color: #ccc; font-size: 0.6rem;">
-        缺失模块，请参考主题文档进行安装配置：https://github.com/fi3ework/hexo-theme-archer#%E5%AE%89%E8%A3%85%E4%B8%BB%E9%A2%98
-    </div> 
-    <div class="sidebar-tags-list"></div>
-</div>
-
-        <div class="sidebar-panel-categories">
-    <div class="sidebar-categories-name">
-    
-        <span class="sidebar-category-name" data-categories="Technology">
-            <span class="iconfont-archer">&#xe60a;</span>
-            Technology
-        </span>
-    
-    </div>
-    <div class="iconfont-archer sidebar-categories-empty">&#xe678;</div>
-    <div class="sidebar-categories-list"></div>
-</div>
-
-    </div>
-</div>
-
-        <!-- site-meta -->
-        <script>
-    var siteMetaRoot = "/"
-    if (siteMetaRoot === "undefined") {
-        siteMetaRoot = '/'
-    }
-    var siteMeta = {
-        url: "http://example.com",
-        root: siteMetaRoot,
-        author: "Kevin Y"
-    }
-</script>
-
-        <!-- import experimental options here -->
-        <!-- Custom Font -->
-
-
-        <!-- main func -->
-        <script src="/scripts/main.js?v=20211217"></script>
-        <!-- dark mode -->
-        <script src="/scripts/dark.js?v=20211217"></script>
-        <!-- fancybox -->
-        <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" defer></script>
-        <!-- algolia -->
-        
-        <!-- busuanzi -->
-        
-        <!-- CNZZ -->
-        
-        <!-- async load share.js -->
-        
-        <!-- mermaid -->
-        
-    </body>
-</html>
     
         
             
