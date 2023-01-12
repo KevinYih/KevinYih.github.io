@@ -1,0 +1,1460 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- title -->
+
+
+    
+
+<!-- keywords -->
+
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="author" content="Kevin Y">
+    <meta name="renderer" content="webkit">
+    <meta name="copyright" content="Kevin Y">
+    
+        <meta name="keywords" content="hexo,hexo-theme,hexo-blog">
+    
+    <meta name="description" content="">
+    <meta name="description" content="1. 数组的定义数组：相同类型的数据的有序集合。 数组元素：数组中的每个数据。 1.1. 数组的声明和创建12345678&#x2F;&#x2F;首选方式dataType[] arrayRefVar &#x3D; new dataType[arraySize];  &#x2F;&#x2F;次选方式，不推荐。属于C和C++习惯写法。dataType arrayRefVar[] &#x3D; new dataType[arraySize];  int[] nu">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数组">
+<meta property="og:url" content="http://example.com/2022/12/29/%E6%95%B0%E7%BB%84/index.html">
+<meta property="og:site_name" content="Kevin&#39;s Space">
+<meta property="og:description" content="1. 数组的定义数组：相同类型的数据的有序集合。 数组元素：数组中的每个数据。 1.1. 数组的声明和创建12345678&#x2F;&#x2F;首选方式dataType[] arrayRefVar &#x3D; new dataType[arraySize];  &#x2F;&#x2F;次选方式，不推荐。属于C和C++习惯写法。dataType arrayRefVar[] &#x3D; new dataType[arraySize];  int[] nu">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-12-29T14:40:33.000Z">
+<meta property="article:modified_time" content="2022-12-31T03:50:47.763Z">
+<meta property="article:author" content="Kevin Y">
+<meta property="article:tag" content="Java">
+<meta property="article:tag" content="new">
+<meta property="article:tag" content="stack">
+<meta property="article:tag" content="heap">
+<meta property="article:tag" content="array">
+<meta property="article:tag" content="register">
+<meta name="twitter:card" content="summary">
+    <meta http-equiv="Cache-control" content="no-cache">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="icon" href="/assets/favicon.ico">
+    
+    <title>数组 · Kevin&#39;s Studio</title>
+    <!-- /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
+/* This file is meant as a standalone workflow for
+- testing support for link[rel=preload]
+- enabling async CSS loading in browsers that do not support rel=preload
+- applying rel preload css once loaded, whether supported or not.
+*/ -->
+<script>
+    (function (w) {
+        'use strict'
+        // rel=preload support test
+        if (!w.loadCSS) {
+            w.loadCSS = function () {}
+        }
+        // define on the loadCSS obj
+        var rp = (loadCSS.relpreload = {})
+        // rel=preload feature support test
+        // runs once and returns a function for compat purposes
+        rp.support = (function () {
+            var ret
+            try {
+                ret = w.document.createElement('link').relList.supports('preload')
+            } catch (e) {
+                ret = false
+            }
+            return function () {
+                return ret
+            }
+        })()
+
+        // if preload isn't supported, get an asynchronous load by using a non-matching media attribute
+        // then change that media back to its intended value on load
+        rp.bindMediaToggle = function (link) {
+            // remember existing media attr for ultimate state, or default to 'all'
+            var finalMedia = link.media || 'all'
+
+            function enableStylesheet() {
+                link.media = finalMedia
+            }
+
+            // bind load handlers to enable media
+            if (link.addEventListener) {
+                link.addEventListener('load', enableStylesheet)
+            } else if (link.attachEvent) {
+                link.attachEvent('onload', enableStylesheet)
+            }
+
+            // Set rel and non-applicable media type to start an async request
+            // note: timeout allows this to happen async to let rendering continue in IE
+            setTimeout(function () {
+                link.rel = 'stylesheet'
+                link.media = 'only x'
+            })
+            // also enable media after 3 seconds,
+            // which will catch very old browsers (android 2.x, old firefox) that don't support onload on link
+            setTimeout(enableStylesheet, 3000)
+        }
+
+        // loop through link elements in DOM
+        rp.poly = function () {
+            // double check this to prevent external calls from running
+            if (rp.support()) {
+                return
+            }
+            var links = w.document.getElementsByTagName('link')
+            for (var i = 0; i < links.length; i++) {
+                var link = links[i]
+                // qualify links to those with rel=preload and as=style attrs
+                if (
+                    link.rel === 'preload' &&
+                    link.getAttribute('as') === 'style' &&
+                    !link.getAttribute('data-loadcss')
+                ) {
+                    // prevent rerunning on link
+                    link.setAttribute('data-loadcss', true)
+                    // bind listeners to toggle media back
+                    rp.bindMediaToggle(link)
+                }
+            }
+        }
+
+        // if unsupported, run the polyfill
+        if (!rp.support()) {
+            // run once at least
+            rp.poly()
+
+            // rerun poly on an interval until onload
+            var run = w.setInterval(rp.poly, 500)
+            if (w.addEventListener) {
+                w.addEventListener('load', function () {
+                    rp.poly()
+                    w.clearInterval(run)
+                })
+            } else if (w.attachEvent) {
+                w.attachEvent('onload', function () {
+                    rp.poly()
+                    w.clearInterval(run)
+                })
+            }
+        }
+
+        // commonjs
+        if (typeof exports !== 'undefined') {
+            exports.loadCSS = loadCSS
+        } else {
+            w.loadCSS = loadCSS
+        }
+    })(typeof global !== 'undefined' ? global : this)
+</script>
+
+    <style type="text/css">
+    @font-face {
+        font-family: 'Oswald-Regular';
+        src: url("/font/Oswald-Regular.ttf");
+    }
+
+    body {
+        margin: 0;
+    }
+
+    header,
+    footer,
+    .back-top,
+    .sidebar,
+    .container,
+    .site-intro-meta,
+    .toc-wrapper {
+        display: none;
+    }
+
+    .site-intro {
+        position: relative;
+        z-index: 3;
+        width: 100%;
+        /* height: 50vh; */
+        overflow: hidden;
+    }
+
+    .site-intro-placeholder {
+        position: absolute;
+        z-index: -2;
+        top: 0;
+        left: 0;
+        width: calc(100% + 300px);
+        height: 100%;
+        background: repeating-linear-gradient(-45deg, #444 0, #444 80px, #333 80px, #333 160px);
+        background-position: center center;
+        transform: translate3d(-226px, 0, 0);
+        animation: gradient-move 2.5s ease-out 0s infinite;
+    }
+
+    @keyframes gradient-move {
+        0% {
+            transform: translate3d(-226px, 0, 0);
+        }
+        100% {
+            transform: translate3d(0, 0, 0);
+        }
+    }
+</style>
+
+    <link rel="preload" href="/css/style.css?v=20211217" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="/css/dark.css?v=20211217" as="style">
+    <link rel="stylesheet" href="/css/dark.css">
+    <link rel="stylesheet" href="/css/mobile.css?v=20211217" media="(max-width: 960px)">
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" as="script">
+    <link rel="preload" href="/scripts/main.js?v=20211217" as="script">
+    <link rel="preload" href="/scripts/dark.js?v=20211217" as="script">
+    <link rel="preload" href="/font/Oswald-Regular.ttf" as="font" crossorigin>
+    <link rel="preload" href="https://at.alicdn.com/t/font_327081_1dta1rlogw17zaor.woff" as="font" crossorigin>
+    <!-- algolia -->
+    
+    <!-- 百度统计  -->
+    
+    <!-- 谷歌统计  -->
+    
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <script type="text/javascript">
+        if (typeof window.$ == undefined) {
+            console.warn('jquery load from jsdelivr failed, will load local script')
+            document.write('<script src="/lib/jquery.min.js" />')
+        }
+    </script>
+    
+        <body class="post-body">
+    
+        <!-- header -->
+        <header class="header header-mobile">
+    <!-- top read progress line -->
+    <div class="header-element">
+        <div class="read-progress"></div>
+    </div>
+    <!-- sidebar menu button -->
+    <div class="header-element">
+        
+            <div class="header-sidebar-menu">
+        
+            
+                <div style="padding-left: 1px;">&#xe775;</div>
+            
+        </div>
+    </div>
+    <!-- header actions -->
+    <div class="header-actions">
+        <!-- theme mode switch button -->
+        <span class="header-theme-btn header-element">
+            <i class="fas fa-adjust"></i>
+        </span>
+        <!-- back to home page text -->
+        <span class="home-link header-element">
+            <a href=/>Kevin's Studio.</a>
+        </span>
+    </div>
+    <!-- toggle banner for post layout -->
+    
+        
+            <div class="banner">
+        
+            <div class="blog-title header-element">
+                <a href="/">Kevin&#39;s Studio.</a>
+            </div>
+            <div class="post-title header-element">
+                <a href="#" class="post-name">数组</a>
+            </div>
+        </div>
+    
+</header>
+
+        <!-- fixed footer -->
+        <footer class="footer-fixed">
+    <!-- back to top button -->
+    <div class="footer-fixed-element">
+        
+            <div class="back-top back-top-hidden">
+        
+        
+            <div>&#xe639;</div>
+        
+        </div>
+    </div>
+</footer>
+
+        <!-- wrapper -->
+        <div class="wrapper">
+            <div class="site-intro" style="
+
+
+
+
+
+
+
+    height:50vh;
+
+">
+    
+    <!-- 主页  -->
+    
+        
+    <!-- 404页  -->
+            
+    <div class="site-intro-placeholder"></div>
+    <div class="site-intro-img" style="background-image: url(/intro/post-bg.jpg)"></div>
+    <div class="site-intro-meta">
+        <!-- 标题  -->
+        <h1 class="intro-title">
+            <!-- 主页  -->
+            
+                数组
+            <!-- 404 -->
+            
+        </h1>
+        <!-- 副标题 -->
+        <p class="intro-subtitle">
+            <!-- 主页副标题  -->
+            
+                
+            <!-- 404 -->
+            
+        </p>
+        <!-- 文章页 meta -->
+        
+            <div class="post-intros">
+                <!-- 文章页标签  -->
+                
+                    <div class= post-intro-tags >
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Java">Java</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="new">new</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="stack">stack</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="heap">heap</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="array">array</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="register">register</a>
+    
+</div>
+
+                
+                
+                    <div class="post-intro-read">
+                        <span>Word count: <span class="post-count word-count">1.6k</span>Reading time: <span class="post-count reading-time">5 min</span></span>
+                    </div>
+                
+                <div class="post-intro-meta">
+                    <!-- 撰写日期 -->
+                    <span class="iconfont-archer post-intro-calander">&#xe676;</span>
+                    <span class="post-intro-time">2022/12/29</span>
+                    <!-- busuanzi -->
+                    
+                    <!-- 文章分享 -->
+                    <span class="share-wrapper">
+                        <span class="iconfont-archer share-icon">&#xe71d;</span>
+                        <span class="share-text">Share</span>
+                        <ul class="share-list">
+                            <li class="iconfont-archer share-qr" data-type="qr">&#xe75b;
+                                <div class="share-qrcode"></div>
+                            </li>
+                            <li class="iconfont-archer" data-type="weibo">&#xe619;</li>
+                            <li class="iconfont-archer" data-type="qzone">&#xe62e;</li>
+                            <li class="iconfont-archer" data-type="twitter">&#xe634;</li>
+                            <li class="iconfont-archer" data-type="facebook">&#xe67a;</li>
+                        </ul>
+                    </span>
+                </div>
+            </div>
+        
+    </div>
+</div>
+
+            <script>
+  // get user agent
+  function getBrowserVersions() {
+    var u = window.navigator.userAgent
+    return {
+      userAgent: u,
+      trident: u.indexOf('Trident') > -1, //IE内核
+      presto: u.indexOf('Presto') > -1, //opera内核
+      webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
+      gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //火狐内核
+      mobile: !!u.match(/AppleWebKit.*Mobile.*/), //是否为移动终端
+      ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
+      android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或者uc浏览器
+      iPhone: u.indexOf('iPhone') > -1 || u.indexOf('Mac') > -1, //是否为iPhone或者安卓QQ浏览器
+      iPad: u.indexOf('iPad') > -1, //是否为iPad
+      webApp: u.indexOf('Safari') == -1, //是否为web应用程序，没有头部与底部
+      weixin: u.indexOf('MicroMessenger') == -1, //是否为微信浏览器
+      uc: u.indexOf('UCBrowser') > -1, //是否为android下的UC浏览器
+    }
+  }
+  var browser = {
+    versions: getBrowserVersions(),
+  }
+  console.log('userAgent: ' + browser.versions.userAgent)
+
+  // callback
+  function fontLoaded() {
+    console.log('font loaded')
+    if (document.getElementsByClassName('site-intro-meta')) {
+      document
+        .getElementsByClassName('intro-title')[0]
+        .classList.add('intro-fade-in')
+      document
+        .getElementsByClassName('intro-subtitle')[0]
+        .classList.add('intro-fade-in')
+      var postIntros = document.getElementsByClassName('post-intros')[0]
+      if (postIntros) {
+        postIntros.classList.add('post-fade-in')
+      }
+    }
+  }
+
+  // UC不支持跨域，所以直接显示
+  function asyncCb() {
+    if (browser.versions.uc) {
+      console.log('UCBrowser')
+      fontLoaded()
+    } else {
+      WebFont.load({
+        custom: {
+          families: ['Oswald-Regular'],
+        },
+        loading: function () {
+          // 所有字体开始加载
+          // console.log('font loading');
+        },
+        active: function () {
+          // 所有字体已渲染
+          fontLoaded()
+        },
+        inactive: function () {
+          // 字体预加载失败，无效字体或浏览器不支持加载
+          console.log('inactive: timeout')
+          fontLoaded()
+        },
+        timeout: 5000, // Set the timeout to two seconds
+      })
+    }
+  }
+
+  function asyncErr() {
+    console.warn('script load from CDN failed, will load local script')
+  }
+
+  // load webfont-loader async, and add callback function
+  function async(u, cb, err) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0]
+    o.src = u
+    if (cb) {
+      o.addEventListener(
+        'load',
+        function (e) {
+          cb(null, e)
+        },
+        false
+      )
+    }
+    if (err) {
+      o.addEventListener(
+        'error',
+        function (e) {
+          err(null, e)
+        },
+        false
+      )
+    }
+    s.parentNode.insertBefore(o, s)
+  }
+
+  var asyncLoadWithFallBack = function (arr, success, reject) {
+    var currReject = function () {
+      reject()
+      arr.shift()
+      if (arr.length) async(arr[0], success, currReject)
+    }
+
+    async(arr[0], success, currReject)
+  }
+
+  asyncLoadWithFallBack(
+    [
+      'https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.min.js',
+      'https://cdn.bootcss.com/webfont/1.6.28/webfontloader.js',
+      "/lib/webfontloader.min.js",
+    ],
+    asyncCb,
+    asyncErr
+  )
+</script>
+
+            <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
+            <div class="container container-unloaded">
+                <main class="main post-page">
+    <article class="article-entry">
+        <h2 id="1-数组的定义"><a href="#1-数组的定义" class="headerlink" title="1. 数组的定义"></a>1. 数组的定义</h2><p>数组：<u>相同类型</u>的数据的<u>有序</u>集合。</p>
+<p>数组元素：数组中的每个数据。</p>
+<h3 id="1-1-数组的声明和创建"><a href="#1-1-数组的声明和创建" class="headerlink" title="1.1. 数组的声明和创建"></a>1.1. 数组的声明和创建</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//首选方式</span></span><br><span class="line">dataType[] arrayRefVar = <span class="keyword">new</span> <span class="title class_">dataType</span>[arraySize];  </span><br><span class="line"><span class="comment">//次选方式，不推荐。属于C和C++习惯写法。</span></span><br><span class="line">dataType arrayRefVar[] = <span class="keyword">new</span> <span class="title class_">dataType</span>[arraySize];  </span><br><span class="line"></span><br><span class="line"><span class="type">int</span>[] numbers = <span class="keyword">new</span> <span class="title class_">int</span>[<span class="number">9</span>]; <span class="comment">//存放了9个int类型元素的数组。</span></span><br><span class="line"><span class="comment">//int[] numbers            声明数组</span></span><br><span class="line"><span class="comment">//numbers = new int[9]     开辟内存空间，创建数组</span></span><br></pre></td></tr></table></figure>
+
+<p>Java的方法是语句的集合，它们在一起执行一个功能。</p>
+<ul>
+<li>方法是解决一类问题的步骤的有序组合。</li>
+<li>方法包含于类和对象中。</li>
+<li>方法在程序中被创建，在其他地方被引用。</li>
+</ul>
+<h3 id="1-2-数组元素的访问"><a href="#1-2-数组元素的访问" class="headerlink" title="1.2. 数组元素的访问"></a>1.2. 数组元素的访问</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">arrayRefVar[<span class="number">0</span>] = <span class="number">2</span>;  <span class="comment">//第1个元素，数组是从0开始索引。</span></span><br><span class="line">arrayRefVar[<span class="number">1</span>] = <span class="number">5</span>;  <span class="comment">//第2个元素，数组是从0开始索引。</span></span><br><span class="line">                     <span class="comment">//若未赋值，则为该类型的默认值。</span></span><br></pre></td></tr></table></figure>
+
+<p>数组的长度：<code>arrayRefVar.length</code>。</p>
+<h2 id="2-内存分析"><a href="#2-内存分析" class="headerlink" title="2. 内存分析"></a>2. 内存分析</h2><p>JAVA在程序运行时，在内存中划分5片空间进行数据的存储。</p>
+<p>分别是：寄存器(Register)；本地方法区(Native Method Stacks)；方法区(Method Area)；栈(Java Stack)；堆(Java Heap)。</p>
+<h3 id="2-1-寄存器-Register"><a href="#2-1-寄存器-Register" class="headerlink" title="2.1. 寄存器(Register)"></a>2.1. 寄存器(Register)</h3><p>位于处理器内部，最快的存取区。</p>
+<p>这是最快的存储区，因为它位于不同于其他存储区的地方——处理器内部。但是寄存器的数量极其有限，所以寄存器由编译器根据需求进行分配。你不能直接控制，也不能在程序中感觉到寄存器存在的任何迹象。</p>
+<h3 id="2-2-本地方法区-Native-Method-Stacks"><a href="#2-2-本地方法区-Native-Method-Stacks" class="headerlink" title="2.2. 本地方法区(Native Method Stacks)"></a>2.2. 本地方法区(Native Method Stacks)</h3><p>Java官方对于本地方法的定义为methods written in a language other than the Java programming language，就是使用非Java语言实现的方法，但是通常我们指的一般为C或者C++，因此这个栈也有着C栈这一称号。一个不支持本地方法执行的JVM没有必要实现这个数据区域。本地方法栈基本和JVM栈一样，其大小也是可以设置为固定值或者动态增加，因此也会对应抛出StackOverflowError和OutOfMemoryError错误。</p>
+<h3 id="2-3-方法区-Method-Area"><a href="#2-3-方法区-Method-Area" class="headerlink" title="2.3. 方法区(Method Area)"></a>2.3. 方法区(Method Area)</h3><p><strong>可以看做是将类（Class）的元数据，保存在方法区里</strong>；方法区中保存着被加载过的每一个类的信息：类型信息、类型的常量池 (即运行时常量池)、字段信息、方法信息、类变量(即static变量）、对类加载器的引用、对Class类的引用、方法表。</p>
+<p>运行原理：为了运行某程序，首先会将类名传给了jvm。有了这个名字，jvm找到了这个类文件并读入，它从类文件提取了类型信息并放在了方法区中，通过解析存在方法区中的字节码，jvm激活了main()方法，在执行时，jvm保持了一个指向当前类常量池的指针。</p>
+<ul>
+<li><p>方法区是线程共享的；当有多个线程都用到一个类的时候，而这个类还未被加载，则应该只有一个线程去加载类，让其他线程等待；</p>
+</li>
+<li><p>方法区的大小不必是固定的，jvm可以根据应用的需要动态调整。jvm也可以允许用户和程序指定方法区的初始大小，最小和最大限制；</p>
+</li>
+<li><p>方法区同样存在垃圾收集，因为通过用户定义的类加载器可以动态扩展Java程序，这样可能会导致一些类，不再被使用，变为垃圾。这时候需要进行垃圾清理。</p>
+</li>
+<li><p>根据jvm规范的规定，当方法区无法满足内存分配需求时，将抛出OutOfMemoryError异常。</p>
+</li>
+</ul>
+<p>　 </p>
+<h3 id="2-4-栈-Java-Stack"><a href="#2-4-栈-Java-Stack" class="headerlink" title="2.4. 栈(Java Stack)"></a>2.4. 栈(Java Stack)</h3><p>位于RAM中，这是一种快速有效的分配存储方法，仅次于寄存器，对象引用存储在栈中创建程序时候，JAVA编译器必须知道存储在堆栈内所有数据的确切大小和生命周期，因为它必须生成相应的代码，以便上下移动堆栈指针。</p>
+<h3 id="2-5-堆-Java-Heap"><a href="#2-5-堆-Java-Heap" class="headerlink" title="2.5. 堆(Java Heap)"></a>2.5. 堆(Java Heap)</h3><p>位于RAM中，存放所有new出来的java对象。</p>
+<p>堆不同于栈的好处是：编译器不需要知道要从堆里分配多少存储区域，也不必知道存储的数据在堆里存活多长时间，用堆进行存储分配比用堆栈进行存储存储需要更多的时间。</p>
+<ul>
+<li><p>栈内存存储的是局部变量而堆内存存储的是实体；</p>
+</li>
+<li><p>栈内存的更新速度要快于堆内存，因为局部变量的生命周期很短；</p>
+</li>
+<li><p>栈内存存放的变量生命周期一旦结束就会被释放，而堆内存存放的实体会被垃圾回收机制不定时的回收。</p>
+</li>
+</ul>
+<h2 id="3-数组的初始化"><a href="#3-数组的初始化" class="headerlink" title="3. 数组的初始化"></a>3. 数组的初始化</h2><h3 id="3-1-静态初始化"><a href="#3-1-静态初始化" class="headerlink" title="3.1. 静态初始化"></a>3.1. 静态初始化</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span>[] a = &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>&#125;;</span><br><span class="line">Man[] men = &#123;<span class="keyword">new</span> <span class="title class_">Man</span>(<span class="number">1</span>,<span class="number">1</span>), Man(<span class="number">2</span>,<span class="number">2</span>)&#125;</span><br></pre></td></tr></table></figure>
+
+<p>创建和赋值，一并完成。</p>
+<h3 id="3-2-动态初始化"><a href="#3-2-动态初始化" class="headerlink" title="3.2. 动态初始化"></a>3.2. 动态初始化</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span>[] b = <span class="keyword">new</span> <span class="title class_">int</span>[<span class="number">10</span>];</span><br><span class="line">b[<span class="number">0</span>] = <span class="number">10</span>;</span><br><span class="line">b[<span class="number">3</span>] = <span class="number">20</span>;</span><br></pre></td></tr></table></figure>
+
+<p>分配了空间，但是所有数组元素的值都是默认值，需后期赋值。</p>
+<h3 id="3-3-数组的默认初始化"><a href="#3-3-数组的默认初始化" class="headerlink" title="3.3. 数组的默认初始化"></a>3.3. 数组的默认初始化</h3><p>数组也是引用类型（除了8大基本数据类型，其他都是引用类型），他的元素相当于类的实例变量。因此数组一经分配空间，其中的每个元素也被按照实例变量同样的方式被隐式初始化。</p>
+<h3 id="3-4-数组的四个基本特点"><a href="#3-4-数组的四个基本特点" class="headerlink" title="3.4. 数组的四个基本特点"></a>3.4. 数组的四个基本特点</h3><ul>
+<li><p>数组a一旦被创建，长度不可被改变。</p>
+<ul>
+<li>下标的合法区间：[0, a.length-1]</li>
+<li>数组下标越界异常：ArrayIndexOutOfBoundsException</li>
+</ul>
+</li>
+<li><p>数组元素类型必须相同，不允许出现混合类型。</p>
+</li>
+<li><p>数组元素可以是任何数据类型，包括8种基本类型，以及引用类型。</p>
+</li>
+<li><p>数组也是引用类型（除了8大基本数据类型，其他都是引用类型）。数组也可看成是一个对象，<u>数组元素相当于该对象的成员变量</u>。因为Java中的对象是在堆(Java Heap)中的，因此数组无论保存原始类型还是其他对象类型，<u>数组对象都是在堆(Java Heap)中的</u>。（new出来的对象，都是在堆中。）</p>
+</li>
+</ul>
+
+    </article>
+    <!-- license -->
+    
+    <!-- paginator -->
+    <ul class="post-paginator">
+        <li class="next">
+            
+                <div class="nextSlogan">Next Post</div>
+                <a href="/2022/12/30/String%E7%9A%84%E5%88%9B%E5%BB%BA%E9%99%B7%E9%98%B1/" title="String的创建陷阱">
+                    <div class="nextTitle">String的创建陷阱</div>
+                </a>
+            
+        </li>
+        <li class="previous">
+            
+                <div class="prevSlogan">Previous Post</div>
+                <a href="/2022/12/26/%E6%96%B9%E6%B3%95/" title="方法">
+                    <div class="prevTitle">方法</div>
+                </a>
+            
+        </li>
+    </ul>
+    <!-- comment -->
+    
+        <div class="post-comment">
+            <!-- 来必力 City 版安装代码 -->
+
+
+            
+
+            
+
+            
+
+            <!-- utteranc评论 -->
+
+
+            <!-- partial('_partial/comment/changyan') -->
+            <!--PC版-->
+
+
+            
+            
+
+            
+
+        </div>
+    
+    <!-- timeliness note -->
+    <!-- idea from: https://hexo.fluid-dev.com/posts/hexo-injector/#%E6%96%87%E7%AB%A0%E6%97%B6%E6%95%88%E6%80%A7%E6%8F%90%E7%A4%BA -->
+    
+    <!-- Mathjax -->
+    
+</main>
+
+                <!-- profile -->
+                
+            </div>
+            <footer class="footer footer-unloaded">
+    <!-- social  -->
+    
+        <div class="social">
+            
+    
+        
+            
+                <a href="mailto:12345@qq.com" class="iconfont-archer email" title=email ></a>
+            
+        
+    
+        
+            
+                <a href="//github.com/KevinY" class="iconfont-archer github" target="_blank" title=github></a>
+            
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+
+        </div>
+    
+    <!-- powered by Hexo  -->
+    <div class="copyright">
+        <span id="hexo-power">Powered by <a href="https://hexo.io/" target="_blank">Hexo</a></span>
+		<!--  <span class="iconfont-archer power">&#xe635;</span><span id="theme-info">theme <a href="https://github.com/fi3ework/hexo-theme-archer" target="_blank">Archer</a></span>   -->
+    </div>
+    <!-- website approve for Chinese user -->
+    
+    <!-- 不蒜子  -->
+    	
+</footer>
+
+        </div>
+        <!-- toc -->
+        
+            <div class="toc-wrapper toc-wrapper-loding" style=
+
+
+
+
+
+
+
+    top:50vh;
+
+>
+                <div class="toc-catalog">
+                    <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
+                </div>
+                <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E6%95%B0%E7%BB%84%E7%9A%84%E5%AE%9A%E4%B9%89"><span class="toc-text">1. 数组的定义</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-%E6%95%B0%E7%BB%84%E7%9A%84%E5%A3%B0%E6%98%8E%E5%92%8C%E5%88%9B%E5%BB%BA"><span class="toc-text">1.1. 数组的声明和创建</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-%E6%95%B0%E7%BB%84%E5%85%83%E7%B4%A0%E7%9A%84%E8%AE%BF%E9%97%AE"><span class="toc-text">1.2. 数组元素的访问</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%86%85%E5%AD%98%E5%88%86%E6%9E%90"><span class="toc-text">2. 内存分析</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-%E5%AF%84%E5%AD%98%E5%99%A8-Register"><span class="toc-text">2.1. 寄存器(Register)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-%E6%9C%AC%E5%9C%B0%E6%96%B9%E6%B3%95%E5%8C%BA-Native-Method-Stacks"><span class="toc-text">2.2. 本地方法区(Native Method Stacks)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-%E6%96%B9%E6%B3%95%E5%8C%BA-Method-Area"><span class="toc-text">2.3. 方法区(Method Area)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-4-%E6%A0%88-Java-Stack"><span class="toc-text">2.4. 栈(Java Stack)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-5-%E5%A0%86-Java-Heap"><span class="toc-text">2.5. 堆(Java Heap)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E6%95%B0%E7%BB%84%E7%9A%84%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="toc-text">3. 数组的初始化</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-%E9%9D%99%E6%80%81%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="toc-text">3.1. 静态初始化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-%E5%8A%A8%E6%80%81%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="toc-text">3.2. 动态初始化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-%E6%95%B0%E7%BB%84%E7%9A%84%E9%BB%98%E8%AE%A4%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="toc-text">3.3. 数组的默认初始化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-4-%E6%95%B0%E7%BB%84%E7%9A%84%E5%9B%9B%E4%B8%AA%E5%9F%BA%E6%9C%AC%E7%89%B9%E7%82%B9"><span class="toc-text">3.4. 数组的四个基本特点</span></a></li></ol></li></ol>
+            </div>
+        
+        <!-- sidebar -->
+        <div class="sidebar sidebar-hide">
+    <ul class="sidebar-tabs sidebar-tabs-active-0">
+        <li class="sidebar-tab-archives"><span class="iconfont-archer">&#xe67d;</span><span class="tab-name">Archive</span></li>
+        <li class="sidebar-tab-tags"><span class="iconfont-archer">&#xe61b;</span><span class="tab-name">Tag</span></li>
+        <li class="sidebar-tab-categories"><span class="iconfont-archer">&#xe666;</span><span class="tab-name">Cate</span></li>
+    </ul>
+    <div class="sidebar-content sidebar-content-show-archive">
+        <div class="sidebar-panel-archives">
+    <!-- 在 ejs 中将 archive 按照时间排序 -->
+    
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+    
+    
+    
+    <div class="total-and-search">
+        <div class="total-archive">
+        Total : 21
+        </div>
+        <!-- search  -->
+        
+    </div>
+    
+    <div class="post-archive">
+    
+        
+            
+            
+            <div class="archive-year"> 2023 </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">01/12</span>
+            <a class="archive-post-title" href="/2023/01/12/%E9%83%A8%E5%88%86%E5%85%B3%E9%94%AE%E5%AD%97%E8%AF%A6%E8%A7%A3/">部分关键字详解</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">01/10</span>
+            <a class="archive-post-title" href="/2023/01/10/%E5%A4%9A%E6%80%81/">多态</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">01/09</span>
+            <a class="archive-post-title" href="/2023/01/09/%E7%BB%A7%E6%89%BF/">继承</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">01/09</span>
+            <a class="archive-post-title" href="/2023/01/09/%E5%B0%81%E8%A3%85/">封装</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">01/07</span>
+            <a class="archive-post-title" href="/2023/01/07/%E6%97%B6%E7%A9%BA%E5%A4%8D%E6%9D%82%E5%BA%A6/">时空复杂度</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">01/01</span>
+            <a class="archive-post-title" href="/2023/01/01/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/">面向对象</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> 2022 </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">12/31</span>
+            <a class="archive-post-title" href="/2022/12/31/%E6%95%B0%E7%BB%84%E7%9A%84%E6%9C%89%E5%85%B3%E7%AE%97%E6%B3%95/">数组的有关算法</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">12/31</span>
+            <a class="archive-post-title" href="/2022/12/31/%E6%95%B0%E7%BB%84%E7%9A%84%E5%BA%94%E7%94%A8/">数组的应用</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">12/30</span>
+            <a class="archive-post-title" href="/2022/12/30/String%E7%9A%84%E5%88%9B%E5%BB%BA%E9%99%B7%E9%98%B1/">String的创建陷阱</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">12/29</span>
+            <a class="archive-post-title" href="/2022/12/29/%E6%95%B0%E7%BB%84/">数组</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">12/26</span>
+            <a class="archive-post-title" href="/2022/12/26/%E6%96%B9%E6%B3%95/">方法</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">12/11</span>
+            <a class="archive-post-title" href="/2022/12/11/Java%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/">Java流程控制</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">12/10</span>
+            <a class="archive-post-title" href="/2022/12/10/%E8%BF%90%E7%AE%97%E7%AC%A6/">运算符</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">12/09</span>
+            <a class="archive-post-title" href="/2022/12/09/%E5%8F%98%E9%87%8F%E3%80%81%E5%B8%B8%E9%87%8F%E5%92%8C%E4%BD%9C%E7%94%A8%E5%9F%9F/">变量、常量和作用域</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">12/06</span>
+            <a class="archive-post-title" href="/2022/12/06/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">数据类型</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">12/05</span>
+            <a class="archive-post-title" href="/2022/12/05/IDEA%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/">IDEA使用指南</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">12/04</span>
+            <a class="archive-post-title" href="/2022/12/04/HelloWorld/">HelloWorld!</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">12/01</span>
+            <a class="archive-post-title" href="/2022/12/01/%E5%AE%89%E8%A3%85Java%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/">安装Java开发环境</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/30</span>
+            <a class="archive-post-title" href="/2022/11/30/Dos%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C/">DOS常用操作</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/30</span>
+            <a class="archive-post-title" href="/2022/11/30/Blog/">Blog</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/29</span>
+            <a class="archive-post-title" href="/2022/11/29/hello-world/">Hello World</a>
+        </li>
+    
+    </div>
+</div>
+
+        <div class="sidebar-panel-tags">
+    <div class="sidebar-tags-name">
+        
+            <span class="sidebar-tag-name" data-tags="Blog">
+                <span class="iconfont-archer">&#xe606;</span>
+                Blog
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="Hexo">
+                <span class="iconfont-archer">&#xe606;</span>
+                Hexo
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="Github">
+                <span class="iconfont-archer">&#xe606;</span>
+                Github
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="Git">
+                <span class="iconfont-archer">&#xe606;</span>
+                Git
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="Notepad++">
+                <span class="iconfont-archer">&#xe606;</span>
+                Notepad++
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="DOS">
+                <span class="iconfont-archer">&#xe606;</span>
+                DOS
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="CMD">
+                <span class="iconfont-archer">&#xe606;</span>
+                CMD
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="environment variables">
+                <span class="iconfont-archer">&#xe606;</span>
+                environment variables
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="java">
+                <span class="iconfont-archer">&#xe606;</span>
+                java
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="IDEA">
+                <span class="iconfont-archer">&#xe606;</span>
+                IDEA
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="project">
+                <span class="iconfont-archer">&#xe606;</span>
+                project
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="module">
+                <span class="iconfont-archer">&#xe606;</span>
+                module
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="package">
+                <span class="iconfont-archer">&#xe606;</span>
+                package
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="class">
+                <span class="iconfont-archer">&#xe606;</span>
+                class
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="Java">
+                <span class="iconfont-archer">&#xe606;</span>
+                Java
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="scanner">
+                <span class="iconfont-archer">&#xe606;</span>
+                scanner
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="sequential structure">
+                <span class="iconfont-archer">&#xe606;</span>
+                sequential structure
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="selective structure">
+                <span class="iconfont-archer">&#xe606;</span>
+                selective structure
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="cycle structure">
+                <span class="iconfont-archer">&#xe606;</span>
+                cycle structure
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="switch">
+                <span class="iconfont-archer">&#xe606;</span>
+                switch
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="break">
+                <span class="iconfont-archer">&#xe606;</span>
+                break
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="continue">
+                <span class="iconfont-archer">&#xe606;</span>
+                continue
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="String">
+                <span class="iconfont-archer">&#xe606;</span>
+                String
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="new">
+                <span class="iconfont-archer">&#xe606;</span>
+                new
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="stack">
+                <span class="iconfont-archer">&#xe606;</span>
+                stack
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="heap">
+                <span class="iconfont-archer">&#xe606;</span>
+                heap
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="variable">
+                <span class="iconfont-archer">&#xe606;</span>
+                variable
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="constant">
+                <span class="iconfont-archer">&#xe606;</span>
+                constant
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="polymorphism">
+                <span class="iconfont-archer">&#xe606;</span>
+                polymorphism
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="instanceof">
+                <span class="iconfont-archer">&#xe606;</span>
+                instanceof
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="jdk">
+                <span class="iconfont-archer">&#xe606;</span>
+                jdk
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="jre">
+                <span class="iconfont-archer">&#xe606;</span>
+                jre
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="jvm">
+                <span class="iconfont-archer">&#xe606;</span>
+                jvm
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="encapsulation">
+                <span class="iconfont-archer">&#xe606;</span>
+                encapsulation
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="private">
+                <span class="iconfont-archer">&#xe606;</span>
+                private
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="array">
+                <span class="iconfont-archer">&#xe606;</span>
+                array
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="register">
+                <span class="iconfont-archer">&#xe606;</span>
+                register
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="Arrays">
+                <span class="iconfont-archer">&#xe606;</span>
+                Arrays
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="sort">
+                <span class="iconfont-archer">&#xe606;</span>
+                sort
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="bubble">
+                <span class="iconfont-archer">&#xe606;</span>
+                bubble
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="sparse">
+                <span class="iconfont-archer">&#xe606;</span>
+                sparse
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="static">
+                <span class="iconfont-archer">&#xe606;</span>
+                static
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="algorithm">
+                <span class="iconfont-archer">&#xe606;</span>
+                algorithm
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="time">
+                <span class="iconfont-archer">&#xe606;</span>
+                time
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="space">
+                <span class="iconfont-archer">&#xe606;</span>
+                space
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="complexity">
+                <span class="iconfont-archer">&#xe606;</span>
+                complexity
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="extends">
+                <span class="iconfont-archer">&#xe606;</span>
+                extends
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="super">
+                <span class="iconfont-archer">&#xe606;</span>
+                super
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="override">
+                <span class="iconfont-archer">&#xe606;</span>
+                override
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="final">
+                <span class="iconfont-archer">&#xe606;</span>
+                final
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="operator">
+                <span class="iconfont-archer">&#xe606;</span>
+                operator
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="objects">
+                <span class="iconfont-archer">&#xe606;</span>
+                objects
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="constructor">
+                <span class="iconfont-archer">&#xe606;</span>
+                constructor
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="object-oriented">
+                <span class="iconfont-archer">&#xe606;</span>
+                object-oriented
+            </span>
+        
+    </div>
+    <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>
+    <div class="tag-load-fail" style="display: none; color: #ccc; font-size: 0.6rem;">
+        缺失模块，请参考主题文档进行安装配置：https://github.com/fi3ework/hexo-theme-archer#%E5%AE%89%E8%A3%85%E4%B8%BB%E9%A2%98
+    </div> 
+    <div class="sidebar-tags-list"></div>
+</div>
+
+        <div class="sidebar-panel-categories">
+    <div class="sidebar-categories-name">
+    
+        <span class="sidebar-category-name" data-categories="Technology">
+            <span class="iconfont-archer">&#xe60a;</span>
+            Technology
+        </span>
+    
+    </div>
+    <div class="iconfont-archer sidebar-categories-empty">&#xe678;</div>
+    <div class="sidebar-categories-list"></div>
+</div>
+
+    </div>
+</div>
+
+        <!-- site-meta -->
+        <script>
+    var siteMetaRoot = "/"
+    if (siteMetaRoot === "undefined") {
+        siteMetaRoot = '/'
+    }
+    var siteMeta = {
+        url: "http://example.com",
+        root: siteMetaRoot,
+        author: "Kevin Y"
+    }
+</script>
+
+        <!-- import experimental options here -->
+        <!-- Custom Font -->
+
+
+        <!-- main func -->
+        <script src="/scripts/main.js?v=20211217"></script>
+        <!-- dark mode -->
+        <script src="/scripts/dark.js?v=20211217"></script>
+        <!-- fancybox -->
+        <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" defer></script>
+        <!-- algolia -->
+        
+        <!-- busuanzi -->
+        
+        <!-- CNZZ -->
+        
+        <!-- async load share.js -->
+        
+            <script src="/scripts/share.js?v=20211217" async></script>
+        
+        <!-- mermaid -->
+        
+    </body>
+</html>
