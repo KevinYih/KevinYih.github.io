@@ -451,9 +451,8 @@
                 1. 什么是异常异常是程序运行中的一些异常或者错误。
 
 异常（Exception）：程序本身可以处理的异常，可以通过 catch 来进行捕获。Exception 又可以分为 受检查异常(必须处理) 和 非受检查异常(可以不处理)。
-错误（error）：属于程序无法处理的错误 ，我们没办法通过 catch 来进行捕获 。例如，Java 虚拟机运行错误（VirtualMachineError）、虚拟机内存不够错误(OutOfMemoryError)、类定义错误（NoClassDefFoundError）等 。这些异常发生时，Java 虚拟机（JVM）一般会选择线程终止。
-
-2. 异常体系结构...
+错误（Error）：属于程序无法处理的错误 ，我们没办法通过 catch 来进行捕获 。“Error类对象”由JVM抛出，大多数错误与代码编写者所执行的操作无关。这些异常发生时，Java 虚拟机（JVM）一般会选择线程终止。
+由于Error是严重的异常，对于程序已经致命了，所以并不需要捕获(catch)或者声明(throws)；而Exception属于不那么严...
             </div>
             <!-- read more -->
             

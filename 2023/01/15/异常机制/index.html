@@ -19,16 +19,16 @@
         <meta name="keywords" content="hexo,hexo-theme,hexo-blog">
     
     <meta name="description" content="">
-    <meta name="description" content="1. 什么是异常异常是程序运行中的一些异常或者错误。  异常（Exception）：程序本身可以处理的异常，可以通过 catch 来进行捕获。Exception 又可以分为 受检查异常(必须处理) 和 非受检查异常(可以不处理)。 错误（error）：属于程序无法处理的错误 ，我们没办法通过 catch 来进行捕获 。例如，Java 虚拟机运行错误（VirtualMachineError）、虚拟机">
+    <meta name="description" content="1. 什么是异常异常是程序运行中的一些异常或者错误。  异常（Exception）：程序本身可以处理的异常，可以通过 catch 来进行捕获。Exception 又可以分为 受检查异常(必须处理) 和 非受检查异常(可以不处理)。 错误（Error）：属于程序无法处理的错误 ，我们没办法通过 catch 来进行捕获 。“Error类对象”由JVM抛出，大多数错误与代码编写者所执行的操作无关。这些异">
 <meta property="og:type" content="article">
 <meta property="og:title" content="异常机制">
 <meta property="og:url" content="http://example.com/2023/01/15/%E5%BC%82%E5%B8%B8%E6%9C%BA%E5%88%B6/index.html">
 <meta property="og:site_name" content="Kevin&#39;s Space">
-<meta property="og:description" content="1. 什么是异常异常是程序运行中的一些异常或者错误。  异常（Exception）：程序本身可以处理的异常，可以通过 catch 来进行捕获。Exception 又可以分为 受检查异常(必须处理) 和 非受检查异常(可以不处理)。 错误（error）：属于程序无法处理的错误 ，我们没办法通过 catch 来进行捕获 。例如，Java 虚拟机运行错误（VirtualMachineError）、虚拟机">
+<meta property="og:description" content="1. 什么是异常异常是程序运行中的一些异常或者错误。  异常（Exception）：程序本身可以处理的异常，可以通过 catch 来进行捕获。Exception 又可以分为 受检查异常(必须处理) 和 非受检查异常(可以不处理)。 错误（Error）：属于程序无法处理的错误 ，我们没办法通过 catch 来进行捕获 。“Error类对象”由JVM抛出，大多数错误与代码编写者所执行的操作无关。这些异">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://example.com/images/%E5%BC%82%E5%B8%B8%E6%9C%BA%E5%88%B6/exception2.jpg">
 <meta property="article:published_time" content="2023-01-15T15:08:23.000Z">
-<meta property="article:modified_time" content="2023-01-15T17:00:44.650Z">
+<meta property="article:modified_time" content="2023-01-15T17:36:56.470Z">
 <meta property="article:author" content="Kevin Y">
 <meta property="article:tag" content="Java">
 <meta property="article:tag" content="exception">
@@ -338,7 +338,7 @@
                 
                 
                     <div class="post-intro-read">
-                        <span>Word count: <span class="post-count word-count">417</span>Reading time: <span class="post-count reading-time">1 min</span></span>
+                        <span>Word count: <span class="post-count word-count">678</span>Reading time: <span class="post-count reading-time">2 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
@@ -497,27 +497,38 @@
         <h2 id="1-什么是异常"><a href="#1-什么是异常" class="headerlink" title="1. 什么是异常"></a>1. 什么是异常</h2><p>异常是程序运行中的一些异常或者错误。</p>
 <ul>
 <li>异常（Exception）：程序本身可以处理的异常，可以通过 catch 来进行捕获。Exception 又可以分为 受检查异常(必须处理) 和 非受检查异常(可以不处理)。</li>
-<li>错误（error）：属于程序无法处理的错误 ，我们没办法通过 catch 来进行捕获 。例如，Java 虚拟机运行错误（VirtualMachineError）、虚拟机内存不够错误(OutOfMemoryError)、类定义错误（NoClassDefFoundError）等 。这些异常发生时，Java 虚拟机（JVM）一般会选择线程终止。</li>
+<li>错误（Error）：属于程序无法处理的错误 ，我们没办法通过 catch 来进行捕获 。“Error类对象”由JVM抛出，大多数错误与代码编写者所执行的操作无关。这些异常发生时，Java 虚拟机（JVM）一般会选择线程终止。</li>
+<li>由于Error是严重的异常，对于程序已经致命了，所以并不需要捕获(catch)或者声明(throws)；而Exception属于不那么严重，还可以“挽救”或者说“预判”的异常，所以可以被捕获(catch)或者声明(throws)来做出进一步处理。</li>
 </ul>
 <h2 id="2-异常体系结构"><a href="#2-异常体系结构" class="headerlink" title="2. 异常体系结构"></a>2. 异常体系结构</h2><p>Java把异常当作对象来处理，并定义一个类<code>java.lang.Throwable</code>作为所有异常的基类。<code>Throwable 类</code>有两个重要的子类<code>Exception类</code>（异常）和 <code>Error类</code>（错误）。Exception 能被程序本身处理(try-catch)， Error 是无法处理的(只能尽量避免)。</p>
 <p><img src="/images/%E5%BC%82%E5%B8%B8%E6%9C%BA%E5%88%B6/exception2.jpg"></p>
 <ul>
-<li><p>受检查异常（Check Exceptions）</p>
+<li><p>受检查异常（Checked Exceptions）</p>
 <ul>
 <li>Java 代码在编译过程中，如果受检查异常没有被 catch&#x2F;throw 处理的话，就没办法通过编译 。</li>
 <li>除了RuntimeException及其子类以外，其他的Exception类及其子类都属于“受检查异常 ”。</li>
 <li>常见的受检查异常有： IO 相关的异常、ClassNotFoundException 、SQLException等。</li>
 </ul>
 </li>
-<li><p>非受检查异常（Uncheck Exceptions）</p>
+<li><p>非受检查异常（Un-checked Exceptions）</p>
 <ul>
 <li>Java 代码在编译过程中 ，我们即使不处理不受检查异常也可以正常通过编译。</li>
 <li>RuntimeException 及其子类都统称为“非受检查异常”。</li>
-<li>常见的例如：NullPointExecrption、NumberFormatException（字符串转换为数字）、ArrayIndexOutOfBoundsException（数组越界）、ClassCastException（类型转换错误）、ArithmeticException（算术错误）等。</li>
+</ul>
+</li>
+<li><p>运行时异常（RuntimeException）</p>
+<ul>
+<li>常见的例如：NullPointerExecrption（空指针异常）、NumberFormatException（字符串转换为数字）、ArrayIndexOutOfBoundsException（数组下标越界）、ClassCastException（类型转换错误）、ArithmeticException（算术异常）、ClassNotFoundException（找不到类）、MissingResourceException（丢失资源）等，由于它们都是Un-checked Exceptions，程序中可以选择Catch处理，也可以不处理。</li>
+</ul>
+</li>
+<li><p>错误（error）：属于程序无法处理的错误 ，我们没办法通过 catch 来进行捕获 。</p>
+<ul>
+<li>例如：Java 虚拟机运行错误（VirtualMachineError），虚拟机内存不够错误(OutOfMemoryError)等 ，这些异常发生时，Java 虚拟机（JVM）一般会选择线程终止。</li>
+<li>例如：当虚拟机试图执行应用时，类定义错误（NoClassDefFoundError），链接错误（LinkageError），这些错误是不可查的，因为它们是在程序的处理能力之外，而且绝大多数是程序运行时不允许出现的状况。</li>
 </ul>
 </li>
 </ul>
-<h3 id><a href="#" class="headerlink" title></a></h3><h2 id="3-Java异常处理机制"><a href="#3-Java异常处理机制" class="headerlink" title="3. Java异常处理机制"></a>3. Java异常处理机制</h2><h2 id="4-自定义异常"><a href="#4-自定义异常" class="headerlink" title="4. 自定义异常"></a>4. 自定义异常</h2><h2 id="5-总结"><a href="#5-总结" class="headerlink" title="5. 总结"></a>5. 总结</h2>
+<h2 id="3-Java异常处理机制"><a href="#3-Java异常处理机制" class="headerlink" title="3. Java异常处理机制"></a>3. Java异常处理机制</h2><h2 id="4-自定义异常"><a href="#4-自定义异常" class="headerlink" title="4. 自定义异常"></a>4. 自定义异常</h2><h2 id="5-总结"><a href="#5-总结" class="headerlink" title="5. 总结"></a>5. 总结</h2>
     </article>
     <!-- license -->
     
@@ -657,7 +668,7 @@
                 <div class="toc-catalog">
                     <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
                 </div>
-                <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E4%BB%80%E4%B9%88%E6%98%AF%E5%BC%82%E5%B8%B8"><span class="toc-text">1. 什么是异常</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%BC%82%E5%B8%B8%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84"><span class="toc-text">2. 异常体系结构</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-text"></span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-Java%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%E6%9C%BA%E5%88%B6"><span class="toc-text">3. Java异常处理机制</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E8%87%AA%E5%AE%9A%E4%B9%89%E5%BC%82%E5%B8%B8"><span class="toc-text">4. 自定义异常</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E6%80%BB%E7%BB%93"><span class="toc-text">5. 总结</span></a></li></ol>
+                <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E4%BB%80%E4%B9%88%E6%98%AF%E5%BC%82%E5%B8%B8"><span class="toc-text">1. 什么是异常</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%BC%82%E5%B8%B8%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84"><span class="toc-text">2. 异常体系结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-Java%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%E6%9C%BA%E5%88%B6"><span class="toc-text">3. Java异常处理机制</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E8%87%AA%E5%AE%9A%E4%B9%89%E5%BC%82%E5%B8%B8"><span class="toc-text">4. 自定义异常</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E6%80%BB%E7%BB%93"><span class="toc-text">5. 总结</span></a></li></ol>
             </div>
         
         <!-- sidebar -->
