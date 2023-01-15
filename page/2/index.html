@@ -443,6 +443,97 @@
             
         
         <article class="index-post">
+            <a class="abstract-title" href="/2022/12/31/%E6%95%B0%E7%BB%84%E7%9A%84%E5%BA%94%E7%94%A8/">
+                
+                <span class="abstract-title-text">数组的应用</span>
+            </a>
+            <div class="abstract-content">
+                1. 数组的一般使用1.1. 普通For循环12345int[] a = &#123;2,4,6,8,10&#125;;        for (int i=0; i &lt; a.length; a++) &#123;            System.out.println(a[i]);  //输出数组元素a[i]的值。        &#125;
+
+
+最常用的使用方式。
+
+1.2. For-Each 循环12345int[] a = &#123;2,4,6,8,10&#125;;        for (int i : a) &#123;            System.ou...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2022/12/31">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/12/31</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Java">Java</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="array">array</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Arrays">Arrays</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
+            <a class="abstract-title" href="/2022/12/30/String%E7%9A%84%E5%88%9B%E5%BB%BA%E9%99%B7%E9%98%B1/">
+                
+                <span class="abstract-title-text">String的创建陷阱</span>
+            </a>
+            <div class="abstract-content">
+                String用new与不new的是有区别的，需理解并掌握原理，并加深对Java内存的理解。
+1. 关于String str1 &#x3D; “abc”首先在栈(Java Stack)中创建一个String str1，包含变量的类型和引用的变量；接下来，若常量池中有“abc”，则直接指向那个地址；若无，则在字符串常量池中创建一个新的值为“abc”的对象，并将str1指向该地址。
+字符串常量池，放在方法区(Method Area)。
+1.1. 工作原理Java内部将此语句转化为以下几个步骤：
+(1) 先在栈(Java Stack)中定义一个名为str1的对String类的对象引用变量：Str...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2023/01/12">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/12/30</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Java">Java</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="String">String</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="new">new</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="stack">stack</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="heap">heap</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
             <a class="abstract-title" href="/2022/12/29/%E6%95%B0%E7%BB%84/">
                 
                 <span class="abstract-title-text">数组</span>
@@ -859,98 +950,6 @@ class文件打破了C或者C++等语言所遵循的传统，使用这些传统�
         </article>
         <div class="index-post-divider"></div>
     
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/2022/12/01/%E5%AE%89%E8%A3%85Java%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/">
-                
-                <span class="abstract-title-text">安装Java开发环境</span>
-            </a>
-            <div class="abstract-content">
-                1. 什么是JDKJDK（Java Development Kit，  java开发工具包），是整个JAVA的核心，包括了Java运行环境（Java Runtime Envirnment），一堆Java工具（javac&#x2F;java&#x2F;jdb等）和java基础的类库（即Java API 包括rt.jar）和JVM交互的头文件（include）。也就是Java SE开发工具包，也就是说JDK是给开发人员准备的，而JRE这是给使用Java软件的用户准备的，当然，开发人员也可以使用JRE来测试程序。
-基本上每个学java的人都会先在机器上装一个JDK。在目录下面有六个文件夹、一个...
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2022/12/26">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/12/01</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="environment variables">environment variables</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Java">Java</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="jdk">jdk</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="jre">jre</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="jvm">jvm</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/2022/11/30/Dos%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C/">
-                
-                <span class="abstract-title-text">DOS常用操作</span>
-            </a>
-            <div class="abstract-content">
-                DOS全称 Disk Operating System，是一种磁盘操作系统，其中以微软的MS-DOS最著名， Windows 98 就是基于它的。
-1. 打开CMD的方式cmd是command的缩写，即命令提示符(CMD)
-
-开始+系统+命令提示符
-win键+R 输入cmd打开控制台（推荐使用）
-在任意文件夹下，按住shift键+鼠标右键，在此处打开命令行窗口
-资源管理器的地址栏前加上cmd。 cmd 路径
-
-管理员方式运行：选择以管理员方式运行 。
-2. 常用DOS命令DOS命令分为内部命令和外部命令，内部命令是随每次启动的COMMAND.COM装入并常驻内存，而外部命令是一条单独的可...
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2022/12/24">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/11/30</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="DOS">DOS</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="CMD">CMD</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="environment variables">environment variables</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
     <!-- paginator  -->
     
         <nav class="page-nav">
@@ -1233,7 +1232,31 @@ win键+R 输入cmd打开控制台（推荐使用）
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -1378,7 +1401,7 @@ win键+R 输入cmd打开控制台（推荐使用）
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 22
+        Total : 24
         </div>
         <!-- search  -->
         
@@ -1392,6 +1415,18 @@ win键+R 输入cmd打开控制台（推荐使用）
             <div class="archive-year"> 2023 </div>
             <ul class="year-list">
             
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">01/15</span>
+            <a class="archive-post-title" href="/2023/01/15/%E5%BC%82%E5%B8%B8%E6%9C%BA%E5%88%B6/">异常机制</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">01/15</span>
+            <a class="archive-post-title" href="/2023/01/15/%E5%86%85%E9%83%A8%E7%B1%BB/">内部类</a>
+        </li>
+    
         
         <li class="archive-post-item">
             <span class="archive-post-date">01/13</span>
@@ -1669,6 +1704,31 @@ win键+R 输入cmd打开控制台（推荐使用）
                 heap
             </span>
         
+            <span class="sidebar-tag-name" data-tags="innner class">
+                <span class="iconfont-archer">&#xe606;</span>
+                innner class
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="Local inner class">
+                <span class="iconfont-archer">&#xe606;</span>
+                Local inner class
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="anonymous inner class">
+                <span class="iconfont-archer">&#xe606;</span>
+                anonymous inner class
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="member inner class">
+                <span class="iconfont-archer">&#xe606;</span>
+                member inner class
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="static inner class">
+                <span class="iconfont-archer">&#xe606;</span>
+                static inner class
+            </span>
+        
             <span class="sidebar-tag-name" data-tags="variable">
                 <span class="iconfont-archer">&#xe606;</span>
                 variable
@@ -1712,6 +1772,11 @@ win键+R 输入cmd打开控制台（推荐使用）
             <span class="sidebar-tag-name" data-tags="private">
                 <span class="iconfont-archer">&#xe606;</span>
                 private
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="exception">
+                <span class="iconfont-archer">&#xe606;</span>
+                exception
             </span>
         
             <span class="sidebar-tag-name" data-tags="abstract">
