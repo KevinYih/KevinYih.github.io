@@ -19,25 +19,30 @@
         <meta name="keywords" content="hexo,hexo-theme,hexo-blog">
     
     <meta name="description" content="">
-    <meta name="description" content="1. 封装的含义将对象的属性和操作结合为一个独立的整体，并尽可能隐藏对象的内部实现细节。面向对象始于此基本概念，现实世界可以被描绘成一系列完全自治封装的对象。这些对象通过一个受保护的接口访问其他对象。 封装实际上使用方法将类的数据隐藏起来，控制用户对类的修改和访问数据的程度。 适当的封装可以让程式码更容易理解和维护，也加强了程式码的安全性。因为程序最后是给用户用的，避免了程序不严密，导致用户的错误">
+    <meta name="description" content="1. Scanner对象通过java.util.Scanner类获取用户的输入，实现程序和人的交互。  调用java公用类。放在package申明之后。 1import java.util.scanner  创建一个s (scanner)，用于接收键盘数据。 1Scanner s &#x3D; new Scanner(System.in);  在读取前，一般需使用 hasNext() 与 hasNextLi">
 <meta property="og:type" content="article">
-<meta property="og:title" content="封装">
-<meta property="og:url" content="http://example.com/2023/01/09/%E5%B0%81%E8%A3%85/index.html">
+<meta property="og:title" content="Java流程控制">
+<meta property="og:url" content="http://example.com/2022/12/10/Java%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/index.html">
 <meta property="og:site_name" content="Kevin&#39;s Space">
-<meta property="og:description" content="1. 封装的含义将对象的属性和操作结合为一个独立的整体，并尽可能隐藏对象的内部实现细节。面向对象始于此基本概念，现实世界可以被描绘成一系列完全自治封装的对象。这些对象通过一个受保护的接口访问其他对象。 封装实际上使用方法将类的数据隐藏起来，控制用户对类的修改和访问数据的程度。 适当的封装可以让程式码更容易理解和维护，也加强了程式码的安全性。因为程序最后是给用户用的，避免了程序不严密，导致用户的错误">
+<meta property="og:description" content="1. Scanner对象通过java.util.Scanner类获取用户的输入，实现程序和人的交互。  调用java公用类。放在package申明之后。 1import java.util.scanner  创建一个s (scanner)，用于接收键盘数据。 1Scanner s &#x3D; new Scanner(System.in);  在读取前，一般需使用 hasNext() 与 hasNextLi">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2023-01-09T01:27:16.000Z">
-<meta property="article:modified_time" content="2023-01-09T17:02:36.213Z">
+<meta property="article:published_time" content="2022-12-11T03:58:46.000Z">
+<meta property="article:modified_time" content="2022-12-31T04:44:08.703Z">
 <meta property="article:author" content="Kevin Y">
 <meta property="article:tag" content="Java">
-<meta property="article:tag" content="encapsulation">
-<meta property="article:tag" content="private">
+<meta property="article:tag" content="scanner">
+<meta property="article:tag" content="sequential structure">
+<meta property="article:tag" content="selective structure">
+<meta property="article:tag" content="cycle structure">
+<meta property="article:tag" content="switch">
+<meta property="article:tag" content="break">
+<meta property="article:tag" content="continue">
 <meta name="twitter:card" content="summary">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <link rel="icon" href="/assets/favicon.ico">
     
-    <title>封装 · Kevin&#39;s Studio</title>
+    <title>Java流程控制 · Kevin&#39;s Studio</title>
     <!-- /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
 /* This file is meant as a standalone workflow for
 - testing support for link[rel=preload]
@@ -262,7 +267,7 @@
                 <a href="/">Kevin&#39;s Studio.</a>
             </div>
             <div class="post-title header-element">
-                <a href="#" class="post-name">封装</a>
+                <a href="#" class="post-name">Java流程控制</a>
             </div>
         </div>
     
@@ -308,7 +313,7 @@
         <h1 class="intro-title">
             <!-- 主页  -->
             
-                封装
+                Java流程控制
             <!-- 404 -->
             
         </h1>
@@ -330,22 +335,32 @@
     
         <a class="post-tag" href="javascript:void(0);" data-tags="Java">Java</a>
     
-        <a class="post-tag" href="javascript:void(0);" data-tags="encapsulation">encapsulation</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags="scanner">scanner</a>
     
-        <a class="post-tag" href="javascript:void(0);" data-tags="private">private</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags="sequential structure">sequential structure</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="selective structure">selective structure</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="cycle structure">cycle structure</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="switch">switch</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="break">break</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="continue">continue</a>
     
 </div>
 
                 
                 
                     <div class="post-intro-read">
-                        <span>Word count: <span class="post-count word-count">967</span>Reading time: <span class="post-count reading-time">3 min</span></span>
+                        <span>Word count: <span class="post-count word-count">1k</span>Reading time: <span class="post-count reading-time">3 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
                     <!-- 撰写日期 -->
                     <span class="iconfont-archer post-intro-calander">&#xe676;</span>
-                    <span class="post-intro-time">2023/01/09</span>
+                    <span class="post-intro-time">2022/12/11</span>
                     <!-- busuanzi -->
                     
                     <!-- 文章分享 -->
@@ -495,70 +510,80 @@
             <div class="container container-unloaded">
                 <main class="main post-page">
     <article class="article-entry">
-        <h2 id="1-封装的含义"><a href="#1-封装的含义" class="headerlink" title="1. 封装的含义"></a>1. 封装的含义</h2><p>将对象的属性和操作结合为一个独立的整体，并尽可能隐藏对象的内部实现细节。面向对象始于此基本概念，现实世界可以被描绘成一系列完全自治封装的对象。这些对象通过一个受保护的接口访问其他对象。</p>
-<p><strong>封装实际上使用方法将类的数据隐藏起来，控制用户对类的修改和访问数据的程度。 适当的封装可以让程式码更容易理解和维护，也加强了程式码的安全性。</strong>因为程序最后是给用户用的，避免了程序不严密，导致用户的错误访问。</p>
-<h2 id="2-封装的特点"><a href="#2-封装的特点" class="headerlink" title="2. 封装的特点"></a>2. 封装的特点</h2><h3 id="2-1-该藏的藏"><a href="#2-1-该藏的藏" class="headerlink" title="2.1. 该藏的藏"></a>2.1. 该藏的藏</h3><p>高内聚（high cohesion），类的内部数据操作细节自己完成，不允许外部干涉。</p>
-<h3 id="2-2-该露的露"><a href="#2-2-该露的露" class="headerlink" title="2.2. 该露的露"></a>2.2. 该露的露</h3><p>低耦合（low coupling），仅留出少量接口供外部使用。最后所有的操作都只能通过<strong>提供的public方法</strong>进行访问。</p>
-<h2 id="3-封装使用"><a href="#3-封装使用" class="headerlink" title="3. 封装使用"></a>3. 封装使用</h2><h3 id="3-1-访问修饰符"><a href="#3-1-访问修饰符" class="headerlink" title="3.1. 访问修饰符"></a>3.1. 访问修饰符</h3><p>Java中关于访问权限的四个修饰符，表格如下：</p>
-<table>
-<thead>
-<tr>
-<th align="left"></th>
-<th align="center">private</th>
-<th align="center">friendly(默认)</th>
-<th align="center">protected</th>
-<th align="center">public</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">当前类访问权限</td>
-<td align="center">√</td>
-<td align="center">√</td>
-<td align="center">√</td>
-<td align="center">√</td>
-</tr>
-<tr>
-<td align="left">包访问权限</td>
-<td align="center">×</td>
-<td align="center">√</td>
-<td align="center">√</td>
-<td align="center">√</td>
-</tr>
-<tr>
-<td align="left">子类访问权限</td>
-<td align="center">×</td>
-<td align="center">×</td>
-<td align="center">√</td>
-<td align="center">√</td>
-</tr>
-<tr>
-<td align="left">其他类访问权限</td>
-<td align="center">×</td>
-<td align="center">×</td>
-<td align="center">×</td>
-<td align="center">√</td>
-</tr>
-</tbody></table>
-<h3 id="3-2-封装的使用"><a href="#3-2-封装的使用" class="headerlink" title="3.2. 封装的使用"></a>3.2. 封装的使用</h3><p>封装主要是针对属性的，而不是方法。</p>
-<p>封装核心：private属性私有，提供一些public的get&#x2F;set即可以操作属性的方法，get获得这个属性，set给这个属性设置值。</p>
-<p>意义：</p>
+        <h2 id="1-Scanner对象"><a href="#1-Scanner对象" class="headerlink" title="1. Scanner对象"></a>1. Scanner对象</h2><p>通过java.util.Scanner类获取用户的输入，实现程序和人的交互。</p>
 <ul>
-<li>提高程序安全性，保护数据；</li>
-<li>（对用户）隐藏代码的实现细节；（隐藏仅针对用户而言，程序员是上帝视角，所有细节都能看得见。）</li>
-<li>统一接口，所有接口都命名为get和set</li>
-<li>系统可维护性增加。</li>
+<li><p>调用java公用类。放在package申明之后。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.scanner</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>创建一个s (<em>scanner</em>)，用于接收键盘数据。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">Scanner</span> <span class="variable">s</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Scanner</span>(System.in);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在读取前，一般需使用 <code>hasNext()</code> 与 <code>hasNextLine()</code> 方法判断是否还有<strong>非空字符</strong>的输入。</p>
+<ul>
+<li><p>hasNext() </p>
+<ul>
+<li>一定要读取到有效字符后才可以结束输入。</li>
+<li>对输入有效字符之前遇到的空格，<code>hasNext()</code>方法会自动将其去掉。</li>
+<li>只有输入有效字符后才将其后面输入的<strong>space bar</strong>作为分隔符或者结束符。</li>
+<li><u>不能得到带有空白格的字符串</u>。</li>
 </ul>
-<p>定义类：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Student</span> &#123;     <span class="comment">//创建Student类</span></span><br><span class="line">    <span class="comment">//进行属性私有</span></span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="keyword">private</span> <span class="type">int</span> age;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//提供一些public的可以操作name属性的方法</span></span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">getName</span><span class="params">()</span>&#123;     <span class="comment">//获得属性</span></span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">this</span>.name;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">setName</span><span class="params">(String nam)</span>&#123;    <span class="comment">//给属性设置值</span></span><br><span class="line">        <span class="built_in">this</span>.name = nam;</span><br><span class="line">	&#125;</span><br><span class="line">    <span class="comment">//提供一些public的可以操作age属性的方法</span></span><br><span class="line">        <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">getAge</span><span class="params">()</span>&#123;     <span class="comment">//获得属性</span></span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">this</span>.name;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">setAge</span><span class="params">(<span class="type">int</span> agee)</span>&#123;    <span class="comment">//给属性设置值</span></span><br><span class="line">        <span class="keyword">if</span>((agee&lt;=<span class="number">120</span>) || (agee&gt;=<span class="number">0</span>))&#123;</span><br><span class="line">            <span class="built_in">this</span>.age = agee;</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="built_in">this</span>.age = <span class="number">3</span>;   <span class="comment">//提高程序安全性，保护数据，系统可维护性增加</span></span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(s.hasNext())&#123;</span><br><span class="line">    <span class="comment">//判断是否还有输入的内容</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>hasNextLine() </p>
+<ul>
+<li>以<strong>Enter</strong>为结束符。返回回车前所有的输入。</li>
+<li>可以获得空白格的字符串。</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(s.hasNextLine())&#123;</span><br><span class="line">    <span class="comment">//判断是否还有输入的内容</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>通过Scanner<strong>类</strong>的 <code>next()</code> 与 <code>nextLine()</code> <strong>方法</strong>获取输入的字符串。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//用next()方法获取输入。</span></span><br><span class="line"><span class="type">String</span> <span class="variable">str</span> <span class="operator">=</span> s.next();</span><br><span class="line"><span class="comment">//用nextLine()方法获取输入。</span></span><br><span class="line"><span class="type">String</span> <span class="variable">str</span> <span class="operator">=</span> s.nextLine();</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>用完后，就关掉<code>scanner</code>。I&#x2F;O流不关闭，会一直占用资源，用完就须关掉。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scanner.close();</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="2-顺序结构"><a href="#2-顺序结构" class="headerlink" title="2. 顺序结构"></a>2. 顺序结构</h2><p>Java最基本的算法结构，从上往下依次执行。</p>
+<h2 id="3-选择结构"><a href="#3-选择结构" class="headerlink" title="3. 选择结构"></a>3. 选择结构</h2><h3 id="3-1-if单选结构"><a href="#3-1-if单选结构" class="headerlink" title="3.1. if单选结构"></a>3.1. if单选结构</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(布尔表达式)&#123;</span><br><span class="line">    <span class="comment">//布尔表达式为true，即执行本语句。</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>主程序：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Application</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;   <span class="comment">//程序入口</span></span><br><span class="line">        </span><br><span class="line">        <span class="type">Student</span> <span class="variable">stu1</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Student</span>();  <span class="comment">//通过Student类，创建对象        </span></span><br><span class="line"></span><br><span class="line">        stu1.setName(<span class="string">&quot;韩梅梅&quot;</span>);   <span class="comment">//通过setName方法，操作设置该属性</span></span><br><span class="line">        System.out.println(stu1.getName());   <span class="comment">//通过getName方法，获得该属性</span></span><br><span class="line">        </span><br><span class="line">        stu1.setAge(<span class="number">199</span>);  <span class="comment">//通过setName方法，操作设置该属性。具体的实现细节全封装在类里。</span></span><br><span class="line">        System.out.println(stu1.getName());   <span class="comment">//通过getName方法，获得该属性</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="3-2-if双选结构"><a href="#3-2-if双选结构" class="headerlink" title="3.2. if双选结构"></a>3.2. if双选结构</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(布尔表达式)&#123;</span><br><span class="line">    <span class="comment">//布尔表达式为true，即执行本语句。    </span></span><br><span class="line">&#125;<span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="comment">//布尔表达式为false，即执行本语句。 </span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p><code>stu1</code>的<code>name</code>已经不能通过<code>stu1.name</code>直接访问了，只能通过设置的<code>setName</code>和<code>getName</code>方法来访问，内部数据的操作变成在类内部独立完成。</p>
-<p>private私有属性，最终结果就是<u>给你什么方法就只能用什么方法</u>，不给用就不能用，只给看就只能看。</p>
-<h2 id="4-总结"><a href="#4-总结" class="headerlink" title="4. 总结"></a>4. 总结</h2><p>封装，是一种良好的编写习惯。可以大大提高程序后期可维护性。</p>
-<p>对象的数据封装特性彻底消除了传统结构方法中数据与操作分离所带来的种种问题，提高了程序的可复用性和可维护性，降低了程序员保持数据与操作内容的负担。</p>
-<p>对象的数据封装特性还可以把对象的私有数据和公共数据分离开，保护了私有数据，减少了可能的模块间干扰，达到降低程序复杂性、提高可控性的目的。</p>
+<h3 id="3-3-if多选结构"><a href="#3-3-if多选结构" class="headerlink" title="3.3. if多选结构"></a>3.3. if多选结构</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(布尔表达式<span class="number">1</span>)&#123;</span><br><span class="line">    <span class="comment">//布尔表达式1为true，即执行本语句。    </span></span><br><span class="line">&#125;<span class="keyword">else</span> <span class="keyword">if</span>(布尔表达式<span class="number">2</span>)&#123;</span><br><span class="line">    <span class="comment">//布尔表达式1为false，且布尔表达式2为true，即执行本语句。 </span></span><br><span class="line">&#125;<span class="keyword">else</span> <span class="keyword">if</span>(布尔表达式<span class="number">3</span>)&#123;</span><br><span class="line">    <span class="comment">//布尔表达式1为false，且布尔表达式2为false，且布尔表达式3为true，即执行本语句。 </span></span><br><span class="line">&#125;<span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="comment">//以上布尔表达式均不成立，即执行本语句。</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>多种选择判断，最终只择其一。</p>
+<h3 id="3-4-嵌套if结构"><a href="#3-4-嵌套if结构" class="headerlink" title="3.4. 嵌套if结构"></a>3.4. 嵌套if结构</h3><p>在<code>if</code>或<code>else if</code>中嵌套<code>if</code>或<code>else if</code>。</p>
+<h2 id="4-switch选择结构"><a href="#4-switch选择结构" class="headerlink" title="4. switch选择结构"></a>4. switch选择结构</h2><p>判断、匹配一个变量与一系列值是否相等，每个值称为一个分支。</p>
+<p>原理：case，就是一个入口，进入入口后，执行入口后所有语句。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">switch</span>(expression)&#123;</span><br><span class="line">    <span class="keyword">case</span> value :</span><br><span class="line">        <span class="comment">//执行语句</span></span><br><span class="line">        <span class="keyword">break</span>; <span class="comment">//可选，但应选。为避免case穿透。</span></span><br><span class="line">    <span class="keyword">case</span> value :</span><br><span class="line">        <span class="comment">//执行语句</span></span><br><span class="line">        <span class="keyword">break</span>; <span class="comment">//可选，但应选。为避免case穿透。      </span></span><br><span class="line">   <span class="comment">//可有任意数个case语句 ；</span></span><br><span class="line">    <span class="keyword">default</span> :  <span class="comment">//可选。</span></span><br><span class="line">        <span class="comment">//执行语句</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><code>expression</code>和<code>value</code>可以是：</p>
+<ul>
+<li>byte, short, int 或者char；</li>
+<li>从Java SE 7 开始支持 String；</li>
+<li>case的标签必须是字符串常量或者字面量，case只是一个入口。</li>
+<li><strong>case穿透</strong>：不写<code>break</code>，会执行符合的某case后面所有语句。</li>
+</ul>
+<h2 id="5-IDEA反编译"><a href="#5-IDEA反编译" class="headerlink" title="5. IDEA反编译"></a>5. IDEA反编译</h2><p>将out文件夹下的<code>.class</code>文件，拷贝到<code>.java</code>文件夹下。</p>
+<h2 id="6-循环结构"><a href="#6-循环结构" class="headerlink" title="6. 循环结构"></a>6. 循环结构</h2><h3 id="6-1-while-循环"><a href="#6-1-while-循环" class="headerlink" title="6.1. while 循环"></a>6.1. <code>while</code> 循环</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span>(布尔表达式)&#123;</span><br><span class="line">    <span class="comment">//循环内容</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>要首先满足条件（先判断），才能进入循环。</li>
+<li>循环布尔表达式一直为<code>true</code>会造成死循环，会影响程序性能或卡死崩溃，我们需要一个让表达式失效的方式来结束循环。</li>
+</ul>
+<h3 id="6-2-do-while-循环"><a href="#6-2-do-while-循环" class="headerlink" title="6.2. do...while 循环"></a>6.2. <code>do...while</code> 循环</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">do</span>&#123;</span><br><span class="line">    <span class="comment">//循环内容</span></span><br><span class="line">&#125;<span class="keyword">while</span>(布尔表达式)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>先循环，再判断条件。即使不满足条件，也会循环一次。</li>
+</ul>
+<h3 id="6-3-for-循环"><a href="#6-3-for-循环" class="headerlink" title="6.3. for 循环"></a>6.3. <code>for</code> 循环</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(初始化; 布尔表达式; 迭代)&#123;    </span><br><span class="line">    <span class="comment">//循环内容</span></span><br><span class="line">    <span class="comment">//循环一次之后，才会进行迭代。    </span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//例子</span></span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>, j=<span class="number">2</span>; i&lt;<span class="number">10</span> &amp;&amp; j&lt;<span class="number">10</span>; i++, j++)&#123;</span><br><span class="line">    <span class="comment">//循环内容</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>初始化，布尔表达式，迭代，三个部分都可省略。</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(;;)&#123;</span><br><span class="line">    <span class="comment">//循环内容</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="7-continue-amp-break"><a href="#7-continue-amp-break" class="headerlink" title="7. continue &amp; break"></a>7. continue &amp; break</h2><h3 id="7-1-continue"><a href="#7-1-continue" class="headerlink" title="7.1. continue"></a>7.1. continue</h3><p>终止某次循环，不再执行本次剩余的循环语句，开始下次循环。</p>
+<h3 id="7-2-Break"><a href="#7-2-Break" class="headerlink" title="7.2. Break"></a>7.2. Break</h3><p>强制退出整个循环。不再执行循环。</p>
 
     </article>
     <!-- license -->
@@ -568,16 +593,16 @@
         <li class="next">
             
                 <div class="nextSlogan">Next Post</div>
-                <a href="/2023/01/09/%E7%BB%A7%E6%89%BF/" title="继承">
-                    <div class="nextTitle">继承</div>
+                <a href="/2022/12/26/%E6%96%B9%E6%B3%95/" title="方法">
+                    <div class="nextTitle">方法</div>
                 </a>
             
         </li>
         <li class="previous">
             
                 <div class="prevSlogan">Previous Post</div>
-                <a href="/2023/01/07/%E6%97%B6%E7%A9%BA%E5%A4%8D%E6%9D%82%E5%BA%A6/" title="时空复杂度">
-                    <div class="prevTitle">时空复杂度</div>
+                <a href="/2022/12/09/%E8%BF%90%E7%AE%97%E7%AC%A6/" title="运算符">
+                    <div class="prevTitle">运算符</div>
                 </a>
             
         </li>
@@ -704,7 +729,7 @@
                 <div class="toc-catalog">
                     <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
                 </div>
-                <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%B0%81%E8%A3%85%E7%9A%84%E5%90%AB%E4%B9%89"><span class="toc-text">1. 封装的含义</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%B0%81%E8%A3%85%E7%9A%84%E7%89%B9%E7%82%B9"><span class="toc-text">2. 封装的特点</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-%E8%AF%A5%E8%97%8F%E7%9A%84%E8%97%8F"><span class="toc-text">2.1. 该藏的藏</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-%E8%AF%A5%E9%9C%B2%E7%9A%84%E9%9C%B2"><span class="toc-text">2.2. 该露的露</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E5%B0%81%E8%A3%85%E4%BD%BF%E7%94%A8"><span class="toc-text">3. 封装使用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-%E8%AE%BF%E9%97%AE%E4%BF%AE%E9%A5%B0%E7%AC%A6"><span class="toc-text">3.1. 访问修饰符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-%E5%B0%81%E8%A3%85%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="toc-text">3.2. 封装的使用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E6%80%BB%E7%BB%93"><span class="toc-text">4. 总结</span></a></li></ol>
+                <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-Scanner%E5%AF%B9%E8%B1%A1"><span class="toc-text">1. Scanner对象</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E9%A1%BA%E5%BA%8F%E7%BB%93%E6%9E%84"><span class="toc-text">2. 顺序结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E9%80%89%E6%8B%A9%E7%BB%93%E6%9E%84"><span class="toc-text">3. 选择结构</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-if%E5%8D%95%E9%80%89%E7%BB%93%E6%9E%84"><span class="toc-text">3.1. if单选结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-if%E5%8F%8C%E9%80%89%E7%BB%93%E6%9E%84"><span class="toc-text">3.2. if双选结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-if%E5%A4%9A%E9%80%89%E7%BB%93%E6%9E%84"><span class="toc-text">3.3. if多选结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-4-%E5%B5%8C%E5%A5%97if%E7%BB%93%E6%9E%84"><span class="toc-text">3.4. 嵌套if结构</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-switch%E9%80%89%E6%8B%A9%E7%BB%93%E6%9E%84"><span class="toc-text">4. switch选择结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-IDEA%E5%8F%8D%E7%BC%96%E8%AF%91"><span class="toc-text">5. IDEA反编译</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-%E5%BE%AA%E7%8E%AF%E7%BB%93%E6%9E%84"><span class="toc-text">6. 循环结构</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#6-1-while-%E5%BE%AA%E7%8E%AF"><span class="toc-text">6.1. while 循环</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-2-do-while-%E5%BE%AA%E7%8E%AF"><span class="toc-text">6.2. do...while 循环</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-3-for-%E5%BE%AA%E7%8E%AF"><span class="toc-text">6.3. for 循环</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-continue-amp-break"><span class="toc-text">7. continue &amp; break</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#7-1-continue"><span class="toc-text">7.1. continue</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-2-Break"><span class="toc-text">7.2. Break</span></a></li></ol></li></ol>
             </div>
         
         <!-- sidebar -->
@@ -838,7 +863,22 @@
         
         
         
+        
+        
+        
+        
+        
     
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -997,7 +1037,7 @@
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 24
+        Total : 25
         </div>
         <!-- search  -->
         
@@ -1013,56 +1053,74 @@
             
         
         <li class="archive-post-item">
-            <span class="archive-post-date">01/15</span>
+            <span class="archive-post-date">05/31</span>
+            <a class="archive-post-title" href="/2023/05/30/Linux%20Commands/">Linux Commands</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">01/16</span>
             <a class="archive-post-title" href="/2023/01/15/%E5%BC%82%E5%B8%B8%E6%9C%BA%E5%88%B6/">异常机制</a>
         </li>
     
         
         <li class="archive-post-item">
-            <span class="archive-post-date">01/15</span>
+            <span class="archive-post-date">01/16</span>
             <a class="archive-post-title" href="/2023/01/15/%E5%86%85%E9%83%A8%E7%B1%BB/">内部类</a>
         </li>
     
         
         <li class="archive-post-item">
-            <span class="archive-post-date">01/13</span>
+            <span class="archive-post-date">01/14</span>
             <a class="archive-post-title" href="/2023/01/13/%E6%8A%BD%E8%B1%A1%E7%B1%BB%E5%92%8C%E6%8E%A5%E5%8F%A3/">抽象类和接口</a>
         </li>
     
         
         <li class="archive-post-item">
-            <span class="archive-post-date">01/12</span>
+            <span class="archive-post-date">01/13</span>
             <a class="archive-post-title" href="/2023/01/12/%E9%83%A8%E5%88%86%E5%85%B3%E9%94%AE%E5%AD%97%E8%AF%A6%E8%A7%A3/">部分关键字详解</a>
         </li>
     
         
         <li class="archive-post-item">
-            <span class="archive-post-date">01/10</span>
+            <span class="archive-post-date">01/11</span>
             <a class="archive-post-title" href="/2023/01/10/%E5%A4%9A%E6%80%81/">多态</a>
         </li>
     
         
         <li class="archive-post-item">
-            <span class="archive-post-date">01/09</span>
+            <span class="archive-post-date">01/10</span>
             <a class="archive-post-title" href="/2023/01/09/%E7%BB%A7%E6%89%BF/">继承</a>
         </li>
     
         
         <li class="archive-post-item">
-            <span class="archive-post-date">01/09</span>
-            <a class="archive-post-title" href="/2023/01/09/%E5%B0%81%E8%A3%85/">封装</a>
+            <span class="archive-post-date">01/10</span>
+            <a class="archive-post-title" href="/2023/01/08/%E5%B0%81%E8%A3%85/">封装</a>
         </li>
     
         
         <li class="archive-post-item">
-            <span class="archive-post-date">01/07</span>
+            <span class="archive-post-date">01/08</span>
             <a class="archive-post-title" href="/2023/01/07/%E6%97%B6%E7%A9%BA%E5%A4%8D%E6%9D%82%E5%BA%A6/">时空复杂度</a>
         </li>
     
         
         <li class="archive-post-item">
-            <span class="archive-post-date">01/01</span>
+            <span class="archive-post-date">01/02</span>
             <a class="archive-post-title" href="/2023/01/01/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/">面向对象</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">01/01</span>
+            <a class="archive-post-title" href="/2022/12/31/%E6%95%B0%E7%BB%84%E7%9A%84%E6%9C%89%E5%85%B3%E7%AE%97%E6%B3%95/">数组的有关算法</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">01/01</span>
+            <a class="archive-post-title" href="/2022/12/30/%E6%95%B0%E7%BB%84%E7%9A%84%E5%BA%94%E7%94%A8/">数组的应用</a>
         </li>
     
         
@@ -1077,91 +1135,79 @@
         
         <li class="archive-post-item">
             <span class="archive-post-date">12/31</span>
-            <a class="archive-post-title" href="/2022/12/31/%E6%95%B0%E7%BB%84%E7%9A%84%E6%9C%89%E5%85%B3%E7%AE%97%E6%B3%95/">数组的有关算法</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">12/31</span>
-            <a class="archive-post-title" href="/2022/12/31/%E6%95%B0%E7%BB%84%E7%9A%84%E5%BA%94%E7%94%A8/">数组的应用</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">12/30</span>
             <a class="archive-post-title" href="/2022/12/30/String%E7%9A%84%E5%88%9B%E5%BB%BA%E9%99%B7%E9%98%B1/">String的创建陷阱</a>
         </li>
     
         
         <li class="archive-post-item">
-            <span class="archive-post-date">12/29</span>
+            <span class="archive-post-date">12/30</span>
             <a class="archive-post-title" href="/2022/12/29/%E6%95%B0%E7%BB%84/">数组</a>
         </li>
     
         
         <li class="archive-post-item">
-            <span class="archive-post-date">12/26</span>
+            <span class="archive-post-date">12/27</span>
             <a class="archive-post-title" href="/2022/12/26/%E6%96%B9%E6%B3%95/">方法</a>
         </li>
     
         
         <li class="archive-post-item">
-            <span class="archive-post-date">12/11</span>
-            <a class="archive-post-title" href="/2022/12/11/Java%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/">Java流程控制</a>
+            <span class="archive-post-date">12/12</span>
+            <a class="archive-post-title" href="/2022/12/10/Java%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/">Java流程控制</a>
         </li>
     
         
         <li class="archive-post-item">
             <span class="archive-post-date">12/10</span>
-            <a class="archive-post-title" href="/2022/12/10/%E8%BF%90%E7%AE%97%E7%AC%A6/">运算符</a>
+            <a class="archive-post-title" href="/2022/12/09/%E8%BF%90%E7%AE%97%E7%AC%A6/">运算符</a>
         </li>
     
         
         <li class="archive-post-item">
-            <span class="archive-post-date">12/09</span>
+            <span class="archive-post-date">12/10</span>
             <a class="archive-post-title" href="/2022/12/09/%E5%8F%98%E9%87%8F%E3%80%81%E5%B8%B8%E9%87%8F%E5%92%8C%E4%BD%9C%E7%94%A8%E5%9F%9F/">变量、常量和作用域</a>
         </li>
     
         
         <li class="archive-post-item">
             <span class="archive-post-date">12/06</span>
-            <a class="archive-post-title" href="/2022/12/06/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">数据类型</a>
+            <a class="archive-post-title" href="/2022/12/05/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">数据类型</a>
         </li>
     
         
         <li class="archive-post-item">
-            <span class="archive-post-date">12/05</span>
+            <span class="archive-post-date">12/06</span>
             <a class="archive-post-title" href="/2022/12/05/IDEA%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/">IDEA使用指南</a>
         </li>
     
         
         <li class="archive-post-item">
-            <span class="archive-post-date">12/04</span>
+            <span class="archive-post-date">12/05</span>
             <a class="archive-post-title" href="/2022/12/04/HelloWorld/">HelloWorld!</a>
         </li>
     
         
         <li class="archive-post-item">
             <span class="archive-post-date">12/01</span>
-            <a class="archive-post-title" href="/2022/12/01/%E5%AE%89%E8%A3%85Java%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/">安装Java开发环境</a>
+            <a class="archive-post-title" href="/2022/11/30/%E5%AE%89%E8%A3%85Java%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/">安装Java开发环境</a>
         </li>
     
         
         <li class="archive-post-item">
-            <span class="archive-post-date">11/30</span>
+            <span class="archive-post-date">12/01</span>
             <a class="archive-post-title" href="/2022/11/30/Dos%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C/">DOS常用操作</a>
         </li>
     
         
         <li class="archive-post-item">
-            <span class="archive-post-date">11/30</span>
-            <a class="archive-post-title" href="/2022/11/30/Blog/">Blog</a>
+            <span class="archive-post-date">12/01</span>
+            <a class="archive-post-title" href="/2022/11/29/Blog/">Blog</a>
         </li>
     
         
         <li class="archive-post-item">
-            <span class="archive-post-date">11/29</span>
-            <a class="archive-post-title" href="/2022/11/29/hello-world/">Hello World</a>
+            <span class="archive-post-date">11/30</span>
+            <a class="archive-post-title" href="/2022/11/28/hello-world/">Hello World</a>
         </li>
     
     </div>
@@ -1523,6 +1569,31 @@
             <span class="sidebar-tag-name" data-tags="object-oriented">
                 <span class="iconfont-archer">&#xe606;</span>
                 object-oriented
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="catch">
+                <span class="iconfont-archer">&#xe606;</span>
+                catch
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="throw">
+                <span class="iconfont-archer">&#xe606;</span>
+                throw
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="Linux">
+                <span class="iconfont-archer">&#xe606;</span>
+                Linux
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="operating system">
+                <span class="iconfont-archer">&#xe606;</span>
+                operating system
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="command">
+                <span class="iconfont-archer">&#xe606;</span>
+                command
             </span>
         
     </div>
