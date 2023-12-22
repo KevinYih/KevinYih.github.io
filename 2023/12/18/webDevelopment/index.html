@@ -65,8 +65,11 @@
 <meta property="og:image" content="http://example.com/images/webDevelopment/inheritance1.jpg">
 <meta property="og:image" content="http://example.com/images/webDevelopment/inheritance2.jpg">
 <meta property="og:image" content="http://example.com/images/webDevelopment/boxmodel1.jpg">
+<meta property="og:image" content="http://example.com/images/webDevelopment/toblock.jpg">
+<meta property="og:image" content="http://example.com/images/webDevelopment/toinline.jpg">
+<meta property="og:image" content="http://example.com/images/webDevelopment/inlineblock.jpg">
 <meta property="article:published_time" content="2023-12-18T15:35:53.000Z">
-<meta property="article:modified_time" content="2023-12-21T21:34:56.814Z">
+<meta property="article:modified_time" content="2023-12-22T02:56:38.215Z">
 <meta property="article:author" content="Kevin Y">
 <meta property="article:tag" content="constant">
 <meta property="article:tag" content="html">
@@ -379,7 +382,7 @@
                 
                 
                     <div class="post-intro-read">
-                        <span>Word count: <span class="post-count word-count">938</span>Reading time: <span class="post-count reading-time">5 min</span></span>
+                        <span>Word count: <span class="post-count word-count">1.1k</span>Reading time: <span class="post-count reading-time">6 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
@@ -627,7 +630,7 @@
 </li>
 </ul>
 <p><img src="/images/webDevelopment/stylelinks.jpg"></p>
-<h3 id="4-6-CSS-Theory"><a href="#4-6-CSS-Theory" class="headerlink" title="4.6. CSS Theory"></a>4.6. CSS Theory</h3><h4 id="4-6-1-Conflicts-between-Selectors"><a href="#4-6-1-Conflicts-between-Selectors" class="headerlink" title="4.6.1. Conflicts between Selectors"></a>4.6.1. Conflicts between Selectors</h4><p>There are <strong>multiple selectors</strong> selecting the same element. Which one of them applies?</p>
+<h3 id="4-6-CSS-Theories"><a href="#4-6-CSS-Theories" class="headerlink" title="4.6. CSS Theories"></a>4.6. CSS Theories</h3><h4 id="4-6-1-Conflicts-between-Selectors"><a href="#4-6-1-Conflicts-between-Selectors" class="headerlink" title="4.6.1. Conflicts between Selectors"></a>4.6.1. Conflicts between Selectors</h4><p>There are <strong>multiple selectors</strong> selecting the same element. Which one of them applies?</p>
 <p><img src="/images/webDevelopment/multipleselector1.jpg"></p>
 <p><img src="/images/webDevelopment/multipleselector2.jpg"></p>
 <p><strong>All of them</strong>. All rules and properties are applied!</p>
@@ -652,7 +655,7 @@
 <p>The inherited values are the ones who have the lowest priority.</p>
 <p><img src="/images/webDevelopment/inheritance2.jpg"></p>
 <p>Not all properties get inherited. It’s mostly ones <strong>related to text</strong>: font-family, font-size, font-weight, font-style, color, line-height, letter-spacing, text-align, text-transform, text-shadow, list-style, etc.</p>
-<h4 id="4-6-3-CSS-box-model"><a href="#4-6-3-CSS-box-model" class="headerlink" title="4.6.3. CSS box model"></a>4.6.3. CSS box model</h4><ul>
+<h4 id="4-6-3-CSS-box-model"><a href="#4-6-3-CSS-box-model" class="headerlink" title="4.6.3. CSS box model"></a>4.6.3. CSS box model</h4><h5 id="4-6-3-1-concept"><a href="#4-6-3-1-concept" class="headerlink" title="4.6.3.1. concept"></a>4.6.3.1. concept</h5><ul>
 <li><strong>Content</strong>: Text, images, etc.</li>
 <li><strong>Border</strong>: A line around the element, still <strong>inside</strong> of the element.</li>
 <li><strong>Padding</strong>: Invisible space around the content, <strong>inside</strong> of the element.</li>
@@ -663,7 +666,7 @@
 <p><strong>Fill area</strong>: Area that gets filled with <strong>background color</strong> or <strong>background image</strong>.</p>
 <p><strong>Final element width</strong> &#x3D; left border + left padding + width + right padding + right border.<br><strong>Final element height</strong> &#x3D; top border + top padding + height + bottom padding + bottom border.</p>
 <p>margin is <strong>not</strong> part of the width or height calculations.</p>
-<p><strong>Collapsing Margins</strong>: two margins that occupied the same space, the space is determined by the larger one instead of the sum of two margins.</p>
+<h5 id="4-6-3-2-Collapsing-Margins"><a href="#4-6-3-2-Collapsing-Margins" class="headerlink" title="4.6.3.2. Collapsing Margins"></a>4.6.3.2. <strong>Collapsing Margins</strong></h5><p>Two margins that occupied the same space, the space is determined by the larger one instead of the sum of two margins.</p>
 <ul>
 <li><strong>Image settings</strong>:</li>
 </ul>
@@ -674,9 +677,39 @@
 </ul>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.container</span>&#123;</span><br><span class="line">    <span class="attribute">margin-left</span>: auto;</span><br><span class="line">    <span class="attribute">margin-right</span>: auto;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.container</span>&#123;</span><br><span class="line">    <span class="attribute">margin</span>:<span class="number">0</span> auto;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* two different methods acheive the same result. */</span></span><br></pre></td></tr></table></figure>
 
-
-
-
+<h4 id="4-6-4-Types-of-Boxes"><a href="#4-6-4-Types-of-Boxes" class="headerlink" title="4.6.4. Types of Boxes"></a><strong>4.6.4. Types of Boxes</strong></h4><ul>
+<li><p>Block-level elements</p>
+<ul>
+<li>Elements are formatted visually as <strong>blocks</strong>.</li>
+<li>Elements occupy <strong>100% of parent element’s width</strong>, no matter the content.</li>
+<li>Elements are <strong>stacked vertically</strong> by default, one after another.</li>
+<li>The box-model <strong>applies as showed</strong> earlier.</li>
+</ul>
+</li>
+<li><p>Inline elements</p>
+<ul>
+<li>Occupies only the space necessary for its <strong>content</strong>.</li>
+<li>Causes <strong>no line-breaks</strong> after or before the element.</li>
+<li>Box model applies in a different way: <strong>heights and widths do not apply</strong>.</li>
+<li><strong>Paddings and margins</strong> are applied only <strong>horizontally</strong>(left and right)</li>
+</ul>
+<p>default inline elements: </p>
+<ul>
+<li>a, img, strong, em, button, etc. (html)</li>
+<li>display: inline. (css)</li>
+</ul>
+</li>
+</ul>
+<p>Change inline to block-level</p>
+<p> <img src="/images/webDevelopment/toblock.jpg"></p>
+<p>Change block-levle to inline</p>
+<p> <img src="/images/webDevelopment/toinline.jpg"></p>
+<ul>
+<li>Inline-block boxes.</li>
+</ul>
+<p> <img src="/images/webDevelopment/inlineblock.jpg"></p>
+<p>(keep block side-by-side.)</p>
+<h4 id="4-6-5-Absolute-Positioning"><a href="#4-6-5-Absolute-Positioning" class="headerlink" title="4.6.5. Absolute Positioning"></a>4.6.5. Absolute Positioning</h4>
     </article>
     <!-- license -->
     
@@ -816,7 +849,7 @@
                 <div class="toc-catalog">
                     <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
                 </div>
-                <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-Extensions"><span class="toc-text">1. Extensions</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-Prettier-Code-formatter"><span class="toc-text">1.1. Prettier - Code formatter</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-Format-On-Save"><span class="toc-text">1.2. Format On Save</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-Auto-Save"><span class="toc-text">1.3. Auto Save</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-4-Tab-Size"><span class="toc-text">1.4. Tab Size</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-5-One-Monokai-Theme"><span class="toc-text">1.5. One Monokai Theme</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-6-Image-preview"><span class="toc-text">1.6. Image preview</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-7-Color-Highlight"><span class="toc-text">1.7. Color Highlight</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-8-Auto-Rename-Tag"><span class="toc-text">1.8. Auto Rename Tag</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-9-Auto-Closing-Tags"><span class="toc-text">1.9. Auto Closing Tags</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-10-Live-Server"><span class="toc-text">1.10. Live Server</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-Semantic-Elements"><span class="toc-text">2. Semantic Elements</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-CodePen-io"><span class="toc-text">3. CodePen.io</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-CSS"><span class="toc-text">4. CSS</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-CSS-rule"><span class="toc-text">4.1. CSS rule</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-Types-Places-we-can-write"><span class="toc-text">4.2. Types (Places we can write)</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#4-2-1-Inline-CSS"><span class="toc-text">4.2.1. Inline CSS</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-2-2-Internal-CSS"><span class="toc-text">4.2.2. Internal CSS</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-2-3-External-CSS"><span class="toc-text">4.2.3. External CSS</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-3-Selectors"><span class="toc-text">4.3. Selectors</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#4-3-1-id"><span class="toc-text">4.3.1. id</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-3-2-class-recommend"><span class="toc-text">4.3.2. class (recommend)</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-3-Colors"><span class="toc-text">4.3. Colors</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#4-3-1-RGB-x2F-RGBA-notation"><span class="toc-text">4.3.1. RGB&#x2F;RGBA notation</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-3-2-HexaDecimal-notation"><span class="toc-text">4.3.2. HexaDecimal notation</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-3-3-Applications"><span class="toc-text">4.3.3. Applications</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-4-Pseudo-class"><span class="toc-text">4.4. Pseudo-class</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-5-Style-links"><span class="toc-text">4.5. Style links</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-6-CSS-Theory"><span class="toc-text">4.6. CSS Theory</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#4-6-1-Conflicts-between-Selectors"><span class="toc-text">4.6.1. Conflicts between Selectors</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-6-2-Inheritance"><span class="toc-text">4.6.2. Inheritance</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-6-3-CSS-box-model"><span class="toc-text">4.6.3. CSS box model</span></a></li></ol></li></ol></li></ol>
+                <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-Extensions"><span class="toc-text">1. Extensions</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-Prettier-Code-formatter"><span class="toc-text">1.1. Prettier - Code formatter</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-Format-On-Save"><span class="toc-text">1.2. Format On Save</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-Auto-Save"><span class="toc-text">1.3. Auto Save</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-4-Tab-Size"><span class="toc-text">1.4. Tab Size</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-5-One-Monokai-Theme"><span class="toc-text">1.5. One Monokai Theme</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-6-Image-preview"><span class="toc-text">1.6. Image preview</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-7-Color-Highlight"><span class="toc-text">1.7. Color Highlight</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-8-Auto-Rename-Tag"><span class="toc-text">1.8. Auto Rename Tag</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-9-Auto-Closing-Tags"><span class="toc-text">1.9. Auto Closing Tags</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-10-Live-Server"><span class="toc-text">1.10. Live Server</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-Semantic-Elements"><span class="toc-text">2. Semantic Elements</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-CodePen-io"><span class="toc-text">3. CodePen.io</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-CSS"><span class="toc-text">4. CSS</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-CSS-rule"><span class="toc-text">4.1. CSS rule</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-Types-Places-we-can-write"><span class="toc-text">4.2. Types (Places we can write)</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#4-2-1-Inline-CSS"><span class="toc-text">4.2.1. Inline CSS</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-2-2-Internal-CSS"><span class="toc-text">4.2.2. Internal CSS</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-2-3-External-CSS"><span class="toc-text">4.2.3. External CSS</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-3-Selectors"><span class="toc-text">4.3. Selectors</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#4-3-1-id"><span class="toc-text">4.3.1. id</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-3-2-class-recommend"><span class="toc-text">4.3.2. class (recommend)</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-3-Colors"><span class="toc-text">4.3. Colors</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#4-3-1-RGB-x2F-RGBA-notation"><span class="toc-text">4.3.1. RGB&#x2F;RGBA notation</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-3-2-HexaDecimal-notation"><span class="toc-text">4.3.2. HexaDecimal notation</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-3-3-Applications"><span class="toc-text">4.3.3. Applications</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-4-Pseudo-class"><span class="toc-text">4.4. Pseudo-class</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-5-Style-links"><span class="toc-text">4.5. Style links</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-6-CSS-Theories"><span class="toc-text">4.6. CSS Theories</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#4-6-1-Conflicts-between-Selectors"><span class="toc-text">4.6.1. Conflicts between Selectors</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-6-2-Inheritance"><span class="toc-text">4.6.2. Inheritance</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-6-3-CSS-box-model"><span class="toc-text">4.6.3. CSS box model</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#4-6-3-1-concept"><span class="toc-text">4.6.3.1. concept</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#4-6-3-2-Collapsing-Margins"><span class="toc-text">4.6.3.2. Collapsing Margins</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-6-4-Types-of-Boxes"><span class="toc-text">4.6.4. Types of Boxes</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-6-5-Absolute-Positioning"><span class="toc-text">4.6.5. Absolute Positioning</span></a></li></ol></li></ol></li></ol>
             </div>
         
         <!-- sidebar -->
