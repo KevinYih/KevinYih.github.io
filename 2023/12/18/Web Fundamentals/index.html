@@ -1,0 +1,1909 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- title -->
+
+
+    
+
+<!-- keywords -->
+
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="author" content="Kevin Y">
+    <meta name="renderer" content="webkit">
+    <meta name="copyright" content="Kevin Y">
+    
+        <meta name="keywords" content="hexo,hexo-theme,hexo-blog">
+    
+    <meta name="description" content="">
+    <meta name="description" content="1. ExtensionsSome useful extensions for html &amp; css in VScode. 1.1. Prettier - Code formatterPrettier - Code formatter；  Setting in VScode.  1.2. Format On Save 1.3. Auto Save 1.4. Tab Size 1.5. On">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Web Fundamentals">
+<meta property="og:url" content="http://example.com/2023/12/18/Web%20Fundamentals/index.html">
+<meta property="og:site_name" content="Kevin&#39;s Space">
+<meta property="og:description" content="1. ExtensionsSome useful extensions for html &amp; css in VScode. 1.1. Prettier - Code formatterPrettier - Code formatter；  Setting in VScode.  1.2. Format On Save 1.3. Auto Save 1.4. Tab Size 1.5. On">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/images/WebFundamentals/prettier.jpg">
+<meta property="og:image" content="http://example.com/images/WebFundamentals/defaultprettier.jpg">
+<meta property="og:image" content="http://example.com/images/WebFundamentals/formatOnSave.jpg">
+<meta property="og:image" content="http://example.com/images/WebFundamentals/autoSave.jpg">
+<meta property="og:image" content="http://example.com/images/WebFundamentals/tabSize.jpg">
+<meta property="og:image" content="http://example.com/images/WebFundamentals/onemonokai.jpg">
+<meta property="og:image" content="http://example.com/images/WebFundamentals/imagePreview.jpg">
+<meta property="og:image" content="http://example.com/images/WebFundamentals/colorHighlight.jpg">
+<meta property="og:image" content="http://example.com/images/WebFundamentals/autoRenameTag.jpg">
+<meta property="og:image" content="http://example.com/images/WebFundamentals/autoClosingTags.jpg">
+<meta property="og:image" content="http://example.com/images/WebFundamentals/liveServer.jpg">
+<meta property="og:image" content="http://example.com/images/WebFundamentals/runLiveServer.jpg">
+<meta property="og:image" content="http://example.com/images/WebFundamentals/semanticelement.jpg">
+<meta property="og:image" content="http://example.com/images/WebFundamentals/codepen.jpg">
+<meta property="og:image" content="http://example.com/images/WebFundamentals/cssrule.jpg">
+<meta property="og:image" content="http://example.com/images/WebFundamentals/inlinecode.jpg">
+<meta property="og:image" content="http://example.com/images/WebFundamentals/internalcode.jpg">
+<meta property="og:image" content="http://example.com/images/WebFundamentals/externalcode.jpg">
+<meta property="og:image" content="http://example.com/images/WebFundamentals/linktohtml.jpg">
+<meta property="og:image" content="http://example.com/images/WebFundamentals/selectorid.jpg">
+<meta property="og:image" content="http://example.com/images/WebFundamentals/selectorid2.jpg">
+<meta property="og:image" content="http://example.com/images/WebFundamentals/selectorclass.jpg">
+<meta property="og:image" content="http://example.com/images/WebFundamentals/selectorclass2.jpg">
+<meta property="og:image" content="http://example.com/images/WebFundamentals/rgb.jpg">
+<meta property="og:image" content="http://example.com/images/WebFundamentals/rgba.jpg">
+<meta property="og:image" content="http://example.com/images/WebFundamentals/rgbadown.jpg">
+<meta property="og:image" content="http://example.com/images/WebFundamentals/hexcolor.jpg">
+<meta property="og:image" content="http://example.com/images/WebFundamentals/shadegrey.jpg">
+<meta property="og:image" content="http://example.com/images/WebFundamentals/stylelinks.jpg">
+<meta property="og:image" content="http://example.com/images/WebFundamentals/multipleselector1.jpg">
+<meta property="og:image" content="http://example.com/images/WebFundamentals/multipleselector2.jpg">
+<meta property="og:image" content="http://example.com/images/WebFundamentals/selectorpriority.jpg">
+<meta property="og:image" content="http://example.com/images/WebFundamentals/multipleselector3.jpg">
+<meta property="og:image" content="http://example.com/images/WebFundamentals/selectorpriority2.jpg">
+<meta property="og:image" content="http://example.com/images/WebFundamentals/selectorpriority3.jpg">
+<meta property="og:image" content="http://example.com/images/WebFundamentals/selectorpriority4.jpg">
+<meta property="og:image" content="http://example.com/images/WebFundamentals/inheritance1.jpg">
+<meta property="og:image" content="http://example.com/images/WebFundamentals/inheritance2.jpg">
+<meta property="og:image" content="http://example.com/images/WebFundamentals/boxmodel1.jpg">
+<meta property="og:image" content="http://example.com/images/WebFundamentals/toblock.jpg">
+<meta property="og:image" content="http://example.com/images/WebFundamentals/toinline.jpg">
+<meta property="og:image" content="http://example.com/images/WebFundamentals/inlineblock.jpg">
+<meta property="og:image" content="http://example.com/images/WebFundamentals/absoluteposition.jpg">
+<meta property="og:image" content="http://example.com/images/WebFundamentals/topexample.jpg">
+<meta property="article:published_time" content="2023-12-18T15:35:53.000Z">
+<meta property="article:modified_time" content="2023-12-22T22:19:28.588Z">
+<meta property="article:author" content="Kevin Y">
+<meta property="article:tag" content="html">
+<meta property="article:tag" content="css">
+<meta property="article:tag" content="box">
+<meta property="article:tag" content="block">
+<meta property="article:tag" content="pseudo">
+<meta property="article:tag" content="positioning">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/images/WebFundamentals/prettier.jpg">
+    <meta http-equiv="Cache-control" content="no-cache">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="icon" href="/assets/favicon.ico">
+    
+    <title>Web Fundamentals · Kevin&#39;s Studio</title>
+    <!-- /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
+/* This file is meant as a standalone workflow for
+- testing support for link[rel=preload]
+- enabling async CSS loading in browsers that do not support rel=preload
+- applying rel preload css once loaded, whether supported or not.
+*/ -->
+<script>
+    (function (w) {
+        'use strict'
+        // rel=preload support test
+        if (!w.loadCSS) {
+            w.loadCSS = function () {}
+        }
+        // define on the loadCSS obj
+        var rp = (loadCSS.relpreload = {})
+        // rel=preload feature support test
+        // runs once and returns a function for compat purposes
+        rp.support = (function () {
+            var ret
+            try {
+                ret = w.document.createElement('link').relList.supports('preload')
+            } catch (e) {
+                ret = false
+            }
+            return function () {
+                return ret
+            }
+        })()
+
+        // if preload isn't supported, get an asynchronous load by using a non-matching media attribute
+        // then change that media back to its intended value on load
+        rp.bindMediaToggle = function (link) {
+            // remember existing media attr for ultimate state, or default to 'all'
+            var finalMedia = link.media || 'all'
+
+            function enableStylesheet() {
+                link.media = finalMedia
+            }
+
+            // bind load handlers to enable media
+            if (link.addEventListener) {
+                link.addEventListener('load', enableStylesheet)
+            } else if (link.attachEvent) {
+                link.attachEvent('onload', enableStylesheet)
+            }
+
+            // Set rel and non-applicable media type to start an async request
+            // note: timeout allows this to happen async to let rendering continue in IE
+            setTimeout(function () {
+                link.rel = 'stylesheet'
+                link.media = 'only x'
+            })
+            // also enable media after 3 seconds,
+            // which will catch very old browsers (android 2.x, old firefox) that don't support onload on link
+            setTimeout(enableStylesheet, 3000)
+        }
+
+        // loop through link elements in DOM
+        rp.poly = function () {
+            // double check this to prevent external calls from running
+            if (rp.support()) {
+                return
+            }
+            var links = w.document.getElementsByTagName('link')
+            for (var i = 0; i < links.length; i++) {
+                var link = links[i]
+                // qualify links to those with rel=preload and as=style attrs
+                if (
+                    link.rel === 'preload' &&
+                    link.getAttribute('as') === 'style' &&
+                    !link.getAttribute('data-loadcss')
+                ) {
+                    // prevent rerunning on link
+                    link.setAttribute('data-loadcss', true)
+                    // bind listeners to toggle media back
+                    rp.bindMediaToggle(link)
+                }
+            }
+        }
+
+        // if unsupported, run the polyfill
+        if (!rp.support()) {
+            // run once at least
+            rp.poly()
+
+            // rerun poly on an interval until onload
+            var run = w.setInterval(rp.poly, 500)
+            if (w.addEventListener) {
+                w.addEventListener('load', function () {
+                    rp.poly()
+                    w.clearInterval(run)
+                })
+            } else if (w.attachEvent) {
+                w.attachEvent('onload', function () {
+                    rp.poly()
+                    w.clearInterval(run)
+                })
+            }
+        }
+
+        // commonjs
+        if (typeof exports !== 'undefined') {
+            exports.loadCSS = loadCSS
+        } else {
+            w.loadCSS = loadCSS
+        }
+    })(typeof global !== 'undefined' ? global : this)
+</script>
+
+    <style type="text/css">
+    @font-face {
+        font-family: 'Oswald-Regular';
+        src: url("/font/Oswald-Regular.ttf");
+    }
+
+    body {
+        margin: 0;
+    }
+
+    header,
+    footer,
+    .back-top,
+    .sidebar,
+    .container,
+    .site-intro-meta,
+    .toc-wrapper {
+        display: none;
+    }
+
+    .site-intro {
+        position: relative;
+        z-index: 3;
+        width: 100%;
+        /* height: 50vh; */
+        overflow: hidden;
+    }
+
+    .site-intro-placeholder {
+        position: absolute;
+        z-index: -2;
+        top: 0;
+        left: 0;
+        width: calc(100% + 300px);
+        height: 100%;
+        background: repeating-linear-gradient(-45deg, #444 0, #444 80px, #333 80px, #333 160px);
+        background-position: center center;
+        transform: translate3d(-226px, 0, 0);
+        animation: gradient-move 2.5s ease-out 0s infinite;
+    }
+
+    @keyframes gradient-move {
+        0% {
+            transform: translate3d(-226px, 0, 0);
+        }
+        100% {
+            transform: translate3d(0, 0, 0);
+        }
+    }
+</style>
+
+    <link rel="preload" href="/css/style.css?v=20211217" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="/css/dark.css?v=20211217" as="style">
+    <link rel="stylesheet" href="/css/dark.css">
+    <link rel="stylesheet" href="/css/mobile.css?v=20211217" media="(max-width: 960px)">
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" as="script">
+    <link rel="preload" href="/scripts/main.js?v=20211217" as="script">
+    <link rel="preload" href="/scripts/dark.js?v=20211217" as="script">
+    <link rel="preload" href="/font/Oswald-Regular.ttf" as="font" crossorigin>
+    <link rel="preload" href="https://at.alicdn.com/t/font_327081_1dta1rlogw17zaor.woff" as="font" crossorigin>
+    <!-- algolia -->
+    
+    <!-- 百度统计  -->
+    
+    <!-- 谷歌统计  -->
+    
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <script type="text/javascript">
+        if (typeof window.$ == undefined) {
+            console.warn('jquery load from jsdelivr failed, will load local script')
+            document.write('<script src="/lib/jquery.min.js" />')
+        }
+    </script>
+    
+        <body class="post-body">
+    
+        <!-- header -->
+        <header class="header header-mobile">
+    <!-- top read progress line -->
+    <div class="header-element">
+        <div class="read-progress"></div>
+    </div>
+    <!-- sidebar menu button -->
+    <div class="header-element">
+        
+            <div class="header-sidebar-menu">
+        
+            
+                <div style="padding-left: 1px;">&#xe775;</div>
+            
+        </div>
+    </div>
+    <!-- header actions -->
+    <div class="header-actions">
+        <!-- theme mode switch button -->
+        <span class="header-theme-btn header-element">
+            <i class="fas fa-adjust"></i>
+        </span>
+        <!-- back to home page text -->
+        <span class="home-link header-element">
+            <a href=/>Kevin's Studio.</a>
+        </span>
+    </div>
+    <!-- toggle banner for post layout -->
+    
+        
+            <div class="banner">
+        
+            <div class="blog-title header-element">
+                <a href="/">Kevin&#39;s Studio.</a>
+            </div>
+            <div class="post-title header-element">
+                <a href="#" class="post-name">Web Fundamentals</a>
+            </div>
+        </div>
+    
+</header>
+
+        <!-- fixed footer -->
+        <footer class="footer-fixed">
+    <!-- back to top button -->
+    <div class="footer-fixed-element">
+        
+            <div class="back-top back-top-hidden">
+        
+        
+            <div>&#xe639;</div>
+        
+        </div>
+    </div>
+</footer>
+
+        <!-- wrapper -->
+        <div class="wrapper">
+            <div class="site-intro" style="
+
+
+
+
+
+
+
+    height:50vh;
+
+">
+    
+    <!-- 主页  -->
+    
+        
+    <!-- 404页  -->
+            
+    <div class="site-intro-placeholder"></div>
+    <div class="site-intro-img" style="background-image: url(/intro/post-bg.jpg)"></div>
+    <div class="site-intro-meta">
+        <!-- 标题  -->
+        <h1 class="intro-title">
+            <!-- 主页  -->
+            
+                Web Fundamentals
+            <!-- 404 -->
+            
+        </h1>
+        <!-- 副标题 -->
+        <p class="intro-subtitle">
+            <!-- 主页副标题  -->
+            
+                
+            <!-- 404 -->
+            
+        </p>
+        <!-- 文章页 meta -->
+        
+            <div class="post-intros">
+                <!-- 文章页标签  -->
+                
+                    <div class= post-intro-tags >
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="html">html</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="css">css</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="box">box</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="block">block</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="pseudo">pseudo</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="positioning">positioning</a>
+    
+</div>
+
+                
+                
+                    <div class="post-intro-read">
+                        <span>Word count: <span class="post-count word-count">1.3k</span>Reading time: <span class="post-count reading-time">8 min</span></span>
+                    </div>
+                
+                <div class="post-intro-meta">
+                    <!-- 撰写日期 -->
+                    <span class="iconfont-archer post-intro-calander">&#xe676;</span>
+                    <span class="post-intro-time">2023/12/18</span>
+                    <!-- busuanzi -->
+                    
+                    <!-- 文章分享 -->
+                    <span class="share-wrapper">
+                        <span class="iconfont-archer share-icon">&#xe71d;</span>
+                        <span class="share-text">Share</span>
+                        <ul class="share-list">
+                            <li class="iconfont-archer share-qr" data-type="qr">&#xe75b;
+                                <div class="share-qrcode"></div>
+                            </li>
+                            <li class="iconfont-archer" data-type="weibo">&#xe619;</li>
+                            <li class="iconfont-archer" data-type="qzone">&#xe62e;</li>
+                            <li class="iconfont-archer" data-type="twitter">&#xe634;</li>
+                            <li class="iconfont-archer" data-type="facebook">&#xe67a;</li>
+                        </ul>
+                    </span>
+                </div>
+            </div>
+        
+    </div>
+</div>
+
+            <script>
+  // get user agent
+  function getBrowserVersions() {
+    var u = window.navigator.userAgent
+    return {
+      userAgent: u,
+      trident: u.indexOf('Trident') > -1, //IE内核
+      presto: u.indexOf('Presto') > -1, //opera内核
+      webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
+      gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //火狐内核
+      mobile: !!u.match(/AppleWebKit.*Mobile.*/), //是否为移动终端
+      ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
+      android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或者uc浏览器
+      iPhone: u.indexOf('iPhone') > -1 || u.indexOf('Mac') > -1, //是否为iPhone或者安卓QQ浏览器
+      iPad: u.indexOf('iPad') > -1, //是否为iPad
+      webApp: u.indexOf('Safari') == -1, //是否为web应用程序，没有头部与底部
+      weixin: u.indexOf('MicroMessenger') == -1, //是否为微信浏览器
+      uc: u.indexOf('UCBrowser') > -1, //是否为android下的UC浏览器
+    }
+  }
+  var browser = {
+    versions: getBrowserVersions(),
+  }
+  console.log('userAgent: ' + browser.versions.userAgent)
+
+  // callback
+  function fontLoaded() {
+    console.log('font loaded')
+    if (document.getElementsByClassName('site-intro-meta')) {
+      document
+        .getElementsByClassName('intro-title')[0]
+        .classList.add('intro-fade-in')
+      document
+        .getElementsByClassName('intro-subtitle')[0]
+        .classList.add('intro-fade-in')
+      var postIntros = document.getElementsByClassName('post-intros')[0]
+      if (postIntros) {
+        postIntros.classList.add('post-fade-in')
+      }
+    }
+  }
+
+  // UC不支持跨域，所以直接显示
+  function asyncCb() {
+    if (browser.versions.uc) {
+      console.log('UCBrowser')
+      fontLoaded()
+    } else {
+      WebFont.load({
+        custom: {
+          families: ['Oswald-Regular'],
+        },
+        loading: function () {
+          // 所有字体开始加载
+          // console.log('font loading');
+        },
+        active: function () {
+          // 所有字体已渲染
+          fontLoaded()
+        },
+        inactive: function () {
+          // 字体预加载失败，无效字体或浏览器不支持加载
+          console.log('inactive: timeout')
+          fontLoaded()
+        },
+        timeout: 5000, // Set the timeout to two seconds
+      })
+    }
+  }
+
+  function asyncErr() {
+    console.warn('script load from CDN failed, will load local script')
+  }
+
+  // load webfont-loader async, and add callback function
+  function async(u, cb, err) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0]
+    o.src = u
+    if (cb) {
+      o.addEventListener(
+        'load',
+        function (e) {
+          cb(null, e)
+        },
+        false
+      )
+    }
+    if (err) {
+      o.addEventListener(
+        'error',
+        function (e) {
+          err(null, e)
+        },
+        false
+      )
+    }
+    s.parentNode.insertBefore(o, s)
+  }
+
+  var asyncLoadWithFallBack = function (arr, success, reject) {
+    var currReject = function () {
+      reject()
+      arr.shift()
+      if (arr.length) async(arr[0], success, currReject)
+    }
+
+    async(arr[0], success, currReject)
+  }
+
+  asyncLoadWithFallBack(
+    [
+      'https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.min.js',
+      'https://cdn.bootcss.com/webfont/1.6.28/webfontloader.js',
+      "/lib/webfontloader.min.js",
+    ],
+    asyncCb,
+    asyncErr
+  )
+</script>
+
+            <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
+            <div class="container container-unloaded">
+                <main class="main post-page">
+    <article class="article-entry">
+        <h2 id="1-Extensions"><a href="#1-Extensions" class="headerlink" title="1. Extensions"></a>1. Extensions</h2><p>Some useful extensions for html &amp; css in VScode.</p>
+<h3 id="1-1-Prettier-Code-formatter"><a href="#1-1-Prettier-Code-formatter" class="headerlink" title="1.1. Prettier - Code formatter"></a>1.1. Prettier - Code formatter</h3><p>Prettier - Code formatter；</p>
+<p><img src="/images/WebFundamentals/prettier.jpg"></p>
+<p>Setting in VScode.</p>
+<p><img src="/images/WebFundamentals/defaultprettier.jpg"></p>
+<h3 id="1-2-Format-On-Save"><a href="#1-2-Format-On-Save" class="headerlink" title="1.2. Format On Save"></a>1.2. Format On Save</h3><p><img src="/images/WebFundamentals/formatOnSave.jpg"></p>
+<h3 id="1-3-Auto-Save"><a href="#1-3-Auto-Save" class="headerlink" title="1.3. Auto Save"></a>1.3. Auto Save</h3><p><img src="/images/WebFundamentals/autoSave.jpg"></p>
+<h3 id="1-4-Tab-Size"><a href="#1-4-Tab-Size" class="headerlink" title="1.4. Tab Size"></a>1.4. Tab Size</h3><p><img src="/images/WebFundamentals/tabSize.jpg"></p>
+<h3 id="1-5-One-Monokai-Theme"><a href="#1-5-One-Monokai-Theme" class="headerlink" title="1.5. One Monokai Theme"></a>1.5. One Monokai Theme</h3><p><img src="/images/WebFundamentals/onemonokai.jpg"></p>
+<h3 id="1-6-Image-preview"><a href="#1-6-Image-preview" class="headerlink" title="1.6. Image preview"></a>1.6. Image preview</h3><p><img src="/images/WebFundamentals/imagePreview.jpg"></p>
+<h3 id="1-7-Color-Highlight"><a href="#1-7-Color-Highlight" class="headerlink" title="1.7. Color Highlight"></a>1.7. Color Highlight</h3><p>for css.</p>
+<p><img src="/images/WebFundamentals/colorHighlight.jpg"></p>
+<h3 id="1-8-Auto-Rename-Tag"><a href="#1-8-Auto-Rename-Tag" class="headerlink" title="1.8. Auto Rename Tag"></a>1.8. Auto Rename Tag</h3><p><img src="/images/WebFundamentals/autoRenameTag.jpg"></p>
+<h3 id="1-9-Auto-Closing-Tags"><a href="#1-9-Auto-Closing-Tags" class="headerlink" title="1.9. Auto Closing Tags"></a>1.9. Auto Closing Tags</h3><p><img src="/images/WebFundamentals/autoClosingTags.jpg"></p>
+<h3 id="1-10-Live-Server"><a href="#1-10-Live-Server" class="headerlink" title="1.10. Live Server"></a>1.10. Live Server</h3><p><img src="/images/WebFundamentals/liveServer.jpg"></p>
+<p>run it.</p>
+<p><img src="/images/WebFundamentals/runLiveServer.jpg"></p>
+<h2 id="2-Semantic-Elements"><a href="#2-Semantic-Elements" class="headerlink" title="2. Semantic Elements"></a>2. Semantic Elements</h2><p><em>emphasize</em>: <code>&lt;em&gt; &lt;/em&gt;</code>  instead of <em>italics</em>: <code>&lt;i&gt;  &lt;/i&gt;</code></p>
+<p><strong>strong</strong>: <code>&lt;strong&gt;  &lt;/strong&gt;</code>  instead of <strong>bold</strong>:  <code>&lt;b&gt; &lt;/b&gt;</code></p>
+<p>Used the following semantic elements instead of <code>&lt;div&gt; &lt;/div&gt;</code> to construct the page: </p>
+<ul>
+<li><code>&lt;header&gt;  &lt;/header&gt;</code></li>
+<li><code>&lt;nav&gt;  &lt;/nav&gt;</code></li>
+<li><code>&lt;artical&gt;  &lt;/article&gt;</code></li>
+<li><code>&lt;section&gt;  &lt;/section&gt;</code></li>
+<li><code>&lt;aside&gt;  &lt;/aside&gt;</code></li>
+<li><code>&lt;footer&gt;  &lt;/footer&gt;</code></li>
+</ul>
+<p><img src="/images/WebFundamentals/semanticelement.jpg"></p>
+<p>Advantage of Semantic elements:</p>
+<ul>
+<li><p>Search engine optimization. </p>
+<p>A search engine such as google will be able to understand the structure of your content.</p>
+</li>
+<li><p>Accessibility.</p>
+<p>especially for people who rely on screen readers to consume on web pages.</p>
+</li>
+</ul>
+<h2 id="3-CodePen-io"><a href="#3-CodePen-io" class="headerlink" title="3. CodePen.io"></a>3. CodePen.io</h2><p>A useful website for web coding with html &amp; css  &amp; JS.<br><img src="/images/WebFundamentals/codepen.jpg"></p>
+<h2 id="4-CSS"><a href="#4-CSS" class="headerlink" title="4. CSS"></a>4. CSS</h2><h3 id="4-1-CSS-rule"><a href="#4-1-CSS-rule" class="headerlink" title="4.1. CSS rule"></a>4.1. CSS rule</h3><p><img src="/images/WebFundamentals/cssrule.jpg"></p>
+<h3 id="4-2-Types-Places-we-can-write"><a href="#4-2-Types-Places-we-can-write" class="headerlink" title="4.2. Types (Places we can write)"></a>4.2. Types (Places we can write)</h3><h4 id="4-2-1-Inline-CSS"><a href="#4-2-1-Inline-CSS" class="headerlink" title="4.2.1. Inline CSS"></a>4.2.1. Inline CSS</h4><p><img src="/images/WebFundamentals/inlinecode.jpg"></p>
+<p>Very unprofessional, do not use this type.</p>
+<h4 id="4-2-2-Internal-CSS"><a href="#4-2-2-Internal-CSS" class="headerlink" title="4.2.2. Internal CSS"></a>4.2.2. Internal CSS</h4><p><img src="/images/WebFundamentals/internalcode.jpg"></p>
+<h4 id="4-2-3-External-CSS"><a href="#4-2-3-External-CSS" class="headerlink" title="4.2.3. External CSS"></a>4.2.3. External CSS</h4><p>Create a CSS file outside the Html file that would be styled.</p>
+<p><img src="/images/WebFundamentals/externalcode.jpg"></p>
+<p>Link the CSS file to the Html file.</p>
+<p><img src="/images/WebFundamentals/linktohtml.jpg"></p>
+<p>Recommend!</p>
+<h3 id="4-3-Selectors"><a href="#4-3-Selectors" class="headerlink" title="4.3. Selectors"></a>4.3. Selectors</h3><p>The element selector selects HTML elements based on the element name.</p>
+<p>For the future, for potential changes, for the expansion, <strong>recommend selector class  and don’t use selector id</strong>, even if the elements just are selected once.</p>
+<h4 id="4-3-1-id"><a href="#4-3-1-id" class="headerlink" title="4.3.1. id"></a>4.3.1. id</h4><p>The id selector uses the id attribute of an HTML element to select a specific element.</p>
+<p>The id of an element is unique within a page, so the id selector is used to select one unique element!</p>
+<p><img src="/images/WebFundamentals/selectorid.jpg"></p>
+<p>To select an element with a specific id, write a hash (#) character, followed by the id of the element.</p>
+<p><img src="/images/WebFundamentals/selectorid2.jpg"></p>
+<h4 id="4-3-2-class-recommend"><a href="#4-3-2-class-recommend" class="headerlink" title="4.3.2. class (recommend)"></a>4.3.2. class (recommend)</h4><p>The class selector selects HTML elements with a specific class attribute.</p>
+<p>Multiple elements can be given the same class name.</p>
+<p><img src="/images/WebFundamentals/selectorclass.jpg"></p>
+<p>To select elements with a specific class, write a period (.) character, followed by the class name.</p>
+<p><img src="/images/WebFundamentals/selectorclass2.jpg"></p>
+<h3 id="4-3-Colors"><a href="#4-3-Colors" class="headerlink" title="4.3. Colors"></a>4.3. Colors</h3><h4 id="4-3-1-RGB-x2F-RGBA-notation"><a href="#4-3-1-RGB-x2F-RGBA-notation" class="headerlink" title="4.3.1. RGB&#x2F;RGBA notation"></a>4.3.1. RGB&#x2F;RGBA notation</h4><ul>
+<li><p>Regular RGB model</p>
+<p><img src="/images/WebFundamentals/rgb.jpg"></p>
+</li>
+<li><p>RGBA: RGB with transparency (“alpha”)</p>
+<p><img src="/images/WebFundamentals/rgba.jpg"></p>
+<p><img src="/images/WebFundamentals/rgbadown.jpg"></p>
+</li>
+</ul>
+<h4 id="4-3-2-HexaDecimal-notation"><a href="#4-3-2-HexaDecimal-notation" class="headerlink" title="4.3.2. HexaDecimal notation"></a>4.3.2. HexaDecimal notation</h4><p><img src="/images/WebFundamentals/hexcolor.jpg"></p>
+<p>4.3.3. Shades of Grey</p>
+<p>When colors in all 3 channels are the same, we get a grey color.</p>
+<p>So, there are 256 pure garys to choose.</p>
+<p><img src="/images/WebFundamentals/shadegrey.jpg"></p>
+<h4 id="4-3-3-Applications"><a href="#4-3-3-Applications" class="headerlink" title="4.3.3. Applications"></a>4.3.3. Applications</h4><ul>
+<li>&#96;&#96;&#96;css<br>border-top: 5px solid #1098ad;<br>border-bottom: 5px solid #1098ad;<br>boder-left: 5px solid #1098ad;<br>boder-right: 5px solid #1098ad;<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- ```css</span><br><span class="line">  body &#123;</span><br><span class="line">    background: rgb(177, 174, 181); </span><br><span class="line">  &#125;</span><br><span class="line">  /*color the whole web page*/</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="4-4-Pseudo-class"><a href="#4-4-Pseudo-class" class="headerlink" title="4.4. Pseudo-class"></a>4.4. Pseudo-class</h3><p>The <strong><code>:first-child</code></strong> [CSS] [pseudo-class] represents the first element among a group of sibling elements.</p>
+<p>The <strong><code>:last-child</code></strong> [CSS] [pseudo-class] represents the last element among a group of sibling elements.</p>
+<p>The <strong><code>:nth-child()</code></strong> [CSS] [pseudo-class] matches elements based on the indexes of the elements in the child list of their parents. In other words, the <code>:nth-child()</code> selector selects child elements according to their position among all the sibling elements within a parent element.</p>
+<h3 id="4-5-Style-links"><a href="#4-5-Style-links" class="headerlink" title="4.5. Style links"></a>4.5. Style links</h3><p>LVHA:</p>
+<ul>
+<li><p>a:<strong>l</strong>ink - a normal, unvisited link.</p>
+</li>
+<li><p>a:<strong>v</strong>isited - a link the user has visited.</p>
+</li>
+<li><p>a:<strong>h</strong>over - a link when the user mouses over it.</p>
+</li>
+<li><p>a:<strong>a</strong>ctive - a link the moment it is clicked.</p>
+</li>
+</ul>
+<p><img src="/images/WebFundamentals/stylelinks.jpg"></p>
+<h3 id="4-6-CSS-Theories"><a href="#4-6-CSS-Theories" class="headerlink" title="4.6. CSS Theories"></a>4.6. CSS Theories</h3><h4 id="4-6-1-Conflicts-between-Selectors"><a href="#4-6-1-Conflicts-between-Selectors" class="headerlink" title="4.6.1. Conflicts between Selectors"></a>4.6.1. Conflicts between Selectors</h4><p>There are <strong>multiple selectors</strong> selecting the same element. Which one of them applies?</p>
+<p><img src="/images/WebFundamentals/multipleselector1.jpg"></p>
+<p><img src="/images/WebFundamentals/multipleselector2.jpg"></p>
+<p><strong>All of them</strong>. All rules and properties are applied!</p>
+<p><img src="/images/WebFundamentals/selectorpriority.jpg"></p>
+<p>(Almost never use Inline style.)</p>
+<p><img src="/images/WebFundamentals/multipleselector3.jpg"></p>
+<ul>
+<li><p>multiple defined classes : <code>Copyright</code>, <code>text</code>.</p>
+</li>
+<li><p>id and class can have the same name.</p>
+</li>
+</ul>
+<p>VScode would show you the priority as <code>Selector Specificity</code>:</p>
+<p><img src="/images/WebFundamentals/selectorpriority2.jpg"></p>
+<p>The priority would also be shown in Chrome Devtools:</p>
+<p><img src="/images/WebFundamentals/selectorpriority3.jpg"></p>
+<p>(open Chrome Devtools by <code>ctrl+shift+c</code>.)</p>
+<p><img src="/images/WebFundamentals/selectorpriority4.jpg"></p>
+<p><code>!important</code> has the highest priority! (Not used usually, not recommend.)</p>
+<h4 id="4-6-2-Inheritance"><a href="#4-6-2-Inheritance" class="headerlink" title="4.6.2. Inheritance"></a>4.6.2. Inheritance</h4><p>Some properties get their values inherited from parent elements to child elements.</p>
+<p><img src="/images/WebFundamentals/inheritance1.jpg"></p>
+<p>The inherited values are the ones who have the lowest priority.</p>
+<p><img src="/images/WebFundamentals/inheritance2.jpg"></p>
+<p>Not all properties get inherited. It’s mostly ones <strong>related to text</strong>: font-family, font-size, font-weight, font-style, color, line-height, letter-spacing, text-align, text-transform, text-shadow, list-style, etc.</p>
+<h4 id="4-6-3-CSS-box-model"><a href="#4-6-3-CSS-box-model" class="headerlink" title="4.6.3. CSS box model"></a>4.6.3. CSS box model</h4><h5 id="4-6-3-1-concept"><a href="#4-6-3-1-concept" class="headerlink" title="4.6.3.1. concept"></a>4.6.3.1. concept</h5><ul>
+<li><strong>Content</strong>: Text, images, etc.</li>
+<li><strong>Border</strong>: A line around the element, still <strong>inside</strong> of the element.</li>
+<li><strong>Padding</strong>: Invisible space around the content, <strong>inside</strong> of the element.</li>
+<li><strong>Margin</strong>: Space <strong>outside</strong> of the element, between element.</li>
+</ul>
+<p>All the four things are optional, you can specify none or some.</p>
+<p> <img src="/images/WebFundamentals/boxmodel1.jpg"></p>
+<p><strong>Fill area</strong>: Area that gets filled with <strong>background color</strong> or <strong>background image</strong>.</p>
+<p><strong>Final element width</strong> &#x3D; left border + left padding + width + right padding + right border.<br><strong>Final element height</strong> &#x3D; top border + top padding + height + bottom padding + bottom border.</p>
+<p>margin is <strong>not</strong> part of the width or height calculations.</p>
+<h5 id="4-6-3-2-Collapsing-Margins"><a href="#4-6-3-2-Collapsing-Margins" class="headerlink" title="4.6.3.2. Collapsing Margins"></a>4.6.3.2. <strong>Collapsing Margins</strong></h5><p>Two margins that occupied the same space, the space is determined by the larger one instead of the sum of two margins.</p>
+<ul>
+<li><strong>Image settings</strong>:</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.post-img</span>&#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">800px</span>;</span><br><span class="line">    <span class="attribute">height</span>:auto;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*percentage of the width of parent container.*/</span></span><br><span class="line"><span class="comment">/*filled the entire container by width.*/</span></span><br><span class="line"><span class="comment">/*view would be changed by the windows*/</span></span><br><span class="line"><span class="selector-class">.post-img</span>&#123;</span><br><span class="line">    <span class="attribute">width</span>:<span class="number">100%</span>;  </span><br><span class="line">    <span class="attribute">height</span>:auto;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>center a page inside of the browser</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.container</span>&#123;</span><br><span class="line">    <span class="attribute">margin-left</span>: auto;</span><br><span class="line">    <span class="attribute">margin-right</span>: auto;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.container</span>&#123;</span><br><span class="line">    <span class="attribute">margin</span>:<span class="number">0</span> auto;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* two different methods acheive the same result. */</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="4-6-4-Types-of-Boxes"><a href="#4-6-4-Types-of-Boxes" class="headerlink" title="4.6.4. Types of Boxes"></a><strong>4.6.4. Types of Boxes</strong></h4><ul>
+<li><p>Block-level elements</p>
+<ul>
+<li>Elements are formatted visually as <strong>blocks</strong>.</li>
+<li>Elements occupy <strong>100% of parent element’s width</strong>, no matter the content.</li>
+<li>Elements are <strong>stacked vertically</strong> by default, one after another.</li>
+<li>The box-model <strong>applies as showed</strong> earlier.</li>
+</ul>
+</li>
+<li><p>Inline elements</p>
+<ul>
+<li>Occupies only the space necessary for its <strong>content</strong>.</li>
+<li>Causes <strong>no line-breaks</strong> after or before the element.</li>
+<li>Box model applies in a different way: <strong>heights and widths do not apply</strong>.</li>
+<li><strong>Paddings and margins</strong> are applied only <strong>horizontally</strong>(left and right)</li>
+</ul>
+<p>default inline elements: </p>
+<ul>
+<li>a, img, strong, em, button, etc. (html)</li>
+<li>display: inline. (css)</li>
+</ul>
+</li>
+</ul>
+<p>Change inline to block-level</p>
+<p> <img src="/images/WebFundamentals/toblock.jpg"></p>
+<p>Change block-levle to inline</p>
+<p> <img src="/images/WebFundamentals/toinline.jpg"></p>
+<ul>
+<li>Inline-block boxes.</li>
+</ul>
+<p> <img src="/images/WebFundamentals/inlineblock.jpg"></p>
+<p>(keep block side-by-side.)</p>
+<h4 id="4-6-5-Absolute-Positioning"><a href="#4-6-5-Absolute-Positioning" class="headerlink" title="4.6.5. Absolute Positioning"></a>4.6.5. Absolute Positioning</h4><p>An element with <code>position: absolute;</code> is positioned relative to the nearest <u>positioned</u> ancestor (instead of positioned relative to the viewport, like fixed).</p>
+<p>An element with <code>position: relative;</code> is positioned relative to its normal position.</p>
+<p>For example:</p>
+<p>A element is inside of a container. Then we could use this container as the parent element inside of which we want to absolutely position this element. So, we need to set the container position relative at first.</p>
+<p> <img src="/images/WebFundamentals/absoluteposition.jpg"></p>
+<h3 id="4-7-Pseudo-elements"><a href="#4-7-Pseudo-elements" class="headerlink" title="4.7. Pseudo-elements"></a>4.7. Pseudo-elements</h3><p><code>first-letter</code>, <code>first-line</code>, <code>after</code> …</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">h1</span><span class="selector-pseudo">::first-letter</span> &#123;</span><br><span class="line">  <span class="attribute">font-style</span>: normal;</span><br><span class="line">  <span class="attribute">margin-right</span>: <span class="number">5px</span>;</span><br><span class="line">&#125; </span><br><span class="line"></span><br><span class="line"><span class="comment">/*adjacent sibling selector */</span></span><br><span class="line"><span class="selector-tag">h3</span> + <span class="selector-tag">p</span><span class="selector-pseudo">::first-line</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>: red;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">h2</span><span class="selector-pseudo">::after</span> &#123;</span><br><span class="line">  <span class="attribute">content</span>: <span class="string">&quot;TOP&quot;</span>;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="number">#ffe70e</span>;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">16px</span>;</span><br><span class="line">  <span class="attribute">font-weight</span>: bold;</span><br><span class="line">  <span class="attribute">display</span>: inline-block;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">5px</span> <span class="number">10px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>For example:</p>
+<p> <img src="/images/WebFundamentals/topexample.jpg"></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">h2</span> &#123;  </span><br><span class="line">  <span class="attribute">position</span>: relative;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">h2</span><span class="selector-pseudo">::after</span> &#123;</span><br><span class="line">  <span class="attribute">content</span>: <span class="string">&quot;TOP&quot;</span>;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="number">#ffe70e</span>;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">16px</span>;</span><br><span class="line">  <span class="attribute">font-weight</span>: bold;</span><br><span class="line">  <span class="attribute">display</span>: inline-block;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">5px</span> <span class="number">10px</span>;</span><br><span class="line">  <span class="attribute">position</span>: absolute;</span><br><span class="line">  <span class="attribute">top</span>: -<span class="number">15px</span>;</span><br><span class="line">  <span class="attribute">right</span>: -<span class="number">25px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-8-Developer-Skill"><a href="#4-8-Developer-Skill" class="headerlink" title="4.8. Developer Skill"></a>4.8. Developer Skill</h3><h4 id="4-6-1-HTML"><a href="#4-6-1-HTML" class="headerlink" title="4.6.1. HTML"></a>4.6.1. HTML</h4><p>Common bugs with Html is without closing tags. </p>
+<p>Useful tools:</p>
+<ul>
+<li>Stack Overflow</li>
+<li>HTML validator tool</li>
+<li>Diffchecker</li>
+<li>ChatGPT</li>
+</ul>
+<h4 id="4-6-2-CSS"><a href="#4-6-2-CSS" class="headerlink" title="4.6.2. CSS"></a>4.6.2. CSS</h4><p>One of the most common sources of bugs in CSS are some conflicts between selectors.</p>
+<p>Misspelled a property name.</p>
+<p>Is style sheet(css) correctly link to HTML?</p>
+<ul>
+<li>Chrome inspect</li>
+<li>use the up and down keys to view how the values changed.</li>
+</ul>
+
+    </article>
+    <!-- license -->
+    
+    <!-- paginator -->
+    <ul class="post-paginator">
+        <li class="next">
+            
+                <div class="nextSlogan">Next Post</div>
+                <a href="/2023/12/18/Web%20Layouts/" title="Web Layouts">
+                    <div class="nextTitle">Web Layouts</div>
+                </a>
+            
+        </li>
+        <li class="previous">
+            
+                <div class="prevSlogan">Previous Post</div>
+                <a href="/2023/05/30/Linux%20Commands/" title="Linux Commands">
+                    <div class="prevTitle">Linux Commands</div>
+                </a>
+            
+        </li>
+    </ul>
+    <!-- comment -->
+    
+        <div class="post-comment">
+            <!-- 来必力 City 版安装代码 -->
+
+
+            
+
+            
+
+            
+
+            <!-- utteranc评论 -->
+
+
+            <!-- partial('_partial/comment/changyan') -->
+            <!--PC版-->
+
+
+            
+            
+
+            
+
+        </div>
+    
+    <!-- timeliness note -->
+    <!-- idea from: https://hexo.fluid-dev.com/posts/hexo-injector/#%E6%96%87%E7%AB%A0%E6%97%B6%E6%95%88%E6%80%A7%E6%8F%90%E7%A4%BA -->
+    
+    <!-- Mathjax -->
+    
+</main>
+
+                <!-- profile -->
+                
+            </div>
+            <footer class="footer footer-unloaded">
+    <!-- social  -->
+    
+        <div class="social">
+            
+    
+        
+            
+                <a href="mailto:12345@qq.com" class="iconfont-archer email" title=email ></a>
+            
+        
+    
+        
+            
+                <a href="//github.com/KevinY" class="iconfont-archer github" target="_blank" title=github></a>
+            
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+
+        </div>
+    
+    <!-- powered by Hexo  -->
+    <div class="copyright">
+        <span id="hexo-power">Powered by <a href="https://hexo.io/" target="_blank">Hexo</a></span>
+		<!--  <span class="iconfont-archer power">&#xe635;</span><span id="theme-info">theme <a href="https://github.com/fi3ework/hexo-theme-archer" target="_blank">Archer</a></span>   -->
+    </div>
+    <!-- website approve for Chinese user -->
+    
+    <!-- 不蒜子  -->
+    	
+</footer>
+
+        </div>
+        <!-- toc -->
+        
+            <div class="toc-wrapper toc-wrapper-loding" style=
+
+
+
+
+
+
+
+    top:50vh;
+
+>
+                <div class="toc-catalog">
+                    <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
+                </div>
+                <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-Extensions"><span class="toc-text">1. Extensions</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-Prettier-Code-formatter"><span class="toc-text">1.1. Prettier - Code formatter</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-Format-On-Save"><span class="toc-text">1.2. Format On Save</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-Auto-Save"><span class="toc-text">1.3. Auto Save</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-4-Tab-Size"><span class="toc-text">1.4. Tab Size</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-5-One-Monokai-Theme"><span class="toc-text">1.5. One Monokai Theme</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-6-Image-preview"><span class="toc-text">1.6. Image preview</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-7-Color-Highlight"><span class="toc-text">1.7. Color Highlight</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-8-Auto-Rename-Tag"><span class="toc-text">1.8. Auto Rename Tag</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-9-Auto-Closing-Tags"><span class="toc-text">1.9. Auto Closing Tags</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-10-Live-Server"><span class="toc-text">1.10. Live Server</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-Semantic-Elements"><span class="toc-text">2. Semantic Elements</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-CodePen-io"><span class="toc-text">3. CodePen.io</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-CSS"><span class="toc-text">4. CSS</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-CSS-rule"><span class="toc-text">4.1. CSS rule</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-Types-Places-we-can-write"><span class="toc-text">4.2. Types (Places we can write)</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#4-2-1-Inline-CSS"><span class="toc-text">4.2.1. Inline CSS</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-2-2-Internal-CSS"><span class="toc-text">4.2.2. Internal CSS</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-2-3-External-CSS"><span class="toc-text">4.2.3. External CSS</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-3-Selectors"><span class="toc-text">4.3. Selectors</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#4-3-1-id"><span class="toc-text">4.3.1. id</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-3-2-class-recommend"><span class="toc-text">4.3.2. class (recommend)</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-3-Colors"><span class="toc-text">4.3. Colors</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#4-3-1-RGB-x2F-RGBA-notation"><span class="toc-text">4.3.1. RGB&#x2F;RGBA notation</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-3-2-HexaDecimal-notation"><span class="toc-text">4.3.2. HexaDecimal notation</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-3-3-Applications"><span class="toc-text">4.3.3. Applications</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-4-Pseudo-class"><span class="toc-text">4.4. Pseudo-class</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-5-Style-links"><span class="toc-text">4.5. Style links</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-6-CSS-Theories"><span class="toc-text">4.6. CSS Theories</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#4-6-1-Conflicts-between-Selectors"><span class="toc-text">4.6.1. Conflicts between Selectors</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-6-2-Inheritance"><span class="toc-text">4.6.2. Inheritance</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-6-3-CSS-box-model"><span class="toc-text">4.6.3. CSS box model</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#4-6-3-1-concept"><span class="toc-text">4.6.3.1. concept</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#4-6-3-2-Collapsing-Margins"><span class="toc-text">4.6.3.2. Collapsing Margins</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-6-4-Types-of-Boxes"><span class="toc-text">4.6.4. Types of Boxes</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-6-5-Absolute-Positioning"><span class="toc-text">4.6.5. Absolute Positioning</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-7-Pseudo-elements"><span class="toc-text">4.7. Pseudo-elements</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-8-Developer-Skill"><span class="toc-text">4.8. Developer Skill</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#4-6-1-HTML"><span class="toc-text">4.6.1. HTML</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-6-2-CSS"><span class="toc-text">4.6.2. CSS</span></a></li></ol></li></ol></li></ol>
+            </div>
+        
+        <!-- sidebar -->
+        <div class="sidebar sidebar-hide">
+    <ul class="sidebar-tabs sidebar-tabs-active-0">
+        <li class="sidebar-tab-archives"><span class="iconfont-archer">&#xe67d;</span><span class="tab-name">Archive</span></li>
+        <li class="sidebar-tab-tags"><span class="iconfont-archer">&#xe61b;</span><span class="tab-name">Tag</span></li>
+        <li class="sidebar-tab-categories"><span class="iconfont-archer">&#xe666;</span><span class="tab-name">Cate</span></li>
+    </ul>
+    <div class="sidebar-content sidebar-content-show-archive">
+        <div class="sidebar-panel-archives">
+    <!-- 在 ejs 中将 archive 按照时间排序 -->
+    
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+    
+    
+    
+    <div class="total-and-search">
+        <div class="total-archive">
+        Total : 27
+        </div>
+        <!-- search  -->
+        
+    </div>
+    
+    <div class="post-archive">
+    
+        
+            
+            
+            <div class="archive-year"> 2023 </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">12/20</span>
+            <a class="archive-post-title" href="/2023/12/18/Web%20Layouts/">Web Layouts</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">12/19</span>
+            <a class="archive-post-title" href="/2023/12/18/Web%20Fundamentals/">Web Fundamentals</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/31</span>
+            <a class="archive-post-title" href="/2023/05/30/Linux%20Commands/">Linux Commands</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">01/16</span>
+            <a class="archive-post-title" href="/2023/01/15/%E5%BC%82%E5%B8%B8%E6%9C%BA%E5%88%B6/">异常机制</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">01/16</span>
+            <a class="archive-post-title" href="/2023/01/15/%E5%86%85%E9%83%A8%E7%B1%BB/">内部类</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">01/14</span>
+            <a class="archive-post-title" href="/2023/01/13/%E6%8A%BD%E8%B1%A1%E7%B1%BB%E5%92%8C%E6%8E%A5%E5%8F%A3/">抽象类和接口</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">01/13</span>
+            <a class="archive-post-title" href="/2023/01/12/%E9%83%A8%E5%88%86%E5%85%B3%E9%94%AE%E5%AD%97%E8%AF%A6%E8%A7%A3/">部分关键字详解</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">01/11</span>
+            <a class="archive-post-title" href="/2023/01/10/%E5%A4%9A%E6%80%81/">多态</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">01/10</span>
+            <a class="archive-post-title" href="/2023/01/09/%E7%BB%A7%E6%89%BF/">继承</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">01/10</span>
+            <a class="archive-post-title" href="/2023/01/08/%E5%B0%81%E8%A3%85/">封装</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">01/08</span>
+            <a class="archive-post-title" href="/2023/01/07/%E6%97%B6%E7%A9%BA%E5%A4%8D%E6%9D%82%E5%BA%A6/">时空复杂度</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">01/02</span>
+            <a class="archive-post-title" href="/2023/01/01/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/">面向对象</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">01/01</span>
+            <a class="archive-post-title" href="/2022/12/31/%E6%95%B0%E7%BB%84%E7%9A%84%E6%9C%89%E5%85%B3%E7%AE%97%E6%B3%95/">数组的有关算法</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">01/01</span>
+            <a class="archive-post-title" href="/2022/12/30/%E6%95%B0%E7%BB%84%E7%9A%84%E5%BA%94%E7%94%A8/">数组的应用</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> 2022 </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">12/31</span>
+            <a class="archive-post-title" href="/2022/12/30/String%E7%9A%84%E5%88%9B%E5%BB%BA%E9%99%B7%E9%98%B1/">String的创建陷阱</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">12/30</span>
+            <a class="archive-post-title" href="/2022/12/29/%E6%95%B0%E7%BB%84/">数组</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">12/27</span>
+            <a class="archive-post-title" href="/2022/12/26/%E6%96%B9%E6%B3%95/">方法</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">12/12</span>
+            <a class="archive-post-title" href="/2022/12/10/Java%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/">Java流程控制</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">12/10</span>
+            <a class="archive-post-title" href="/2022/12/09/%E8%BF%90%E7%AE%97%E7%AC%A6/">运算符</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">12/10</span>
+            <a class="archive-post-title" href="/2022/12/09/%E5%8F%98%E9%87%8F%E3%80%81%E5%B8%B8%E9%87%8F%E5%92%8C%E4%BD%9C%E7%94%A8%E5%9F%9F/">变量、常量和作用域</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">12/06</span>
+            <a class="archive-post-title" href="/2022/12/05/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">数据类型</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">12/06</span>
+            <a class="archive-post-title" href="/2022/12/05/IDEA%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/">IDEA使用指南</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">12/05</span>
+            <a class="archive-post-title" href="/2022/12/04/HelloWorld/">HelloWorld!</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">12/01</span>
+            <a class="archive-post-title" href="/2022/11/30/%E5%AE%89%E8%A3%85Java%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/">安装Java开发环境</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">12/01</span>
+            <a class="archive-post-title" href="/2022/11/30/Dos%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C/">DOS常用操作</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">12/01</span>
+            <a class="archive-post-title" href="/2022/11/29/Blog/">Blog</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/30</span>
+            <a class="archive-post-title" href="/2022/11/28/hello-world/">Hello World</a>
+        </li>
+    
+    </div>
+</div>
+
+        <div class="sidebar-panel-tags">
+    <div class="sidebar-tags-name">
+        
+            <span class="sidebar-tag-name" data-tags="Blog">
+                <span class="iconfont-archer">&#xe606;</span>
+                Blog
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="Hexo">
+                <span class="iconfont-archer">&#xe606;</span>
+                Hexo
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="Github">
+                <span class="iconfont-archer">&#xe606;</span>
+                Github
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="Git">
+                <span class="iconfont-archer">&#xe606;</span>
+                Git
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="Notepad++">
+                <span class="iconfont-archer">&#xe606;</span>
+                Notepad++
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="DOS">
+                <span class="iconfont-archer">&#xe606;</span>
+                DOS
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="CMD">
+                <span class="iconfont-archer">&#xe606;</span>
+                CMD
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="environment variables">
+                <span class="iconfont-archer">&#xe606;</span>
+                environment variables
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="java">
+                <span class="iconfont-archer">&#xe606;</span>
+                java
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="IDEA">
+                <span class="iconfont-archer">&#xe606;</span>
+                IDEA
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="project">
+                <span class="iconfont-archer">&#xe606;</span>
+                project
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="module">
+                <span class="iconfont-archer">&#xe606;</span>
+                module
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="package">
+                <span class="iconfont-archer">&#xe606;</span>
+                package
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="class">
+                <span class="iconfont-archer">&#xe606;</span>
+                class
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="Java">
+                <span class="iconfont-archer">&#xe606;</span>
+                Java
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="scanner">
+                <span class="iconfont-archer">&#xe606;</span>
+                scanner
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="sequential structure">
+                <span class="iconfont-archer">&#xe606;</span>
+                sequential structure
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="selective structure">
+                <span class="iconfont-archer">&#xe606;</span>
+                selective structure
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="cycle structure">
+                <span class="iconfont-archer">&#xe606;</span>
+                cycle structure
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="switch">
+                <span class="iconfont-archer">&#xe606;</span>
+                switch
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="break">
+                <span class="iconfont-archer">&#xe606;</span>
+                break
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="continue">
+                <span class="iconfont-archer">&#xe606;</span>
+                continue
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="String">
+                <span class="iconfont-archer">&#xe606;</span>
+                String
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="new">
+                <span class="iconfont-archer">&#xe606;</span>
+                new
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="stack">
+                <span class="iconfont-archer">&#xe606;</span>
+                stack
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="heap">
+                <span class="iconfont-archer">&#xe606;</span>
+                heap
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="innner class">
+                <span class="iconfont-archer">&#xe606;</span>
+                innner class
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="Local inner class">
+                <span class="iconfont-archer">&#xe606;</span>
+                Local inner class
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="anonymous inner class">
+                <span class="iconfont-archer">&#xe606;</span>
+                anonymous inner class
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="member inner class">
+                <span class="iconfont-archer">&#xe606;</span>
+                member inner class
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="static inner class">
+                <span class="iconfont-archer">&#xe606;</span>
+                static inner class
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="variable">
+                <span class="iconfont-archer">&#xe606;</span>
+                variable
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="constant">
+                <span class="iconfont-archer">&#xe606;</span>
+                constant
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="polymorphism">
+                <span class="iconfont-archer">&#xe606;</span>
+                polymorphism
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="instanceof">
+                <span class="iconfont-archer">&#xe606;</span>
+                instanceof
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="jdk">
+                <span class="iconfont-archer">&#xe606;</span>
+                jdk
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="jre">
+                <span class="iconfont-archer">&#xe606;</span>
+                jre
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="jvm">
+                <span class="iconfont-archer">&#xe606;</span>
+                jvm
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="encapsulation">
+                <span class="iconfont-archer">&#xe606;</span>
+                encapsulation
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="private">
+                <span class="iconfont-archer">&#xe606;</span>
+                private
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="exception">
+                <span class="iconfont-archer">&#xe606;</span>
+                exception
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="abstract">
+                <span class="iconfont-archer">&#xe606;</span>
+                abstract
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="interface">
+                <span class="iconfont-archer">&#xe606;</span>
+                interface
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="implements">
+                <span class="iconfont-archer">&#xe606;</span>
+                implements
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="byte">
+                <span class="iconfont-archer">&#xe606;</span>
+                byte
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="short">
+                <span class="iconfont-archer">&#xe606;</span>
+                short
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="int">
+                <span class="iconfont-archer">&#xe606;</span>
+                int
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="long">
+                <span class="iconfont-archer">&#xe606;</span>
+                long
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="float">
+                <span class="iconfont-archer">&#xe606;</span>
+                float
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="double">
+                <span class="iconfont-archer">&#xe606;</span>
+                double
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="boolean">
+                <span class="iconfont-archer">&#xe606;</span>
+                boolean
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="char">
+                <span class="iconfont-archer">&#xe606;</span>
+                char
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="array">
+                <span class="iconfont-archer">&#xe606;</span>
+                array
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="register">
+                <span class="iconfont-archer">&#xe606;</span>
+                register
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="Arrays">
+                <span class="iconfont-archer">&#xe606;</span>
+                Arrays
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="sort">
+                <span class="iconfont-archer">&#xe606;</span>
+                sort
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="bubble">
+                <span class="iconfont-archer">&#xe606;</span>
+                bubble
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="sparse">
+                <span class="iconfont-archer">&#xe606;</span>
+                sparse
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="static">
+                <span class="iconfont-archer">&#xe606;</span>
+                static
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="algorithm">
+                <span class="iconfont-archer">&#xe606;</span>
+                algorithm
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="time">
+                <span class="iconfont-archer">&#xe606;</span>
+                time
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="space">
+                <span class="iconfont-archer">&#xe606;</span>
+                space
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="complexity">
+                <span class="iconfont-archer">&#xe606;</span>
+                complexity
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="extends">
+                <span class="iconfont-archer">&#xe606;</span>
+                extends
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="super">
+                <span class="iconfont-archer">&#xe606;</span>
+                super
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="override">
+                <span class="iconfont-archer">&#xe606;</span>
+                override
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="final">
+                <span class="iconfont-archer">&#xe606;</span>
+                final
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="operator">
+                <span class="iconfont-archer">&#xe606;</span>
+                operator
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="objects">
+                <span class="iconfont-archer">&#xe606;</span>
+                objects
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="constructor">
+                <span class="iconfont-archer">&#xe606;</span>
+                constructor
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="object-oriented">
+                <span class="iconfont-archer">&#xe606;</span>
+                object-oriented
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="catch">
+                <span class="iconfont-archer">&#xe606;</span>
+                catch
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="throw">
+                <span class="iconfont-archer">&#xe606;</span>
+                throw
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="Linux">
+                <span class="iconfont-archer">&#xe606;</span>
+                Linux
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="operating system">
+                <span class="iconfont-archer">&#xe606;</span>
+                operating system
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="command">
+                <span class="iconfont-archer">&#xe606;</span>
+                command
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="html">
+                <span class="iconfont-archer">&#xe606;</span>
+                html
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="css">
+                <span class="iconfont-archer">&#xe606;</span>
+                css
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="floats">
+                <span class="iconfont-archer">&#xe606;</span>
+                floats
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="flexbox">
+                <span class="iconfont-archer">&#xe606;</span>
+                flexbox
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="css grid">
+                <span class="iconfont-archer">&#xe606;</span>
+                css grid
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="box">
+                <span class="iconfont-archer">&#xe606;</span>
+                box
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="block">
+                <span class="iconfont-archer">&#xe606;</span>
+                block
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="pseudo">
+                <span class="iconfont-archer">&#xe606;</span>
+                pseudo
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="positioning">
+                <span class="iconfont-archer">&#xe606;</span>
+                positioning
+            </span>
+        
+    </div>
+    <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>
+    <div class="tag-load-fail" style="display: none; color: #ccc; font-size: 0.6rem;">
+        缺失模块，请参考主题文档进行安装配置：https://github.com/fi3ework/hexo-theme-archer#%E5%AE%89%E8%A3%85%E4%B8%BB%E9%A2%98
+    </div> 
+    <div class="sidebar-tags-list"></div>
+</div>
+
+        <div class="sidebar-panel-categories">
+    <div class="sidebar-categories-name">
+    
+        <span class="sidebar-category-name" data-categories="Technology">
+            <span class="iconfont-archer">&#xe60a;</span>
+            Technology
+        </span>
+    
+    </div>
+    <div class="iconfont-archer sidebar-categories-empty">&#xe678;</div>
+    <div class="sidebar-categories-list"></div>
+</div>
+
+    </div>
+</div>
+
+        <!-- site-meta -->
+        <script>
+    var siteMetaRoot = "/"
+    if (siteMetaRoot === "undefined") {
+        siteMetaRoot = '/'
+    }
+    var siteMeta = {
+        url: "http://example.com",
+        root: siteMetaRoot,
+        author: "Kevin Y"
+    }
+</script>
+
+        <!-- import experimental options here -->
+        <!-- Custom Font -->
+
+
+        <!-- main func -->
+        <script src="/scripts/main.js?v=20211217"></script>
+        <!-- dark mode -->
+        <script src="/scripts/dark.js?v=20211217"></script>
+        <!-- fancybox -->
+        <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" defer></script>
+        <!-- algolia -->
+        
+        <!-- busuanzi -->
+        
+        <!-- CNZZ -->
+        
+        <!-- async load share.js -->
+        
+            <script src="/scripts/share.js?v=20211217" async></script>
+        
+        <!-- mermaid -->
+        
+    </body>
+</html>
