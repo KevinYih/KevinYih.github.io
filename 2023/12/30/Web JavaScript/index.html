@@ -32,7 +32,7 @@
 <meta property="og:image" content="http://example.com/images/WebJavaScript/CDNS1.jpg">
 <meta property="og:image" content="http://example.com/images/WebJavaScript/CDNS2.jpg">
 <meta property="article:published_time" content="2023-12-30T11:29:25.000Z">
-<meta property="article:modified_time" content="2024-01-05T08:18:48.943Z">
+<meta property="article:modified_time" content="2024-01-05T21:43:36.833Z">
 <meta property="article:author" content="Kevin Y">
 <meta property="article:tag" content="Javascript">
 <meta name="twitter:card" content="summary">
@@ -339,7 +339,7 @@
                 
                 
                     <div class="post-intro-read">
-                        <span>Word count: <span class="post-count word-count">2.4k</span>Reading time: <span class="post-count reading-time">15 min</span></span>
+                        <span>Word count: <span class="post-count word-count">2.9k</span>Reading time: <span class="post-count reading-time">17 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
@@ -732,12 +732,27 @@
 
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&quot;a&quot;</span>).<span class="property">attributes</span>;</span><br><span class="line"><span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&quot;a&quot;</span>).<span class="title function_">getAttribute</span>(<span class="string">&quot;href&quot;</span>);</span><br><span class="line"><span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&quot;a&quot;</span>).<span class="title function_">setAttribute</span>(<span class="string">&quot;href&quot;</span>, <span class="string">&quot;https://www.bing.com&quot;</span>);</span><br></pre></td></tr></table></figure>
 
-<h3 id="3-5-EventTarget"><a href="#3-5-EventTarget" class="headerlink" title="3.5. EventTarget"></a>3.5. EventTarget</h3><p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/EventTarget">https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/EventTarget</a></p>
+<h3 id="3-5-Event-Listener"><a href="#3-5-Event-Listener" class="headerlink" title="3.5. Event Listener"></a>3.5. Event Listener</h3><p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/EventTarget">https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/EventTarget</a></p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">addEventListener</span>(type, listener)</span><br><span class="line"><span class="title function_">addEventListener</span>(type, listener, options)</span><br><span class="line"><span class="title function_">addEventListener</span>(type, listener, useCapture)</span><br></pre></td></tr></table></figure>
 
-<p>All types of Events</p>
-<p>Events are fired to notify code of “interesting changes” that may affect code execution. These can arise from user interactions such as using a mouse or resizing a window, changes in the state of the underlying environment (e.g. low battery or media events from the operating system), and other causes.</p>
+<h4 id="3-5-1-Events"><a href="#3-5-1-Events" class="headerlink" title="3.5.1. Events"></a>3.5.1. Events</h4><p>Events are fired to notify code of “interesting changes” that may affect code execution. These can arise from user interactions such as using a mouse or resizing a window, changes in the state of the underlying environment (e.g. low battery or media events from the operating system), and other causes.</p>
 <p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/Events">https://developer.mozilla.org/en-US/docs/Web/Events</a></p>
+<ul>
+<li><p><strong>mouse events</strong></p>
+<p><code>click</code>, <code>dbclick</code>, <code>mousedown</code>, <code>mouseout</code>, <code>mouseover</code>, <code>mouseup</code>, <code>mousemove</code>, …</p>
+</li>
+<li><p><strong>keyboard events</strong></p>
+<p><code>keydown</code>, <code>keypress</code>, <code>keyup</code>.</p>
+</li>
+<li><p><strong>other events</strong></p>
+<ul>
+<li><p>window: <code>onload</code>, <code>unload</code>, <code>abort</code>, <code>error</code>, …;</p>
+</li>
+<li><p>text box: <code>select</code>, <code>change</code>, …;</p>
+</li>
+</ul>
+</li>
+</ul>
 <p>Example of Mouse events:</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">document</span>.<span class="title function_">querySelectorAll</span>(<span class="string">&quot;.drum&quot;</span>)[<span class="number">1</span>].<span class="title function_">addEventListener</span>(<span class="string">&quot;click&quot;</span>, handleClick);</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">handleClick</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="title function_">alert</span>(<span class="string">&quot;I got clicked!&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -788,22 +803,22 @@
 <p><img src="/images/WebJavaScript/CDNS1.jpg"></p>
 <p><u>jQuery link has to be put <strong>before</strong> the script link to index.js, at the bottom of html body.</u></p>
 <p><img src="/images/WebJavaScript/CDNS2.jpg"></p>
-<h3 id="4-2-jQuery-for-style"><a href="#4-2-jQuery-for-style" class="headerlink" title="4.2. jQuery for style"></a>4.2. jQuery for style</h3><p>selector one item:</p>
+<h3 id="4-2-jQuery-for-Style"><a href="#4-2-jQuery-for-Style" class="headerlink" title="4.2. jQuery for Style"></a>4.2. jQuery for Style</h3><p>selector one item:</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">&quot;h1&quot;</span>).<span class="title function_">css</span>(<span class="string">&quot;color&quot;</span>, <span class="string">&quot;green&quot;</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>($(<span class="string">&quot;h1&quot;</span>).<span class="title function_">css</span>(<span class="string">&quot;font-size&quot;</span>));</span><br><span class="line"><span class="comment">// one property: getting value.</span></span><br><span class="line"><span class="comment">// two property: setting value.</span></span><br><span class="line"></span><br><span class="line">$(<span class="string">&quot;h1&quot;</span>).<span class="title function_">addClass</span>(<span class="string">&quot;big-title&quot;</span>);</span><br><span class="line"><span class="comment">//we can set style in styles.css, and add big-title class to h1. So we seperate the style from index.js.</span></span><br><span class="line"></span><br><span class="line">$(<span class="string">&quot;h1&quot;</span>).<span class="title function_">removeClass</span>(<span class="string">&quot;big-title margin-50&quot;</span>);</span><br><span class="line"><span class="comment">//add multiple class to the same style.</span></span><br><span class="line"></span><br><span class="line">$(<span class="string">&quot;h1&quot;</span>).<span class="title function_">hasClass</span>(<span class="string">&quot;margin-50&quot;</span>);</span><br><span class="line"><span class="comment">//return boolean: true or false.</span></span><br><span class="line"></span><br><span class="line">$(<span class="string">&quot;.class&quot;</span>);</span><br><span class="line">$(<span class="string">&quot;#hehe&quot;</span>);</span><br></pre></td></tr></table></figure>
 
 <p>selectorAll is the same as selector one.</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">&quot;button&quot;</span>);</span><br><span class="line">$(<span class="string">&quot;.class&quot;</span>);</span><br><span class="line">$(<span class="string">&quot;#hehe&quot;</span>);</span><br></pre></td></tr></table></figure>
 
-<h3 id="4-3-jQuery-for-text"><a href="#4-3-jQuery-for-text" class="headerlink" title="4.3. jQuery for text"></a>4.3. jQuery for text</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">&quot;h1&quot;</span>).<span class="title function_">text</span>(<span class="string">&quot;Bye&quot;</span>)</span><br><span class="line"><span class="comment">// change the text fo h1 to &quot;Bye&quot;.</span></span><br><span class="line"></span><br><span class="line">$(<span class="string">&quot;button&quot;</span>).<span class="title function_">text</span>(<span class="string">&quot;Click me!&quot;</span>);</span><br><span class="line"><span class="comment">//change all the button&#x27;s text.</span></span><br><span class="line"></span><br><span class="line">$(<span class="string">&quot;button&quot;</span>).<span class="title function_">html</span>(<span class="string">&quot;&lt;em&gt;Dont click me.&lt;/em&gt;&quot;</span>);</span><br><span class="line"><span class="comment">//change all the button&#x27;s content.</span></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="4-3-jQuery-for-Text"><a href="#4-3-jQuery-for-Text" class="headerlink" title="4.3. jQuery for Text"></a>4.3. jQuery for Text</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">&quot;h1&quot;</span>).<span class="title function_">text</span>(<span class="string">&quot;Bye&quot;</span>)</span><br><span class="line"><span class="comment">// change the text fo h1 to &quot;Bye&quot;.</span></span><br><span class="line"></span><br><span class="line">$(<span class="string">&quot;button&quot;</span>).<span class="title function_">text</span>(<span class="string">&quot;Click me!&quot;</span>);</span><br><span class="line"><span class="comment">//change all the button&#x27;s text.</span></span><br><span class="line"></span><br><span class="line">$(<span class="string">&quot;button&quot;</span>).<span class="title function_">html</span>(<span class="string">&quot;&lt;em&gt;Dont click me.&lt;/em&gt;&quot;</span>);</span><br><span class="line"><span class="comment">//change all the button&#x27;s content.</span></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-<h3 id="4-4-jQuery-for-attributes"><a href="#4-4-jQuery-for-attributes" class="headerlink" title="4.4. jQuery for attributes"></a>4.4. jQuery for attributes</h3><p>Example:</p>
+<h3 id="4-4-jQuery-for-Attributes"><a href="#4-4-jQuery-for-Attributes" class="headerlink" title="4.4. jQuery for Attributes"></a>4.4. jQuery for Attributes</h3><p>Example:</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h1</span> <span class="attr">class</span>=<span class="string">&quot;big-title margin-50&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;drum.png&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;https:&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 
 
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">&quot;h1&quot;</span>).<span class="title function_">attr</span>(<span class="string">&quot;class&quot;</span>);</span><br><span class="line"><span class="comment">//class is also an attributes</span></span><br><span class="line"><span class="comment">//console will print: &quot;big-title margin-50&quot;.</span></span><br><span class="line"></span><br><span class="line">$(<span class="string">&quot;img&quot;</span>).<span class="title function_">attr</span>(<span class="string">&quot;src&quot;</span>);</span><br><span class="line"><span class="comment">//get attribute.</span></span><br><span class="line"></span><br><span class="line">$(<span class="string">&quot;a&quot;</span>).<span class="title function_">attr</span>(<span class="string">&quot;href&quot;</span>, <span class="string">&quot;https://www.youtube.com&quot;</span>);</span><br><span class="line"><span class="comment">//modify attributes.</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-<h3 id="4-5-jQuery-for-addEventListener"><a href="#4-5-jQuery-for-addEventListener" class="headerlink" title="4.5. jQuery for addEventListener"></a>4.5. jQuery for addEventListener</h3><p>Example:</p>
+<h3 id="4-5-jQuery-for-Event-Listener"><a href="#4-5-jQuery-for-Event-Listener" class="headerlink" title="4.5. jQuery for Event Listener"></a>4.5. jQuery for Event Listener</h3><p>Example:</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">&quot;h1&quot;</span>).<span class="title function_">click</span>(<span class="keyword">function</span>(<span class="params"></span>)&#123; ...;&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">//regular solution:</span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>; i&lt;<span class="number">5</span>; i++)</span><br><span class="line">    <span class="variable language_">document</span>.<span class="title function_">querySelectorAll</span>(<span class="string">&quot;button&quot;</span>)[i].<span class="title function_">addEventListener</span>(<span class="string">&quot;click&quot;</span>, <span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&quot;h1&quot;</span>).<span class="property">style</span>.<span class="property">color</span>=<span class="string">&quot;purple&quot;</span>;</span><br><span class="line">&#125;))</span><br><span class="line">    </span><br><span class="line"><span class="comment">//jQuery solution:</span></span><br><span class="line">$(<span class="string">&quot;button&quot;</span>).<span class="title function_">click</span>(<span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">    $(<span class="string">&quot;h1&quot;</span>).<span class="title function_">css</span>(<span class="string">&quot;color&quot;</span>, <span class="string">&quot;purple&quot;</span>);</span><br><span class="line">&#125;)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 <p>Example:</p>
@@ -811,14 +826,39 @@
 
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">&quot;input&quot;</span>).<span class="title function_">keypress</span>(<span class="keyword">function</span>(<span class="params">event</span>)&#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(event.<span class="property">key</span>);</span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">//callback in jQuery</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//more flexible method to call listener</span></span><br><span class="line">$(<span class="string">&quot;h1&quot;</span>).<span class="title function_">on</span>(<span class="string">&quot;mouseover&quot;</span>, <span class="keyword">function</span>(<span class="params"></span>)&#123;...&#125;)</span><br><span class="line"><span class="comment">//1st parameter is the event.(any events listed on Event reference in MDN docs for the DOM events)</span></span><br><span class="line"><span class="comment">//2nd parameter is the response.</span></span><br></pre></td></tr></table></figure>
 
+<p>Example, create HTML elements at any time in JS with jQuery.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">&quot;h1&quot;</span>).<span class="title function_">before</span>(<span class="string">&quot;&lt;button&gt;Button1&lt;/button&gt;&quot;</span>)</span><br><span class="line"><span class="comment">//create a button before h1.</span></span><br><span class="line"><span class="comment">//result: &lt;button&gt;Button1&lt;/button&gt;&lt;h1&gt;Hello&lt;/h1&gt;</span></span><br><span class="line"></span><br><span class="line">$(<span class="string">&quot;h1&quot;</span>).<span class="title function_">after</span>(<span class="string">&quot;&lt;button&gt;Button1&lt;/button&gt;&quot;</span>)</span><br><span class="line"><span class="comment">//create a button after h1.</span></span><br><span class="line"><span class="comment">//result: &lt;h1&gt;Hello&lt;/h1&gt;&lt;button&gt;Button1&lt;/button&gt;</span></span><br><span class="line"></span><br><span class="line">$(<span class="string">&quot;h1&quot;</span>).<span class="title function_">prepend</span>(<span class="string">&quot;&lt;button&gt;Button1&lt;/button&gt;&quot;</span>)</span><br><span class="line"><span class="comment">//create a button before h1&#x27;s content.</span></span><br><span class="line"><span class="comment">//result: &lt;h1&gt;&lt;button&gt;Button1&lt;/button&gt;Hello&lt;/h1&gt;</span></span><br><span class="line"></span><br><span class="line">$(<span class="string">&quot;h1&quot;</span>).<span class="title function_">append</span>(<span class="string">&quot;&lt;button&gt;Button1&lt;/button&gt;&quot;</span>)</span><br><span class="line"><span class="comment">//create a button after h1&#x27;s content.</span></span><br><span class="line"><span class="comment">//result: &lt;h1&gt;Hello&lt;button&gt;Button1&lt;/button&gt;&lt;/h1&gt;</span></span><br></pre></td></tr></table></figure>
 
+<p>Remove the button:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">&quot;button&quot;</span>).<span class="title function_">remove</span>();</span><br></pre></td></tr></table></figure>
 
+<h3 id="4-6-jQuery-for-Animations"><a href="#4-6-jQuery-for-Animations" class="headerlink" title="4.6. jQuery for Animations"></a>4.6. jQuery for Animations</h3><p>Example1, click on a button, then hide it.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">&quot;h1&quot;</span>).<span class="title function_">click</span>(<span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">    $(<span class="string">&quot;h1&quot;</span>).<span class="title function_">hide</span>();</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 
+<p>Example2, mouseover a button to hide it, and then reshow it after 1s.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">&quot;h1&quot;</span>).<span class="title function_">mouseover</span>(<span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">  $(<span class="string">&quot;h1&quot;</span>).<span class="title function_">hide</span>();</span><br><span class="line">  $(<span class="string">&quot;h1&quot;</span>).<span class="title function_">delay</span>(<span class="number">1000</span>).<span class="title function_">show</span>(<span class="number">0</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 
+<p>Example3, show when click, hide when click again.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">&quot;h1&quot;</span>).<span class="title function_">mouseover</span>(<span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">  $(<span class="string">&quot;h1&quot;</span>).<span class="title function_">toggle</span>(); </span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 
+<p>Example4, hide in a little bit more progressive way, and after 1s, it will show again in a progressive way.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">&quot;h1&quot;</span>).<span class="title function_">mouseover</span>(<span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">  $(<span class="string">&quot;h1&quot;</span>).<span class="title function_">fadeOut</span>(); </span><br><span class="line">  $(<span class="string">&quot;h1&quot;</span>).<span class="title function_">delay</span>(<span class="number">1000</span>).<span class="title function_">fadeIn</span>(<span class="number">0</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 
+<p>Example3, show when click, hide when click again, in a progressive way.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">&quot;h1&quot;</span>).<span class="title function_">mouseover</span>(<span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">  $(<span class="string">&quot;h1&quot;</span>).<span class="title function_">fadeToggle</span>(); </span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 
+<p>Example:</p>
+<p><code>$(&quot;h1&quot;).slideUp(); </code></p>
+<p><code>$(&quot;h1&quot;).slideToggle(); </code></p>
+<p><strong>Using css code to animate.</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">&quot;h1&quot;</span>).<span class="title function_">mouseover</span>(<span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">  $(<span class="string">&quot;h1&quot;</span>).<span class="title function_">animate</span>(&#123;<span class="attr">opacity</span>: <span class="number">0.5</span>&#125;); </span><br><span class="line">  $(<span class="string">&quot;h1&quot;</span>).<span class="title function_">animate</span>(&#123;<span class="attr">margin</span>: <span class="number">20</span>&#125;); <span class="comment">//make sure the 2nd value is a number!  </span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 
+<p><strong>Using css code to animate multiple steps.</strong></p>
+<p>At 1st step to slideUp, 2nd step to slideDown, at last animate the opacity.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">&quot;h1&quot;</span>).<span class="title function_">mouseover</span>(<span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">  <span class="comment">// hide the &quot;h1&quot; by multiple steps;</span></span><br><span class="line">  $(<span class="string">&quot;h1&quot;</span>).<span class="title function_">slideUp</span>().<span class="title function_">slideDown</span>().<span class="title function_">animate</span>(&#123; <span class="attr">opacity</span>: <span class="number">0.5</span> &#125;).<span class="title function_">fadeOut</span>();</span><br><span class="line"></span><br><span class="line">  <span class="comment">// $(&quot;h1&quot;).delay(1000).show(0);</span></span><br><span class="line">  $(<span class="string">&quot;h1&quot;</span>).<span class="title function_">delay</span>(<span class="number">1000</span>).<span class="title function_">fadeIn</span>(<span class="number">1</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>jQuery Effect Methods docs:</p>
+<p><a target="_blank" rel="noopener" href="https://api.jquery.com/category/effects/">https://api.jquery.com/category/effects/</a></p>
 
     </article>
     <!-- license -->
@@ -826,6 +866,11 @@
     <!-- paginator -->
     <ul class="post-paginator">
         <li class="next">
+            
+                <div class="nextSlogan">Next Post</div>
+                <a href="/2024/01/05/BASH/" title="BASH!">
+                    <div class="nextTitle">BASH!</div>
+                </a>
             
         </li>
         <li class="previous">
@@ -959,7 +1004,7 @@
                 <div class="toc-catalog">
                     <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
                 </div>
-                <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-Introduction"><span class="toc-text">1. Introduction</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-Basic-Syntax"><span class="toc-text">2. Basic Syntax</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-Variables"><span class="toc-text">2.1. Variables</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-Comparators-and-Equality"><span class="toc-text">2.2. Comparators and Equality</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-Js-Arrays"><span class="toc-text">2.3. Js Arrays</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-DOM"><span class="toc-text">3. DOM</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-Elements-Selecting"><span class="toc-text">3.1. Elements Selecting</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-Html-Dom-Styles"><span class="toc-text">3.2. Html Dom Styles</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-Html-Dom-text"><span class="toc-text">3.3. Html Dom text</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-4-Html-Dom-Attributes"><span class="toc-text">3.4.  Html Dom Attributes</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-5-EventTarget"><span class="toc-text">3.5. EventTarget</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-6-JS-Object"><span class="toc-text">3.6. JS Object</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-jQuery"><span class="toc-text">4. jQuery</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-How-to-link-jQuery"><span class="toc-text">4.1. How to link jQuery</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-jQuery-for-style"><span class="toc-text">4.2. jQuery for style</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-3-jQuery-for-text"><span class="toc-text">4.3. jQuery for text</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-4-jQuery-for-attributes"><span class="toc-text">4.4. jQuery for attributes</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-5-jQuery-for-addEventListener"><span class="toc-text">4.5. jQuery for addEventListener</span></a></li></ol></li></ol>
+                <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-Introduction"><span class="toc-text">1. Introduction</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-Basic-Syntax"><span class="toc-text">2. Basic Syntax</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-Variables"><span class="toc-text">2.1. Variables</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-Comparators-and-Equality"><span class="toc-text">2.2. Comparators and Equality</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-Js-Arrays"><span class="toc-text">2.3. Js Arrays</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-DOM"><span class="toc-text">3. DOM</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-Elements-Selecting"><span class="toc-text">3.1. Elements Selecting</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-Html-Dom-Styles"><span class="toc-text">3.2. Html Dom Styles</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-Html-Dom-text"><span class="toc-text">3.3. Html Dom text</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-4-Html-Dom-Attributes"><span class="toc-text">3.4.  Html Dom Attributes</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-5-Event-Listener"><span class="toc-text">3.5. Event Listener</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#3-5-1-Events"><span class="toc-text">3.5.1. Events</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-6-JS-Object"><span class="toc-text">3.6. JS Object</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-jQuery"><span class="toc-text">4. jQuery</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-How-to-link-jQuery"><span class="toc-text">4.1. How to link jQuery</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-jQuery-for-Style"><span class="toc-text">4.2. jQuery for Style</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-3-jQuery-for-Text"><span class="toc-text">4.3. jQuery for Text</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-4-jQuery-for-Attributes"><span class="toc-text">4.4. jQuery for Attributes</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-5-jQuery-for-Event-Listener"><span class="toc-text">4.5. jQuery for Event Listener</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-6-jQuery-for-Animations"><span class="toc-text">4.6. jQuery for Animations</span></a></li></ol></li></ol>
             </div>
         
         <!-- sidebar -->
@@ -1118,7 +1163,22 @@
         
         
         
+        
+        
+        
+        
+        
     
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -1327,7 +1387,7 @@
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 29
+        Total : 30
         </div>
         <!-- search  -->
         
@@ -1337,6 +1397,21 @@
     
         
             
+            
+            <div class="archive-year"> 2024 </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">01/06</span>
+            <a class="archive-post-title" href="/2024/01/05/BASH/">BASH!</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
             
             <div class="archive-year"> 2023 </div>
             <ul class="year-list">
@@ -1958,6 +2033,16 @@
             <span class="sidebar-tag-name" data-tags="Javascript">
                 <span class="iconfont-archer">&#xe606;</span>
                 Javascript
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="commands">
+                <span class="iconfont-archer">&#xe606;</span>
+                commands
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="linux">
+                <span class="iconfont-archer">&#xe606;</span>
+                linux
             </span>
         
     </div>
