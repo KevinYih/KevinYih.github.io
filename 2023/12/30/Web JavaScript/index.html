@@ -32,7 +32,7 @@
 <meta property="og:image" content="http://example.com/images/WebJavaScript/CDNS1.jpg">
 <meta property="og:image" content="http://example.com/images/WebJavaScript/CDNS2.jpg">
 <meta property="article:published_time" content="2023-12-30T11:29:25.000Z">
-<meta property="article:modified_time" content="2024-01-05T21:43:36.833Z">
+<meta property="article:modified_time" content="2024-01-07T10:06:38.909Z">
 <meta property="article:author" content="Kevin Y">
 <meta property="article:tag" content="Javascript">
 <meta name="twitter:card" content="summary">
@@ -339,7 +339,7 @@
                 
                 
                     <div class="post-intro-read">
-                        <span>Word count: <span class="post-count word-count">2.9k</span>Reading time: <span class="post-count reading-time">17 min</span></span>
+                        <span>Word count: <span class="post-count word-count">3.2k</span>Reading time: <span class="post-count reading-time">19 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
@@ -507,20 +507,31 @@
 <h2 id="2-Basic-Syntax"><a href="#2-Basic-Syntax" class="headerlink" title="2. Basic Syntax"></a>2. Basic Syntax</h2><h3 id="2-1-Variables"><a href="#2-1-Variables" class="headerlink" title="2.1. Variables"></a>2.1. Variables</h3><p><img src="/images/WebJavaScript/datatype.jpg"></p>
 <p>All numbers in JavaScript are represented as floating-point values. JavaScript represents numbers using the 64-bit floating-point format defined by the IEEE 754 standard.</p>
 <p><strong>variable initialization</strong></p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span> = <span class="string">&quot;text/javascript&quot;</span>&gt;</span><span class="language-handlebars"><span class="language-xml"></span></span></span><br><span class="line"><span class="language-xml"><span class="language-handlebars">   <span class="comment">&lt;!--</span></span></span></span><br><span class="line"><span class="comment"><span class="language-xml"><span class="language-handlebars">      var money;</span></span></span></span><br><span class="line"><span class="comment"><span class="language-xml"><span class="language-handlebars">      var name;</span></span></span></span><br><span class="line"><span class="comment"><span class="language-xml"><span class="language-handlebars">   //--&gt;</span></span></span></span><br><span class="line"><span class="language-xml"><span class="language-handlebars"></span></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span> = <span class="string">&quot;text/javascript&quot;</span>&gt;</span><span class="language-javascript">   </span></span><br><span class="line"><span class="language-javascript">      <span class="keyword">var</span> money = <span class="number">100</span>;</span></span><br><span class="line"><span class="language-javascript">      <span class="comment">//var is the old way to create variables, we don&#x27;t use it in new JavaScript code.</span></span></span><br><span class="line"><span class="language-javascript">    </span></span><br><span class="line"><span class="language-javascript">      <span class="keyword">let</span> age;</span></span><br><span class="line"><span class="language-javascript">      <span class="keyword">let</span> height;   </span></span><br><span class="line"><span class="language-javascript">    </span></span><br><span class="line"><span class="language-javascript">      <span class="keyword">const</span> dayOfYear; <span class="comment">//can&#x27;t be changed.</span></span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<p>Use the <strong>var</strong> keyword only for declaration or initialization, once for the life of any variable name in a document. </p>
-<p>JavaScript is <strong>untyped</strong> language. This means that a JavaScript variable can hold a value of any data type. Unlike many other languages, you don’t have to tell JavaScript during variable declaration what type of value the variable will hold. The value type of a variable can change during the execution of a program and JavaScript takes care of it automatically.</p>
-<p>Naming a variable is the same as Java.</p>
-<p>Only numbers, letters, <code>$</code> and <code>_</code>  can be contained in the name of a variable.</p>
-<p>Camel casing.</p>
-<p><strong>Strings</strong></p>
 <ul>
+<li><p>We use <code>const</code> by defualt;</p>
+</li>
+<li><p>If we have to change a variable then use <code>let</code>.</p>
+</li>
+</ul>
+<p>JavaScript is <strong>untyped</strong> language. This means that a JavaScript variable can hold a value of any data type. Unlike many other languages, you don’t have to tell JavaScript during variable declaration what type of value the variable will hold. The value type of a variable can change during the execution of a program and JavaScript takes care of it automatically.</p>
+<p>However, we can check the type by using <code>typeof</code>.</p>
+<p>Naming a variable is the same as Java.</p>
+<ul>
+<li><p>Only numbers, letters, <code>$</code> and <code>_</code>  can be contained in the name of a variable.</p>
+</li>
+<li><p>Camel casing.</p>
+</li>
+<li><p>Can’t start with a number.</p>
+</li>
+</ul>
+<h3 id="2-2-Strings"><a href="#2-2-Strings" class="headerlink" title="2.2. Strings"></a>2.2. <strong>Strings</strong></h3><h4 id="2-2-1-String-methods"><a href="#2-2-1-String-methods" class="headerlink" title="2.2.1. String methods"></a>2.2.1. String methods</h4><ul>
 <li>string.length</li>
 </ul>
 <p>Strings can be concatenated by <code>+</code> . (It’s the same as Java.)</p>
 <p>JavaScript:</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> string1 = <span class="string">&quot;hello&quot;</span>;</span><br><span class="line"><span class="keyword">var</span> l = string1.<span class="property">length</span>;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> string1 = <span class="string">&quot;hello&quot;</span>;</span><br><span class="line"><span class="keyword">let</span> l = string1.<span class="property">length</span>;</span><br></pre></td></tr></table></figure>
 
 <p>Java:</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">String</span> <span class="variable">string2</span> <span class="operator">=</span> <span class="string">&quot;hello&quot;</span>;</span><br><span class="line"><span class="type">int</span> <span class="variable">l</span> <span class="operator">=</span> string2.length();</span><br></pre></td></tr></table></figure>
@@ -528,19 +539,69 @@
 <ul>
 <li>string.slice()</li>
 </ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> name = <span class="string">&quot;kevin&quot;</span>;</span><br><span class="line">name.<span class="title function_">slice</span>(x, y);  </span><br><span class="line"><span class="comment">//start at x, continue until but not including y.</span></span><br><span class="line"><span class="comment">//start at x, end before y.</span></span><br><span class="line"><span class="comment">//y-x is the number you finally get.</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> name = <span class="string">&quot;kevin&quot;</span>;</span><br><span class="line">name.<span class="title function_">slice</span>(x, y);  </span><br><span class="line"><span class="comment">//start at x, continue until but not including y.</span></span><br><span class="line"><span class="comment">//start at x, end before y.</span></span><br><span class="line"><span class="comment">//y-x is the number you finally get.</span></span><br></pre></td></tr></table></figure>
 
 <p>Always count from ‘0’ in JavaScript.</p>
 <ul>
 <li>string.toUpperCase()</li>
 <li>string.toLowerCase()</li>
 </ul>
-<h3 id="2-2-Comparators-and-Equality"><a href="#2-2-Comparators-and-Equality" class="headerlink" title="2.2. Comparators and Equality"></a>2.2. Comparators and Equality</h3><p><code>===</code>   equal to;</p>
+<h4 id="2-2-2-String-definitions"><a href="#2-2-2-String-definitions" class="headerlink" title="2.2.2. String definitions"></a>2.2.2. String definitions</h4><ul>
+<li><p><code>&quot; &quot;</code>, <code>&#39; &#39;</code> are both OK. Regularly, using <code>&#39; &#39;</code> on string is more common.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;I&#x27;m a student.&quot;</span> <span class="comment">//need double quotes to work.</span></span><br></pre></td></tr></table></figure>
+
+
+</li>
+<li><p>Escape character: <code>\&#39;</code>, <code>\n</code></p>
+</li>
+<li><p>template string.</p>
+<ul>
+<li>interpolation</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">`Items (<span class="subst">$&#123;xx&#125;</span>)`</span>;</span><br><span class="line"><span class="comment">// $&#123;&#125;</span></span><br><span class="line"><span class="comment">//insert xx into the string directly.</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>multi-line strings</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">`some</span></span><br><span class="line"><span class="string">text</span></span><br><span class="line"><span class="string">is</span></span><br><span class="line"><span class="string">OK&#x27;</span></span><br><span class="line"><span class="string">//multi-line is only available for template strings.</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+<p>Recommendation: <strong>single quotes</strong> by default.</p>
+<h3 id="2-3-Comparators-and-Equality"><a href="#2-3-Comparators-and-Equality" class="headerlink" title="2.3. Comparators and Equality"></a>2.3. Comparators and Equality</h3><h4 id="2-3-1-Comparator"><a href="#2-3-1-Comparator" class="headerlink" title="2.3.1. Comparator"></a>2.3.1. Comparator</h4><p>Boolean type: <code>true</code>, <code>false</code>.</p>
+<p>In javaScript <strong>falsy values</strong>:</p>
+<p><code>false</code>, <code>0</code>, <code>&#39;&#39;</code>, <code>NaN</code>, <code>undefined</code>, <code>null</code></p>
+<p><code>&#39;&#39;</code>: empty string;</p>
+<p><code>NaN</code>: not a number</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;text&#x27;</span> / <span class="number">5</span>);</span><br><span class="line"><span class="comment">//result is NaN.</span></span><br></pre></td></tr></table></figure>
+
+<p><code>undefined</code>: undefined value.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> variable1;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(variable1);</span><br><span class="line"><span class="comment">//result is undefined.</span></span><br></pre></td></tr></table></figure>
+
+<p>Any value that is not on the list is <strong>truthy value</strong>.</p>
+<p>(Different from java and c!)</p>
+<p><code>===</code>   equal to; </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">5</span> === <span class="string">&#x27;5.00&#x27;</span>);</span><br><span class="line"><span class="comment">//false</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">5</span> == <span class="string">&#x27;5.00&#x27;</span>);</span><br><span class="line"><span class="comment">//true convert to the same type value, and compare.</span></span><br></pre></td></tr></table></figure>
+
 <p><code>!==</code>   not equal to;</p>
 <p>These two are different from Java.</p>
-<h3 id="2-3-Js-Arrays"><a href="#2-3-Js-Arrays" class="headerlink" title="2.3. Js Arrays"></a>2.3. Js Arrays</h3><p>Java’s arrays are more structured and offer a static, strongly-typed collection, which is beneficial for performance and type safety. </p>
+<h4 id="2-3-2-Shortcut"><a href="#2-3-2-Shortcut" class="headerlink" title="2.3.2 Shortcut"></a>2.3.2 Shortcut</h4><ul>
+<li>Ternary Operator <code>? : </code></li>
+<li>Guard Operator <code>&amp;&amp;</code></li>
+<li>Default Operator <code>||</code></li>
+</ul>
+<p><code>&amp;&amp;</code> has a higher priority than <code>||</code>.</p>
+<p>java also has shortcut, it will return the result of <code>ture</code> or <code>false</code>. However, in javascript, it will return the result of value.</p>
+<p><code>&amp;&amp;</code> The logical AND expression is a shortcut operator.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> message = <span class="number">5</span> &amp;&amp; <span class="string">&#x27;hello&#x27;</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(message);</span><br><span class="line"><span class="comment">//result is hello.</span></span><br><span class="line"></span><br><span class="line">message = <span class="literal">false</span> &amp;&amp; <span class="string">&#x27;hello&#x27;</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(message);</span><br><span class="line"><span class="comment">//result is false.</span></span><br></pre></td></tr></table></figure>
+
+<p><code>||</code> The logical OR expression is a shortcut operator.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> currency = <span class="string">&#x27;EUR&#x27;</span> || <span class="string">&#x27;USD&#x27;</span>;</span><br><span class="line"><span class="comment">//result is &#x27;EUR&#x27;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="2-4-Js-Arrays"><a href="#2-4-Js-Arrays" class="headerlink" title="2.4. Js Arrays"></a>2.4. Js Arrays</h3><p>Java’s arrays are more structured and offer a static, strongly-typed collection, which is beneficial for performance and type safety. </p>
 <p>In contrast, JavaScript’s arrays are more <strong>flexible and dynamic</strong>, with built-in methods that make them powerful for various manipulations. It’s more like <code>arrayList</code> in java. []</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> array1 = [<span class="string">&quot;a&quot;</span>, <span class="string">&quot;b&quot;</span>, <span class="string">&quot;c&quot;</span>];</span><br><span class="line"><span class="keyword">var</span> array2 = [];</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(array1[<span class="number">0</span>]);</span><br><span class="line">array1.<span class="title function_">includes</span>(<span class="string">&quot;a&quot;</span>);</span><br><span class="line">array1.<span class="property">length</span>;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> array1 = [<span class="string">&quot;a&quot;</span>, <span class="string">&quot;b&quot;</span>, <span class="string">&quot;c&quot;</span>];</span><br><span class="line"><span class="keyword">let</span> array2 = [];</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(array1[<span class="number">0</span>]);</span><br><span class="line">array1.<span class="title function_">includes</span>(<span class="string">&quot;a&quot;</span>);</span><br><span class="line">array1.<span class="property">length</span>;</span><br></pre></td></tr></table></figure>
 
 <p>Array Properties</p>
 <table>
@@ -1004,7 +1065,7 @@
                 <div class="toc-catalog">
                     <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
                 </div>
-                <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-Introduction"><span class="toc-text">1. Introduction</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-Basic-Syntax"><span class="toc-text">2. Basic Syntax</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-Variables"><span class="toc-text">2.1. Variables</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-Comparators-and-Equality"><span class="toc-text">2.2. Comparators and Equality</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-Js-Arrays"><span class="toc-text">2.3. Js Arrays</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-DOM"><span class="toc-text">3. DOM</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-Elements-Selecting"><span class="toc-text">3.1. Elements Selecting</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-Html-Dom-Styles"><span class="toc-text">3.2. Html Dom Styles</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-Html-Dom-text"><span class="toc-text">3.3. Html Dom text</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-4-Html-Dom-Attributes"><span class="toc-text">3.4.  Html Dom Attributes</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-5-Event-Listener"><span class="toc-text">3.5. Event Listener</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#3-5-1-Events"><span class="toc-text">3.5.1. Events</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-6-JS-Object"><span class="toc-text">3.6. JS Object</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-jQuery"><span class="toc-text">4. jQuery</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-How-to-link-jQuery"><span class="toc-text">4.1. How to link jQuery</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-jQuery-for-Style"><span class="toc-text">4.2. jQuery for Style</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-3-jQuery-for-Text"><span class="toc-text">4.3. jQuery for Text</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-4-jQuery-for-Attributes"><span class="toc-text">4.4. jQuery for Attributes</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-5-jQuery-for-Event-Listener"><span class="toc-text">4.5. jQuery for Event Listener</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-6-jQuery-for-Animations"><span class="toc-text">4.6. jQuery for Animations</span></a></li></ol></li></ol>
+                <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-Introduction"><span class="toc-text">1. Introduction</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-Basic-Syntax"><span class="toc-text">2. Basic Syntax</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-Variables"><span class="toc-text">2.1. Variables</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-Strings"><span class="toc-text">2.2. Strings</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-2-1-String-methods"><span class="toc-text">2.2.1. String methods</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-2-2-String-definitions"><span class="toc-text">2.2.2. String definitions</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-Comparators-and-Equality"><span class="toc-text">2.3. Comparators and Equality</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-3-1-Comparator"><span class="toc-text">2.3.1. Comparator</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-3-2-Shortcut"><span class="toc-text">2.3.2 Shortcut</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-4-Js-Arrays"><span class="toc-text">2.4. Js Arrays</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-DOM"><span class="toc-text">3. DOM</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-Elements-Selecting"><span class="toc-text">3.1. Elements Selecting</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-Html-Dom-Styles"><span class="toc-text">3.2. Html Dom Styles</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-Html-Dom-text"><span class="toc-text">3.3. Html Dom text</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-4-Html-Dom-Attributes"><span class="toc-text">3.4.  Html Dom Attributes</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-5-Event-Listener"><span class="toc-text">3.5. Event Listener</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#3-5-1-Events"><span class="toc-text">3.5.1. Events</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-6-JS-Object"><span class="toc-text">3.6. JS Object</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-jQuery"><span class="toc-text">4. jQuery</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-How-to-link-jQuery"><span class="toc-text">4.1. How to link jQuery</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-jQuery-for-Style"><span class="toc-text">4.2. jQuery for Style</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-3-jQuery-for-Text"><span class="toc-text">4.3. jQuery for Text</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-4-jQuery-for-Attributes"><span class="toc-text">4.4. jQuery for Attributes</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-5-jQuery-for-Event-Listener"><span class="toc-text">4.5. jQuery for Event Listener</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-6-jQuery-for-Animations"><span class="toc-text">4.6. jQuery for Animations</span></a></li></ol></li></ol>
             </div>
         
         <!-- sidebar -->
@@ -1168,7 +1229,22 @@
         
         
         
+        
+        
+        
+        
+        
     
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -1387,7 +1463,7 @@
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 30
+        Total : 31
         </div>
         <!-- search  -->
         
@@ -1401,6 +1477,12 @@
             <div class="archive-year"> 2024 </div>
             <ul class="year-list">
             
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">01/07</span>
+            <a class="archive-post-title" href="/2024/01/05/React/">BASH!</a>
+        </li>
+    
         
         <li class="archive-post-item">
             <span class="archive-post-date">01/06</span>
@@ -2043,6 +2125,16 @@
             <span class="sidebar-tag-name" data-tags="linux">
                 <span class="iconfont-archer">&#xe606;</span>
                 linux
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="JavaScript">
+                <span class="iconfont-archer">&#xe606;</span>
+                JavaScript
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="Frontend">
+                <span class="iconfont-archer">&#xe606;</span>
+                Frontend
             </span>
         
     </div>
