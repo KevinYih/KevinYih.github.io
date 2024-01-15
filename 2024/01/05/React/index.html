@@ -35,8 +35,11 @@
 <meta property="og:image" content="http://example.com/images/React/localreact.jpg">
 <meta property="og:image" content="http://example.com/images/React/createapp.jpg">
 <meta property="og:image" content="http://example.com/images/React/createapp2.jpg">
+<meta property="og:image" content="http://example.com/images/React/JSX1.jpg">
+<meta property="og:image" content="http://example.com/images/React/JSX2.jpg">
+<meta property="og:image" content="http://example.com/images/React/JSX2.jpg">
 <meta property="article:published_time" content="2024-01-06T06:54:33.000Z">
-<meta property="article:modified_time" content="2024-01-13T18:43:22.509Z">
+<meta property="article:modified_time" content="2024-01-15T22:26:14.226Z">
 <meta property="article:author" content="Kevin Y">
 <meta property="article:tag" content="html">
 <meta property="article:tag" content="css">
@@ -361,7 +364,7 @@
                 
                 
                     <div class="post-intro-read">
-                        <span>Word count: <span class="post-count word-count">319</span>Reading time: <span class="post-count reading-time">1 min</span></span>
+                        <span>Word count: <span class="post-count word-count">537</span>Reading time: <span class="post-count reading-time">3 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
@@ -564,6 +567,38 @@
 </ul>
 <h3 id="3-5-NExt-js-Remix"><a href="#3-5-NExt-js-Remix" class="headerlink" title="3.5. NExt.js Remix"></a>3.5. NExt.js Remix</h3><p>Up-to-date framework, recommended by React team.</p>
 <p>Both are full-stack framework, let you create React apps of any size.</p>
+<h2 id="4-Components-props-and-JSX"><a href="#4-Components-props-and-JSX" class="headerlink" title="4. Components, props and JSX"></a>4. Components, props and JSX</h2><h3 id="4-1-Components"><a href="#4-1-Components" class="headerlink" title="4.1.Components"></a>4.1.Components</h3><p>React applications are entirely made out of components.</p>
+<p>Each component has Data, Logic, Appearance.</p>
+<p>We build UIs by building <strong>multiple components</strong> and combing them.</p>
+<p>When a component nested in another component, the former is the child component of the latter.</p>
+<p>The <strong>hierarchy of components</strong> show the relationship of child component and the parent component.</p>
+<h3 id="4-2-JSX"><a href="#4-2-JSX" class="headerlink" title="4.2. JSX"></a>4.2. JSX</h3><p>Declarative syntax to <strong>describe</strong> what components <strong>look like</strong> and how they work.</p>
+<p><img src="/images/React/JSX1.jpg"></p>
+<p>We use JSX to tell React what we want to see on the screen, instead how to do things in imperative way.</p>
+<ul>
+<li>Components must return a block of JSX.</li>
+<li>JSX is an extension of JS which allows us to embed JS, CSS, and React components into HTML.</li>
+<li>Each JSX element is converted to a React.createElement function call.</li>
+<li>We could use React without JSX, but actually every use JSX.</li>
+</ul>
+<h3 id="4-3-Separation-of-concerns"><a href="#4-3-Separation-of-concerns" class="headerlink" title="4.3. Separation of concerns"></a>4.3. Separation of concerns</h3><p>Different from traditional way, React also has separation of concerns.</p>
+<p><img src="/images/React/JSX2.jpg"></p>
+<h3 id="4-4-Styling-React-Application-CSS-in-react"><a href="#4-4-Styling-React-Application-CSS-in-react" class="headerlink" title="4.4. Styling React Application, CSS in react"></a>4.4. Styling React Application, CSS in react</h3><p>We can use:</p>
+<ul>
+<li>inline styling. (use style attributes)</li>
+</ul>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">Header</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> styleH = &#123; <span class="attr">color</span>: <span class="string">&quot;red&quot;</span>, <span class="attr">fontSize</span>: <span class="string">&quot;48px&quot;</span>, <span class="attr">textTransform</span>: <span class="string">&quot;uppercase&quot;</span> &#125;;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> <span class="language-xml"><span class="tag">&lt;<span class="name">h1</span> <span class="attr">style</span>=<span class="string">&#123;styleH&#125;</span>&gt;</span>Fast React Pizza Co.<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>external CSS</li>
+</ul>
+<p><img src="/images/React/JSX2.jpg"></p>
+<ul>
+<li>SAS files.</li>
+<li>CSS modules</li>
+<li><strong>styled components</strong>  (<em>recommend!</em>)</li>
+<li>Tailwind CSS</li>
+</ul>
 
     </article>
     <!-- license -->
@@ -704,7 +739,7 @@
                 <div class="toc-catalog">
                     <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
                 </div>
-                <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-Introduction"><span class="toc-text">1. Introduction</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-Extensions"><span class="toc-text">2. Extensions</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-ESLint"><span class="toc-text">2.1. ESLint</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-Material-Icon-Theme"><span class="toc-text">2.2. Material Icon Theme</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-Quokka"><span class="toc-text">2.3. Quokka</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-Installation"><span class="toc-text">3. Installation</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-Online-Sandboxes"><span class="toc-text">3.1. Online Sandboxes</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-Local-React"><span class="toc-text">3.2. Local React</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-Create-React-APP"><span class="toc-text">3.3. Create-React-APP</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-4-VITE"><span class="toc-text">3.4. VITE</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-5-NExt-js-Remix"><span class="toc-text">3.5. NExt.js Remix</span></a></li></ol></li></ol>
+                <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-Introduction"><span class="toc-text">1. Introduction</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-Extensions"><span class="toc-text">2. Extensions</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-ESLint"><span class="toc-text">2.1. ESLint</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-Material-Icon-Theme"><span class="toc-text">2.2. Material Icon Theme</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-Quokka"><span class="toc-text">2.3. Quokka</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-Installation"><span class="toc-text">3. Installation</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-Online-Sandboxes"><span class="toc-text">3.1. Online Sandboxes</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-Local-React"><span class="toc-text">3.2. Local React</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-Create-React-APP"><span class="toc-text">3.3. Create-React-APP</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-4-VITE"><span class="toc-text">3.4. VITE</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-5-NExt-js-Remix"><span class="toc-text">3.5. NExt.js Remix</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-Components-props-and-JSX"><span class="toc-text">4. Components, props and JSX</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-Components"><span class="toc-text">4.1.Components</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-JSX"><span class="toc-text">4.2. JSX</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-3-Separation-of-concerns"><span class="toc-text">4.3. Separation of concerns</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-4-Styling-React-Application-CSS-in-react"><span class="toc-text">4.4. Styling React Application, CSS in react</span></a></li></ol></li></ol>
             </div>
         
         <!-- sidebar -->
