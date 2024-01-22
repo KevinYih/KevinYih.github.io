@@ -49,7 +49,7 @@
 <meta property="og:image" content="http://example.com/images/React/state5.jpg">
 <meta property="og:image" content="http://example.com/images/React/state6.jpg">
 <meta property="article:published_time" content="2024-01-06T06:54:33.000Z">
-<meta property="article:modified_time" content="2024-01-20T06:58:22.959Z">
+<meta property="article:modified_time" content="2024-01-22T07:28:10.936Z">
 <meta property="article:author" content="Kevin Y">
 <meta property="article:tag" content="html">
 <meta property="article:tag" content="css">
@@ -676,6 +676,12 @@
 <figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">function</span> <span class="title function_">App</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> [step, setStep] = <span class="title function_">useState</span>(<span class="number">2</span>);</span><br><span class="line">  <span class="keyword">const</span> [test, setTest] = <span class="title function_">useState</span>(&#123; <span class="attr">name</span>: <span class="string">&quot;KK&quot;</span> &#125;);</span><br><span class="line">    </span><br><span class="line">  <span class="keyword">function</span> <span class="title function_">handlPrevious</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="comment">//need callback</span></span><br><span class="line">    <span class="keyword">if</span> (step &gt; <span class="number">1</span>) <span class="title function_">setStep</span>(<span class="function">(<span class="params">s</span>) =&gt;</span> s-<span class="number">1</span>);</span><br><span class="line">    <span class="comment">//need no callback</span></span><br><span class="line">    <span class="title function_">setTest</span>(&#123;test.<span class="property">name</span> = <span class="string">&#x27;YY&#x27;</span>&#125;); </span><br><span class="line">  &#125;</span><br><span class="line">&#125;  </span><br></pre></td></tr></table></figure>
 
 <p>State really is isolated inside of each component.</p>
+<p>Example:</p>
+<p>Add a new element to a state of array:</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span>[friends, setFriends] = <span class="title function_">useState</span>(<span class="string">&quot;&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">handleAddFriend</span>(<span class="params">friend</span>) &#123;</span><br><span class="line">    <span class="title function_">setFriends</span>(<span class="function">(<span class="params">oldFriends</span>) =&gt;</span> [...oldFriends, friend]);</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+
+
+
 <h3 id="5-2-Features"><a href="#5-2-Features" class="headerlink" title="5.2. Features"></a>5.2. Features</h3><p>With state, we view UI as a reflection of data changing over time.</p>
 <p>state changes, UI changes.</p>
 <p>UI &#x3D; f (state )</p>
